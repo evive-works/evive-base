@@ -8,7 +8,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EVIVE_BASE_VERSION', '0.1.1' );
+define( 'EVIVE_BASE_VERSION', '0.2.0' );
 
 require_once __DIR__ . '/inc/updates.php';
 
@@ -39,4 +39,24 @@ add_action( 'init', function () {
 // skip it so the posts index (home.html / index.html) is used instead.
 add_filter( 'frontpage_template_hierarchy', function ( $templates ) {
 	return 'page' === get_option( 'show_on_front' ) ? $templates : [];
+} );
+
+// Header/footer brand: the site title is only a fallback for sites without a logo.
+add_filter( 'render_block_core/site-title', function ( $html, $block ) {
+	$classes = $block['attrs']['className'] ?? '';
+	return ( str_contains( $classes, 'evive-site-title-fallback' ) && has_custom_logo() ) ? '' : $html;
+}, 10, 2 );
+
+// Social links without any URL filled in render as an empty list: drop it.
+add_filter( 'render_block_core/social-links', function ( $html ) {
+	return str_contains( $html, '<li' ) ? $html : '';
+} );
+
+// Mobile menu toggle: core sets aria-haspopup but no aria-expanded; bind it to core's own menu state.
+add_filter( 'render_block_core/navigation', function ( $html ) {
+	return str_replace(
+		'class="wp-block-navigation__responsive-container-open"',
+		'class="wp-block-navigation__responsive-container-open" aria-expanded="false" data-wp-bind--aria-expanded="state.isMenuOpen"',
+		$html
+	);
 } );

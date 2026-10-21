@@ -2,6 +2,14 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.2.0 — 2026-10-21
+- Generic header (pattern `evive/header`): site logo linking home (site title as fallback, hidden once a logo is set), navigation with the core mobile overlay menu, language-switcher slot (renders `evive-language/switcher` only when that plugin is active), call-to-action button editable in the Site Editor.
+- Header variations: `evive/header-no-cta`, `evive/header-sticky` (sticky with a bottom border).
+- Generic footer (pattern `evive/footer`): logo + tagline, three link columns (navigation blocks), legal line with year and site title, social links. Variation `evive/footer-simple`.
+- Mobile menu toggle gets `aria-expanded` (core only sets `aria-haspopup`). Focus trap, Escape and focus return come from core and were verified.
+- Templates use real `<header>` and `<footer>` landmarks. Short pages keep the footer at the bottom of the viewport.
+- Empty social-links blocks (no URLs yet) render nothing instead of an empty list.
+
 ## 0.1.1 — 2026-10-21
 - Updates from GitHub Releases via Plugin Update Checker v5.7 (same library as invaise-checkout). Off with `EVIVE_BASE_AUTO_UPDATE` = false or the `evive_auto_update` filter; `EVIVE_GITHUB_OWNER` / `EVIVE_GITHUB_TOKEN` in wp-config.php. Update checks run in the admin/cron, never on front-end page views.
 - `Update URI` header, so WordPress.org can never offer a theme with the same slug as an update.

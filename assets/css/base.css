@@ -42,3 +42,22 @@
 		transition-duration: 0.01ms !important;
 	}
 }
+
+/* Short pages: keep the footer at the bottom of the viewport. */
+.wp-site-blocks {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+.wp-site-blocks > main,
+.wp-site-blocks > :where(main) {
+	flex: 1 0 auto;
+}
+
+/* Very narrow screens: let the header actions wrap instead of overflowing. */
+@media (max-width: 30em) {
+	.evive-header .wp-block-group.alignwide {
+		flex-wrap: wrap;
+	}
+}
