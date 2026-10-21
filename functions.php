@@ -8,7 +8,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EVIVE_BASE_VERSION', '0.1.0' );
+define( 'EVIVE_BASE_VERSION', '0.1.1' );
+
+require_once __DIR__ . '/inc/updates.php';
 
 add_action( 'after_setup_theme', function () {
 	load_theme_textdomain( 'evive', get_template_directory() . '/languages' );
