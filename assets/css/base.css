@@ -1,0 +1,44 @@
+/* evive base: the few rules theme.json can't express. Tokens only. */
+
+/* Visible focus for keyboard users, on light and on primary/accent backgrounds. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	outline: 2px solid var(--wp--preset--color--contrast);
+	outline-offset: 2px;
+}
+:where(.has-primary-background-color, .has-contrast-background-color) :focus-visible {
+	outline-color: var(--wp--preset--color--primary-contrast);
+}
+:where(.has-accent-background-color) :focus-visible {
+	outline-color: var(--wp--preset--color--accent-contrast);
+}
+.wp-element-button:focus-visible,
+.wp-block-button__link:focus-visible {
+	outline-offset: 3px;
+}
+
+/* Buttons: smooth state changes (switched off below for reduced motion). */
+.wp-element-button,
+.wp-block-button__link {
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Inputs follow the tokens. */
+:where(input:not([type="checkbox"], [type="radio"], [type="submit"]), select, textarea) {
+	border: 1px solid var(--wp--preset--color--muted);
+	border-radius: var(--wp--custom--radius--s);
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+	font: inherit;
+	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
