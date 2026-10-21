@@ -59,8 +59,19 @@ CSS: `var(--wp--custom--radius--<slug>)` · theme.json: `var:custom|radius|<slug
 | `m` | 8px | buttons |
 | `l` | 16px | cards, images |
 
+## Shadows (`settings.shadow.presets`, since 0.3.0)
+CSS: `var(--wp--preset--shadow--<slug>)` · theme.json: `var:preset|shadow|<slug>`
+
+| Slug | Used for |
+|---|---|
+| `s` | cards (Card block style) |
+| `m` | raised elements |
+| `l` | overlays, menus |
+
+The defaults mix the `contrast` colour with transparency, so they follow any palette. A child may override the values.
+
 ## What a child theme may override
-- The **values** of every slug above (`settings.color.palette`, `settings.typography.fontFamilies` + `fontFace`, `fontSizes`, `spacingSizes`, `settings.custom.radius`).
+- The **values** of every slug above (`settings.color.palette`, `settings.typography.fontFamilies` + `fontFace`, `fontSizes`, `spacingSizes`, `settings.custom.radius`, `settings.shadow.presets`).
 - `styles` (for example heading colour, button radius), as long as it uses presets only.
 - Layout widths (`settings.layout`).
 - Extra, brand-only palette entries are allowed if documented in the child theme. evive-base patterns never use them.
