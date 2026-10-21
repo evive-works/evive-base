@@ -2,6 +2,9 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.3.1 — 2026-10-21
+- Icon images in the feature patterns carry the class `evive-icon`, so child themes can style icon tiles without also hitting logos or avatars.
+
 ## 0.3.0 — 2026-10-21
 - Pattern library, batch 1 (see `docs/patterns.md` with screenshots): heroes `evive/hero-media`, `hero-split`, `hero-page`, `hero-primary`; features `evive/features-cards`, `features-alternating`, `features-icon-list`; CTA bands `evive/cta-primary`, `cta-surface`; `evive/faq`; proof `evive/logo-wall`, `testimonial`, `testimonials-grid`, `stats`.
 - Token contract, additive: shadow presets `s`, `m`, `l` (built from `contrast` with `color-mix()`).

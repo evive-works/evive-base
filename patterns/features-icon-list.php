@@ -28,8 +28,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 <div class="wp-block-column" style="flex-basis:65%"><!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|50","top":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
+<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->
@@ -44,8 +44,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
+<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->
@@ -60,8 +60,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
+<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->
@@ -78,8 +78,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
+<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->
@@ -94,8 +94,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
+<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->
@@ -110,8 +110,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
+<div class="wp-block-group"><!-- wp:image {"width":"40px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:40px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->

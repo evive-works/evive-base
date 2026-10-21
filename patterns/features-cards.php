@@ -24,8 +24,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40","top":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|50"}}}} -->
 <div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--50)"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"className":"is-style-card","style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group is-style-card" style="min-height:100%"><!-- wp:image {"width":"48px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:48px;height:auto"/></figure>
+<div class="wp-block-group is-style-card" style="min-height:100%"><!-- wp:image {"width":"48px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:48px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3} -->
@@ -44,8 +44,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"className":"is-style-card","style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group is-style-card" style="min-height:100%"><!-- wp:image {"width":"48px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:48px;height:auto"/></figure>
+<div class="wp-block-group is-style-card" style="min-height:100%"><!-- wp:image {"width":"48px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:48px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3} -->
@@ -64,8 +64,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"className":"is-style-card","style":{"dimensions":{"minHeight":"100%"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group is-style-card" style="min-height:100%"><!-- wp:image {"width":"48px","sizeSlug":"full"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:48px;height:auto"/></figure>
+<div class="wp-block-group is-style-card" style="min-height:100%"><!-- wp:image {"width":"48px","sizeSlug":"full","className":"evive-icon"} -->
+<figure class="wp-block-image size-full is-resized evive-icon"><img src="<?php echo esc_url( $evive_img . 'placeholder-icon.svg' ); ?>" alt="" style="width:48px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3} -->
