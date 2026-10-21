@@ -51,3 +51,12 @@ add_filter( 'render_block_core/site-title', function ( $html, $block ) {
 add_filter( 'render_block_core/social-links', function ( $html ) {
 	return str_contains( $html, '<li' ) ? $html : '';
 } );
+
+// Mobile menu toggle: core sets aria-haspopup but no aria-expanded; bind it to core's own menu state.
+add_filter( 'render_block_core/navigation', function ( $html ) {
+	return str_replace(
+		'class="wp-block-navigation__responsive-container-open"',
+		'class="wp-block-navigation__responsive-container-open" aria-expanded="false" data-wp-bind--aria-expanded="state.isMenuOpen"',
+		$html
+	);
+} );
