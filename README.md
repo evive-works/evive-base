@@ -28,5 +28,24 @@ wp-content/themes/<customer>/
 
 `front-page.html` renders a static front page's content without a title (the H1 comes from the page's hero). When the front page shows the latest posts, the theme falls back to `index.html`.
 
-## Release and deploy
-Releases are tagged `vX.Y.Z` on `main`, with a `CHANGELOG.md` entry. The auto-update mechanism and the release procedure come with card WAW 0.4. During the whyatwork.nl build, any branch can be deployed to staging with `bin/deploy-staging.sh base=<branch>` from the whyatwork-site repo.
+## Updates and releases
+Sites get new versions through WordPress's own update screen (Network Admin → Updates), from **GitHub Releases** of this repo. It uses the same library as our other distributed plugins (invaise-checkout, evive Connector): [Plugin Update Checker v5](https://github.com/YahnisElsts/plugin-update-checker) (MIT), bundled in `lib/plugin-update-checker/`, wired up in `inc/updates.php`. Like every update, the click on "Update" stays manual.
+
+Settings in `wp-config.php` (all optional):
+| Constant | Effect |
+|---|---|
+| `EVIVE_BASE_AUTO_UPDATE` = `false` | No update checks for this theme (the filter `evive_auto_update` can do the same) |
+| `EVIVE_GITHUB_OWNER` | GitHub account holding the repo (default `stackpros`) |
+| `EVIVE_GITHUB_TOKEN` | Read-only token; only needed while the repo is **private** |
+
+### Release procedure
+1. On a branch: bump `Version:` in `style.css` and `EVIVE_BASE_VERSION` in `functions.php`; add a `## X.Y.Z — date` entry to `CHANGELOG.md`. Merge to `main`.
+2. `git tag -a vX.Y.Z -m "evive-base X.Y.Z" && git push origin main vX.Y.Z`
+3. `bin/build-release.sh vX.Y.Z` → `dist/evive-base.zip`. It checks that every version number matches the tag, then builds the zip with top folder `evive-base/` and without dev files.
+4. Create the GitHub release `vX.Y.Z` with that zip as an asset, named exactly `evive-base.zip`. The notes are the CHANGELOG entry: `gh release create vX.Y.Z dist/evive-base.zip --title "X.Y.Z" --notes "…"`
+5. Sites see "Update available" at their next check (every 12 hours, or right away via Dashboard → Updates → "Check again"). Check one site after the update.
+
+Never break a child theme or a site in a minor or patch release (see `CHANGELOG.md` and `CLAUDE.md`).
+
+### Staging without a release
+While building, deploy any branch straight to whyatwork.cloud from the whyatwork-site repo: `bin/deploy-staging.sh base=<branch>` (add `--working-tree` for uncommitted changes). The version number doesn't change, so the updater isn't involved.
