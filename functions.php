@@ -40,3 +40,14 @@ add_action( 'init', function () {
 add_filter( 'frontpage_template_hierarchy', function ( $templates ) {
 	return 'page' === get_option( 'show_on_front' ) ? $templates : [];
 } );
+
+// Header/footer brand: the site title is only a fallback for sites without a logo.
+add_filter( 'render_block_core/site-title', function ( $html, $block ) {
+	$classes = $block['attrs']['className'] ?? '';
+	return ( str_contains( $classes, 'evive-site-title-fallback' ) && has_custom_logo() ) ? '' : $html;
+}, 10, 2 );
+
+// Social links without any URL filled in render as an empty list: drop it.
+add_filter( 'render_block_core/social-links', function ( $html ) {
+	return str_contains( $html, '<li' ) ? $html : '';
+} );
