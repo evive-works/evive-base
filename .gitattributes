@@ -1,0 +1,6 @@
+/tools export-ignore
+/docs export-ignore
+/CLAUDE.md export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/.distignore export-ignore
