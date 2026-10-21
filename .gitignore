@@ -1,5 +1,5 @@
-node_modules/
-vendor/
+/node_modules/
+/vendor/
 *.zip
 .env
 .env.*
@@ -7,4 +7,4 @@ vendor/
 .phpunit.result.cache
 .phpunit.cache/
 .DS_Store
-dist/
+/dist/
