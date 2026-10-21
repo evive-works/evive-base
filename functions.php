@@ -8,7 +8,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EVIVE_BASE_VERSION', '0.2.0' );
+define( 'EVIVE_BASE_VERSION', '0.3.0' );
 
 require_once __DIR__ . '/inc/updates.php';
 
@@ -34,6 +34,41 @@ add_action( 'init', function () {
 		register_block_pattern_category( $slug, [ 'label' => $label ] );
 	}
 } );
+
+// Block styles used by the patterns: "Card" (rounded, soft shadow; values in theme.json) and
+// "Motif" (large faded rounded-rectangle outlines behind a section; CSS in base.css).
+add_action( 'init', function () {
+	register_block_style( 'core/group', [ 'name' => 'card', 'label' => _x( 'Card', 'block style', 'evive' ) ] );
+	register_block_style( 'core/group', [ 'name' => 'motif', 'label' => _x( 'Motif', 'block style', 'evive' ) ] );
+} );
+
+// FAQ pattern: a group with the class "evive-faq" gets FAQPage structured data built from its
+// Details blocks (question = summary, answer = the content), so editors only edit the visible text.
+add_filter( 'render_block_core/group', function ( $html, $block ) {
+	if ( ! str_contains( $block['attrs']['className'] ?? '', 'evive-faq' ) ) {
+		return $html;
+	}
+	$items = [];
+	$walk  = function ( $blocks ) use ( &$walk, &$items ) {
+		foreach ( $blocks as $inner ) {
+			if ( 'core/details' === $inner['blockName'] ) {
+				$question = trim( wp_strip_all_tags( $inner['attrs']['summary'] ?? '' ) );
+				$answer   = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( implode( ' ', array_map( 'render_block', $inner['innerBlocks'] ) ) ) ) );
+				if ( '' !== $question && '' !== $answer ) {
+					$items[] = [ '@type' => 'Question', 'name' => $question, 'acceptedAnswer' => [ '@type' => 'Answer', 'text' => $answer ] ];
+				}
+			} elseif ( ! empty( $inner['innerBlocks'] ) ) {
+				$walk( $inner['innerBlocks'] );
+			}
+		}
+	};
+	$walk( $block['innerBlocks'] );
+	if ( ! $items ) {
+		return $html;
+	}
+	$data = [ '@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $items ];
+	return $html . '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG ) . '</script>';
+}, 10, 2 );
 
 // front-page.html shows the static front page's content. When the front page lists the latest posts,
 // skip it so the posts index (home.html / index.html) is used instead.

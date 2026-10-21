@@ -2,6 +2,15 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.3.0 — 2026-10-21
+- Pattern library, batch 1 (see `docs/patterns.md` with screenshots): heroes `evive/hero-media`, `hero-split`, `hero-page`, `hero-primary`; features `evive/features-cards`, `features-alternating`, `features-icon-list`; CTA bands `evive/cta-primary`, `cta-surface`; `evive/faq`; proof `evive/logo-wall`, `testimonial`, `testimonials-grid`, `stats`.
+- Token contract, additive: shadow presets `s`, `m`, `l` (built from `contrast` with `color-mix()`).
+- Block styles for Group: **Card** and **Motif**.
+- FAQ structured data (`FAQPage` JSON-LD) generated from the Details blocks inside a group with class `evive-faq`.
+- New template "Page without title" (`page-no-title`) for pages that start with a hero.
+- Neutral placeholder art in `assets/images/` (image, logo, icon, avatar).
+- Fix: header button markup matched the block's saved HTML (no "invalid block" in the editor).
+
 ## 0.2.0 — 2026-10-21
 - Generic header (pattern `evive/header`): site logo linking home (site title as fallback, hidden once a logo is set), navigation with the core mobile overlay menu, language-switcher slot (renders `evive-language/switcher` only when that plugin is active), call-to-action button editable in the Site Editor.
 - Header variations: `evive/header-no-cta`, `evive/header-sticky` (sticky with a bottom border).
