@@ -2,6 +2,9 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.3.2 — 2026-10-22
+- Dutch (nl_NL) translations for every theme string: pattern placeholders, pattern titles and descriptions, footer links, the header button ("Aan de slag") and the theme.json labels. `languages/evive.pot` is the template for further locales; regenerate it with `wp i18n make-pot` and fill a locale with `tools/i18n/build-po.py` (see `tools/i18n/README.md`).
+
 ## 0.3.1 — 2026-10-21
 - Icon images in the feature patterns carry the class `evive-icon`, so child themes can style icon tiles without also hitting logos or avatars.
 

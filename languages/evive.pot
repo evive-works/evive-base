@@ -1,0 +1,880 @@
+# Copyright (C) 2026 StackPros B.V.
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: evive base 0.3.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-22T10:49:37+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: evive\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "evive base"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://evive.works/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Neutral parent block theme for the evive rebuild service. Child themes set the brand by overriding the values of a fixed set of design tokens (see docs/tokens.md); templates and patterns only use those tokens."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "StackPros B.V."
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://stackpros.io/"
+msgstr ""
+
+#: functions.php:27
+msgctxt "pattern category"
+msgid "Hero"
+msgstr ""
+
+#: functions.php:28
+msgctxt "pattern category"
+msgid "Features"
+msgstr ""
+
+#: functions.php:29
+msgctxt "pattern category"
+msgid "Proof"
+msgstr ""
+
+#: functions.php:30
+msgctxt "pattern category"
+msgid "Call to action"
+msgstr ""
+
+#: functions.php:31
+msgctxt "pattern category"
+msgid "Content"
+msgstr ""
+
+#: functions.php:41
+msgctxt "block style"
+msgid "Card"
+msgstr ""
+
+#: functions.php:42
+msgctxt "block style"
+msgid "Motif"
+msgstr ""
+
+#: patterns/cta-primary.php
+msgctxt "Pattern title"
+msgid "CTA band: primary colour"
+msgstr ""
+
+#: patterns/cta-primary.php
+msgctxt "Pattern description"
+msgid "Call-to-action band on the primary colour with one button."
+msgstr ""
+
+#: patterns/cta-primary.php:18
+#: patterns/cta-surface.php:18
+msgctxt "placeholder"
+msgid "Ready to get started?"
+msgstr ""
+
+#: patterns/cta-primary.php:22
+#: patterns/cta-surface.php:22
+msgctxt "placeholder"
+msgid "One sentence that removes the last doubt."
+msgstr ""
+
+#: patterns/cta-primary.php:27
+#: patterns/cta-surface.php:27
+#: patterns/hero-media.php:28
+#: patterns/hero-primary.php:27
+#: patterns/hero-split.php:32
+msgctxt "placeholder"
+msgid "Primary action"
+msgstr ""
+
+#: patterns/cta-surface.php
+msgctxt "Pattern title"
+msgid "CTA band: surface"
+msgstr ""
+
+#: patterns/cta-surface.php
+msgctxt "Pattern description"
+msgid "Call-to-action band on the surface colour with one button."
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "FAQ"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Frequently asked questions as expandable Details blocks. Adds FAQPage structured data (JSON-LD) built from the questions and answers."
+msgstr ""
+
+#: patterns/faq.php:17
+msgctxt "placeholder"
+msgid "Frequently asked questions"
+msgstr ""
+
+#: patterns/faq.php:21
+#: patterns/faq.php:22
+msgctxt "placeholder"
+msgid "What is the first question people ask?"
+msgstr ""
+
+#: patterns/faq.php:23
+#: patterns/faq.php:29
+#: patterns/faq.php:35
+#: patterns/faq.php:41
+msgctxt "placeholder"
+msgid "The answer, in a few clear sentences. Link to more detail if needed."
+msgstr ""
+
+#: patterns/faq.php:27
+#: patterns/faq.php:28
+msgctxt "placeholder"
+msgid "How long does it take to get started?"
+msgstr ""
+
+#: patterns/faq.php:33
+#: patterns/faq.php:34
+msgctxt "placeholder"
+msgid "What does it cost?"
+msgstr ""
+
+#: patterns/faq.php:39
+#: patterns/faq.php:40
+msgctxt "placeholder"
+msgid "Can I cancel at any time?"
+msgstr ""
+
+#: patterns/features-alternating.php
+msgctxt "Pattern title"
+msgid "Features: alternating image and text"
+msgstr ""
+
+#: patterns/features-alternating.php
+msgctxt "Pattern description"
+msgid "Rows of text and image that swap sides, one per feature."
+msgstr ""
+
+#: patterns/features-alternating.php:20
+msgctxt "placeholder"
+msgid "First feature in detail"
+msgstr ""
+
+#: patterns/features-alternating.php:24
+#: patterns/features-alternating.php:52
+#: patterns/features-alternating.php:68
+msgctxt "placeholder"
+msgid "Explain what this does and why it matters, in two or three sentences. Concrete beats clever."
+msgstr ""
+
+#: patterns/features-alternating.php:28
+#: patterns/features-alternating.php:56
+#: patterns/features-alternating.php:72
+#: patterns/features-cards.php:40
+#: patterns/features-cards.php:60
+#: patterns/features-cards.php:80
+msgctxt "placeholder"
+msgid "Learn more →"
+msgstr ""
+
+#: patterns/features-alternating.php:48
+msgctxt "placeholder"
+msgid "Second feature in detail"
+msgstr ""
+
+#: patterns/features-alternating.php:64
+msgctxt "placeholder"
+msgid "Third feature in detail"
+msgstr ""
+
+#: patterns/features-cards.php
+msgctxt "Pattern title"
+msgid "Features: three cards"
+msgstr ""
+
+#: patterns/features-cards.php
+msgctxt "Pattern description"
+msgid "Section heading and three feature cards with an icon, text and a link."
+msgstr ""
+
+#: patterns/features-cards.php:17
+msgctxt "placeholder"
+msgid "Everything you need, nothing you don’t"
+msgstr ""
+
+#: patterns/features-cards.php:21
+msgctxt "placeholder"
+msgid "A one-line summary of the features below."
+msgstr ""
+
+#: patterns/features-cards.php:32
+msgctxt "placeholder"
+msgid "First feature"
+msgstr ""
+
+#: patterns/features-cards.php:36
+#: patterns/features-cards.php:56
+#: patterns/features-cards.php:76
+msgctxt "placeholder"
+msgid "A short description of this feature and the benefit it brings."
+msgstr ""
+
+#: patterns/features-cards.php:52
+msgctxt "placeholder"
+msgid "Second feature"
+msgstr ""
+
+#: patterns/features-cards.php:72
+msgctxt "placeholder"
+msgid "Third feature"
+msgstr ""
+
+#: patterns/features-icon-list.php
+msgctxt "Pattern title"
+msgid "Features: icon list"
+msgstr ""
+
+#: patterns/features-icon-list.php
+msgctxt "Pattern description"
+msgid "Heading on the left, a two-column list of short points with icons on the right."
+msgstr ""
+
+#: patterns/features-icon-list.php:19
+msgctxt "placeholder"
+msgid "Why teams choose us"
+msgstr ""
+
+#: patterns/features-icon-list.php:23
+msgctxt "placeholder"
+msgid "A short line that frames the list."
+msgstr ""
+
+#: patterns/features-icon-list.php:37
+msgctxt "placeholder"
+msgid "First point"
+msgstr ""
+
+#: patterns/features-icon-list.php:41
+#: patterns/features-icon-list.php:57
+#: patterns/features-icon-list.php:73
+#: patterns/features-icon-list.php:91
+#: patterns/features-icon-list.php:107
+#: patterns/features-icon-list.php:123
+msgctxt "placeholder"
+msgid "One sentence about this point."
+msgstr ""
+
+#: patterns/features-icon-list.php:53
+msgctxt "placeholder"
+msgid "Second point"
+msgstr ""
+
+#: patterns/features-icon-list.php:69
+msgctxt "placeholder"
+msgid "Third point"
+msgstr ""
+
+#: patterns/features-icon-list.php:87
+msgctxt "placeholder"
+msgid "Fourth point"
+msgstr ""
+
+#: patterns/features-icon-list.php:103
+msgctxt "placeholder"
+msgid "Fifth point"
+msgstr ""
+
+#: patterns/features-icon-list.php:119
+msgctxt "placeholder"
+msgid "Sixth point"
+msgstr ""
+
+#: patterns/footer-legal.php
+msgctxt "Pattern title"
+msgid "Footer legal line"
+msgstr ""
+
+#: patterns/footer-legal.php
+msgctxt "Pattern description"
+msgid "Copyright line with the current year and the site title; editable in the Site Editor."
+msgstr ""
+
+#. translators: 1: year, 2: site title
+#: patterns/footer-legal.php:14
+#, php-format
+msgid "© %1$s %2$s. All rights reserved."
+msgstr ""
+
+#: patterns/footer-simple.php
+msgctxt "Pattern title"
+msgid "Footer, simple"
+msgstr ""
+
+#: patterns/footer-simple.php
+msgctxt "Pattern description"
+msgid "One row: logo, legal line and social links."
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer, extended"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern description"
+msgid "Logo and tagline, three link columns, legal line and social links."
+msgstr ""
+
+#: patterns/footer.php:13
+msgctxt "footer column heading"
+msgid "Product"
+msgstr ""
+
+#: patterns/footer.php:13
+msgctxt "footer link"
+msgid "Features"
+msgstr ""
+
+#: patterns/footer.php:13
+msgctxt "footer link"
+msgid "Pricing"
+msgstr ""
+
+#: patterns/footer.php:13
+msgctxt "footer link"
+msgid "Customers"
+msgstr ""
+
+#: patterns/footer.php:14
+msgctxt "footer column heading"
+msgid "Company"
+msgstr ""
+
+#: patterns/footer.php:14
+msgctxt "footer link"
+msgid "About us"
+msgstr ""
+
+#: patterns/footer.php:14
+msgctxt "footer link"
+msgid "Contact"
+msgstr ""
+
+#: patterns/footer.php:14
+msgctxt "footer link"
+msgid "Blog"
+msgstr ""
+
+#: patterns/footer.php:15
+msgctxt "footer column heading"
+msgid "Support"
+msgstr ""
+
+#: patterns/footer.php:15
+msgctxt "footer link"
+msgid "Help center"
+msgstr ""
+
+#: patterns/footer.php:15
+msgctxt "footer link"
+msgid "Privacy"
+msgstr ""
+
+#: patterns/footer.php:15
+msgctxt "footer link"
+msgid "Terms"
+msgstr ""
+
+#: patterns/header-brand.php
+msgctxt "Pattern title"
+msgid "Header brand"
+msgstr ""
+
+#: patterns/header-brand.php
+msgctxt "Pattern description"
+msgid "Site logo linking home; the site title is the fallback and disappears once a logo is set."
+msgstr ""
+
+#: patterns/header-cta.php
+msgctxt "Pattern title"
+msgid "Header button"
+msgstr ""
+
+#: patterns/header-cta.php
+msgctxt "Pattern description"
+msgid "Call-to-action button in the header; label and link are edited in the Site Editor."
+msgstr ""
+
+#: patterns/header-cta.php:13
+msgctxt "header button"
+msgid "Get started"
+msgstr ""
+
+#: patterns/header-language.php
+msgctxt "Pattern title"
+msgid "Header language switcher"
+msgstr ""
+
+#: patterns/header-language.php
+msgctxt "Pattern description"
+msgid "The evive-language switcher when that plugin is active; nothing otherwise."
+msgstr ""
+
+#: patterns/header-no-cta.php
+msgctxt "Pattern title"
+msgid "Header without button"
+msgstr ""
+
+#: patterns/header-no-cta.php
+msgctxt "Pattern description"
+msgid "Logo (or site title), navigation and language switcher."
+msgstr ""
+
+#: patterns/header-sticky.php
+msgctxt "Pattern title"
+msgid "Header, sticky"
+msgstr ""
+
+#: patterns/header-sticky.php
+msgctxt "Pattern description"
+msgid "Like the default header, but it stays at the top of the screen while scrolling."
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern description"
+msgid "Logo (or site title), navigation, language switcher and a call-to-action button."
+msgstr ""
+
+#: patterns/hero-media.php
+msgctxt "Pattern title"
+msgid "Hero: text and image"
+msgstr ""
+
+#: patterns/hero-media.php
+msgctxt "Pattern description"
+msgid "Page heading, intro text and two buttons, with an image or screenshot on the side."
+msgstr ""
+
+#: patterns/hero-media.php:19
+msgctxt "placeholder"
+msgid "A clear headline that says what you do"
+msgstr ""
+
+#: patterns/hero-media.php:23
+msgctxt "placeholder"
+msgid "One or two sentences on who it is for and why it matters. Keep it concrete."
+msgstr ""
+
+#: patterns/hero-media.php:32
+#: patterns/hero-primary.php:31
+#: patterns/hero-split.php:36
+msgctxt "placeholder"
+msgid "Secondary action"
+msgstr ""
+
+#: patterns/hero-page.php
+msgctxt "Pattern title"
+msgid "Hero: page title and intro"
+msgstr ""
+
+#: patterns/hero-page.php
+msgctxt "Pattern description"
+msgid "Simple page hero: heading and an intro paragraph, for inner pages."
+msgstr ""
+
+#: patterns/hero-page.php:17
+msgctxt "placeholder"
+msgid "Page title"
+msgstr ""
+
+#: patterns/hero-page.php:21
+msgctxt "placeholder"
+msgid "A short introduction to what this page covers, in one or two sentences."
+msgstr ""
+
+#: patterns/hero-primary.php
+msgctxt "Pattern title"
+msgid "Hero: on primary colour"
+msgstr ""
+
+#: patterns/hero-primary.php
+msgctxt "Pattern description"
+msgid "Hero on the primary colour. Uses the Motif block style (faded rounded rectangles); switch the style to Default to remove it."
+msgstr ""
+
+#: patterns/hero-primary.php:18
+msgctxt "placeholder"
+msgid "A bold headline on the brand colour"
+msgstr ""
+
+#: patterns/hero-primary.php:22
+msgctxt "placeholder"
+msgid "Intro text in the contrast colour. Keep it short so the page gets going quickly."
+msgstr ""
+
+#: patterns/hero-split.php
+msgctxt "Pattern title"
+msgid "Hero: split 50/50"
+msgstr ""
+
+#: patterns/hero-split.php
+msgctxt "Pattern description"
+msgid "Two equal halves: text on a surface background, image on the other side."
+msgstr ""
+
+#: patterns/hero-split.php:19
+msgctxt "placeholder"
+msgid "Eyebrow"
+msgstr ""
+
+#: patterns/hero-split.php:23
+msgctxt "placeholder"
+msgid "A headline split down the middle"
+msgstr ""
+
+#: patterns/hero-split.php:27
+msgctxt "placeholder"
+msgid "Supporting text that explains the offer in plain words."
+msgstr ""
+
+#: patterns/logo-wall.php
+msgctxt "Pattern title"
+msgid "Logo wall"
+msgstr ""
+
+#: patterns/logo-wall.php
+msgctxt "Pattern description"
+msgid "A short line and a row of customer logos."
+msgstr ""
+
+#: patterns/logo-wall.php:17
+msgctxt "placeholder"
+msgid "Trusted by teams at"
+msgstr ""
+
+#: patterns/logo-wall.php:22
+#: patterns/logo-wall.php:26
+#: patterns/logo-wall.php:30
+#: patterns/logo-wall.php:34
+#: patterns/logo-wall.php:38
+msgctxt "placeholder"
+msgid "Customer logo"
+msgstr ""
+
+#: patterns/no-results.php
+msgctxt "Pattern title"
+msgid "No results"
+msgstr ""
+
+#: patterns/no-results.php
+msgctxt "Pattern description"
+msgid "Message shown when a query has no posts."
+msgstr ""
+
+#: patterns/no-results.php:12
+msgid "Nothing found. Try another search."
+msgstr ""
+
+#: patterns/no-results.php:15
+#: patterns/not-found.php:19
+msgctxt "search form label"
+msgid "Search"
+msgstr ""
+
+#: patterns/no-results.php:15
+#: patterns/not-found.php:19
+msgctxt "search button"
+msgid "Search"
+msgstr ""
+
+#: patterns/not-found.php
+msgctxt "Pattern title"
+msgid "Page not found"
+msgstr ""
+
+#: patterns/not-found.php
+msgctxt "Pattern description"
+msgid "Content of the 404 template."
+msgstr ""
+
+#: patterns/not-found.php:12
+msgid "Page not found"
+msgstr ""
+
+#: patterns/not-found.php:16
+msgid "The page you were looking for doesn’t exist or has moved. Try a search, or go to the home page."
+msgstr ""
+
+#: patterns/not-found.php:23
+msgid "Go to the home page"
+msgstr ""
+
+#: patterns/posts-heading.php
+msgctxt "Pattern title"
+msgid "Posts heading"
+msgstr ""
+
+#: patterns/posts-heading.php
+msgctxt "Pattern description"
+msgid "H1 for the posts index: the title of the posts page, or a neutral fallback."
+msgstr ""
+
+#: patterns/posts-heading.php:12
+msgid "Latest posts"
+msgstr ""
+
+#: patterns/stats.php
+msgctxt "Pattern title"
+msgid "Stats"
+msgstr ""
+
+#: patterns/stats.php
+msgctxt "Pattern description"
+msgid "Four big numbers with a label each."
+msgstr ""
+
+#: patterns/stats.php:23
+msgctxt "placeholder"
+msgid "Label for the first number"
+msgstr ""
+
+#: patterns/stats.php:33
+msgctxt "placeholder"
+msgid "Label for the second number"
+msgstr ""
+
+#: patterns/stats.php:43
+msgctxt "placeholder"
+msgid "Label for the third number"
+msgstr ""
+
+#: patterns/stats.php:53
+msgctxt "placeholder"
+msgid "Label for the fourth number"
+msgstr ""
+
+#: patterns/testimonial.php
+msgctxt "Pattern title"
+msgid "Testimonial"
+msgstr ""
+
+#: patterns/testimonial.php
+msgctxt "Pattern description"
+msgid "One large customer quote with name, role and photo."
+msgstr ""
+
+#: patterns/testimonial.php:19
+#: patterns/testimonials-grid.php:28
+#: patterns/testimonials-grid.php:52
+#: patterns/testimonials-grid.php:76
+msgctxt "placeholder"
+msgid "A short, specific quote about the result a customer got. Real words from a real person."
+msgstr ""
+
+#: patterns/testimonial.php:29
+#: patterns/testimonials-grid.php:38
+#: patterns/testimonials-grid.php:62
+#: patterns/testimonials-grid.php:86
+msgctxt "placeholder"
+msgid "Name Surname"
+msgstr ""
+
+#: patterns/testimonial.php:33
+#: patterns/testimonials-grid.php:42
+#: patterns/testimonials-grid.php:66
+#: patterns/testimonials-grid.php:90
+msgctxt "placeholder"
+msgid "Role, Company"
+msgstr ""
+
+#: patterns/testimonials-grid.php
+msgctxt "Pattern title"
+msgid "Testimonials: grid of three"
+msgstr ""
+
+#: patterns/testimonials-grid.php
+msgctxt "Pattern description"
+msgid "Three customer quotes as cards."
+msgstr ""
+
+#: patterns/testimonials-grid.php:17
+msgctxt "placeholder"
+msgid "What customers say"
+msgstr ""
+
+#: patterns/testimonials-grid.php:21
+msgctxt "placeholder"
+msgid "Short intro line for the quotes."
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary contrast"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent contrast"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Surface"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Muted"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Border"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "7"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Heading"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Body"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page without title (hero first)"
+msgstr ""

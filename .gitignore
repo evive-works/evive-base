@@ -9,3 +9,4 @@
 .DS_Store
 /dist/
 /tools/block-validator/node_modules/
+__pycache__/
