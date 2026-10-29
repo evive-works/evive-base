@@ -8,7 +8,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EVIVE_BASE_VERSION', '0.3.2' );
+define( 'EVIVE_BASE_VERSION', '0.4.0' );
 
 require_once __DIR__ . '/inc/updates.php';
 
@@ -29,17 +29,19 @@ add_action( 'init', function () {
 		'evive-proof'    => _x( 'Proof', 'pattern category', 'evive' ),
 		'evive-cta'      => _x( 'Call to action', 'pattern category', 'evive' ),
 		'evive-content'  => _x( 'Content', 'pattern category', 'evive' ),
+		'evive-pricing'  => _x( 'Pricing', 'pattern category', 'evive' ),
 	];
 	foreach ( $categories as $slug => $label ) {
 		register_block_pattern_category( $slug, [ 'label' => $label ] );
 	}
 } );
 
-// Block styles used by the patterns: "Card" (rounded, soft shadow; values in theme.json) and
-// "Motif" (large faded rounded-rectangle outlines behind a section; CSS in base.css).
+// Block styles used by the patterns: "Card" (rounded, soft shadow; values in theme.json), "Motif"
+// (large faded rounded-rectangle outlines behind a section) and "Comparison" for tables (CSS in base.css).
 add_action( 'init', function () {
 	register_block_style( 'core/group', [ 'name' => 'card', 'label' => _x( 'Card', 'block style', 'evive' ) ] );
 	register_block_style( 'core/group', [ 'name' => 'motif', 'label' => _x( 'Motif', 'block style', 'evive' ) ] );
+	register_block_style( 'core/table', [ 'name' => 'comparison', 'label' => _x( 'Comparison', 'block style', 'evive' ) ] );
 } );
 
 // FAQ pattern: a group with the class "evive-faq" gets FAQPage structured data built from its

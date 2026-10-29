@@ -4,10 +4,14 @@
 	"description": "Validates block markup of templates, parts and PHP patterns the way the block editor does (no WordPress needed).",
 	"dependencies": {
 		"@wordpress/block-library": "^9.0.0",
-		"@wordpress/blocks": "^14.0.0",
+		"@wordpress/blocks": "^16.2.0",
 		"global-jsdom": "^26.0.0",
 		"jsdom": "^26.0.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1"
+	},
+	"overrides": {
+		"@wordpress/private-apis": "2.0.0",
+		"@wordpress/blocks": "$@wordpress/blocks"
 	}
 }
