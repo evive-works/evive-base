@@ -5,7 +5,7 @@
  * Categories: evive-pricing
  * Keywords: pricing, compare, comparison, table, features, plans
  * Viewport Width: 1280
- * Description: Feature comparison across plans. Type ✓ in a cell for "included" and leave it empty for "not included" (shown as a dash). A row whose first cell is bold and the rest empty is a group heading. The header row stays visible while scrolling; on phones the table scrolls sideways with the feature column fixed.
+ * Description: Feature comparison across plans. Type ✓ in a cell for "included" and leave it empty for "not included" (shown as a dash). A row whose first cell is bold and the rest empty is a group heading. The header row stays visible while scrolling; on phones the table fits the screen (with many plans it scrolls sideways, the feature column fixed).
  *
  * @package evive
  */

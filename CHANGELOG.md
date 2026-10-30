@@ -2,6 +2,9 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.5.1 — 2026-10-30
+- Dutch (nl_NL) translations for the pricing patterns, the CTA band with image and the Comparison table style (200 of 200 strings).
+
 ## 0.5.0 — 2026-10-30
 - New pattern `evive/cta-media`: call-to-action band on the primary colour with text and two buttons on the left and an image on the right that rises above the band (wide screens) and rests on its bottom edge. Made for a product mockup with a transparent background; on phones the image sits centred below the text.
 
@@ -21,7 +24,6 @@ All notable changes. Semantic versioning: a slug change in the token contract is
 - Block style **Comparison** for the Table block: plan columns centred, ✓ in the primary colour, an empty cell shows a muted dash, a row with a bold first cell and empty plan cells is a group heading, sticky header row; on phones the feature column stays fixed and the table scrolls sideways if it has to.
 - List class `evive-checklist`: check marks in the primary colour instead of bullets.
 - Block validator: dependencies aligned with the current block library (a fresh install mixed two `@wordpress/blocks` and `private-apis` versions and crashed); lockfile committed.
-- The new pattern strings have no Dutch translation yet.
 
 ## 0.3.2 — 2026-10-22
 - Dutch (nl_NL) translations for every theme string: pattern placeholders, pattern titles and descriptions, footer links, the header button ("Aan de slag") and the theme.json labels. `languages/evive.pot` is the template for further locales; regenerate it with `wp i18n make-pot` and fill a locale with `tools/i18n/build-po.py` (see `tools/i18n/README.md`).

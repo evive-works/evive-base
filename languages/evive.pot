@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: evive base 0.3.1\n"
+"Project-Id-Version: evive base 0.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-22T10:49:37+02:00\n"
+"POT-Creation-Date: 2026-10-30T09:42:02+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: evive\n"
@@ -64,14 +64,62 @@ msgctxt "pattern category"
 msgid "Content"
 msgstr ""
 
-#: functions.php:41
-msgctxt "block style"
-msgid "Card"
+#: functions.php:32
+msgctxt "pattern category"
+msgid "Pricing"
 msgstr ""
 
 #: functions.php:42
 msgctxt "block style"
+msgid "Card"
+msgstr ""
+
+#: functions.php:43
+msgctxt "block style"
 msgid "Motif"
+msgstr ""
+
+#: functions.php:44
+msgctxt "block style"
+msgid "Comparison"
+msgstr ""
+
+#: patterns/cta-media.php
+msgctxt "Pattern title"
+msgid "CTA band with image"
+msgstr ""
+
+#: patterns/cta-media.php
+msgctxt "Pattern description"
+msgid "Call-to-action band on the primary colour with text and buttons on the left and an image on the right that sticks out above the band (desktop). Made for a product mockup or screenshot with a transparent background, e.g. a phone. Use real text here, never an image with the text baked in."
+msgstr ""
+
+#: patterns/cta-media.php:20
+msgctxt "placeholder"
+msgid "See it for yourself"
+msgstr ""
+
+#: patterns/cta-media.php:24
+msgctxt "placeholder"
+msgid "One sentence that removes the last doubt, and what happens when you click."
+msgstr ""
+
+#: patterns/cta-media.php:29
+#: patterns/cta-primary.php:27
+#: patterns/cta-surface.php:27
+#: patterns/hero-media.php:28
+#: patterns/hero-primary.php:27
+#: patterns/hero-split.php:32
+msgctxt "placeholder"
+msgid "Primary action"
+msgstr ""
+
+#: patterns/cta-media.php:33
+#: patterns/hero-media.php:32
+#: patterns/hero-primary.php:31
+#: patterns/hero-split.php:36
+msgctxt "placeholder"
+msgid "Secondary action"
 msgstr ""
 
 #: patterns/cta-primary.php
@@ -94,15 +142,6 @@ msgstr ""
 #: patterns/cta-surface.php:22
 msgctxt "placeholder"
 msgid "One sentence that removes the last doubt."
-msgstr ""
-
-#: patterns/cta-primary.php:27
-#: patterns/cta-surface.php:27
-#: patterns/hero-media.php:28
-#: patterns/hero-primary.php:27
-#: patterns/hero-split.php:32
-msgctxt "placeholder"
-msgid "Primary action"
 msgstr ""
 
 #: patterns/cta-surface.php
@@ -225,6 +264,9 @@ msgid "A one-line summary of the features below."
 msgstr ""
 
 #: patterns/features-cards.php:32
+#: patterns/pricing-addon.php:27
+#: patterns/pricing-comparison.php:33
+#: patterns/pricing-plans.php:72
 msgctxt "placeholder"
 msgid "First feature"
 msgstr ""
@@ -237,11 +279,21 @@ msgid "A short description of this feature and the benefit it brings."
 msgstr ""
 
 #: patterns/features-cards.php:52
+#: patterns/pricing-addon.php:31
+#: patterns/pricing-comparison.php:34
+#: patterns/pricing-plans.php:72
+#: patterns/pricing-plans.php:81
+#: patterns/pricing-plans.php:91
 msgctxt "placeholder"
 msgid "Second feature"
 msgstr ""
 
 #: patterns/features-cards.php:72
+#: patterns/pricing-addon.php:35
+#: patterns/pricing-comparison.php:35
+#: patterns/pricing-plans.php:72
+#: patterns/pricing-plans.php:81
+#: patterns/pricing-plans.php:91
 msgctxt "placeholder"
 msgid "Third feature"
 msgstr ""
@@ -487,13 +539,6 @@ msgctxt "placeholder"
 msgid "One or two sentences on who it is for and why it matters. Keep it concrete."
 msgstr ""
 
-#: patterns/hero-media.php:32
-#: patterns/hero-primary.php:31
-#: patterns/hero-split.php:36
-msgctxt "placeholder"
-msgid "Secondary action"
-msgstr ""
-
 #: patterns/hero-page.php
 msgctxt "Pattern title"
 msgid "Hero: page title and intro"
@@ -643,6 +688,212 @@ msgstr ""
 
 #: patterns/posts-heading.php:12
 msgid "Latest posts"
+msgstr ""
+
+#: patterns/pricing-addon.php
+msgctxt "Pattern title"
+msgid "Pricing: add-on or single offer"
+msgstr ""
+
+#: patterns/pricing-addon.php
+msgctxt "Pattern description"
+msgid "One wide card for an add-on or a separate offer next to the plans. Left: name, a short explanation and a checklist. Right: a centred price box with the same price style as the plans (the price in bold, the period text after it on its own line below), a note and one button. Stacks on phones."
+msgstr ""
+
+#: patterns/pricing-addon.php:18
+msgctxt "placeholder"
+msgid "Add-on name"
+msgstr ""
+
+#: patterns/pricing-addon.php:22
+msgctxt "placeholder"
+msgid "Who this is for and what it adds, in one or two sentences."
+msgstr ""
+
+#: patterns/pricing-addon.php:43
+msgctxt "placeholder"
+msgid "From € 1"
+msgstr ""
+
+#: patterns/pricing-addon.php:43
+msgctxt "placeholder"
+msgid "per item / month"
+msgstr ""
+
+#: patterns/pricing-addon.php:47
+msgctxt "placeholder"
+msgid "A short note on what the price depends on."
+msgstr ""
+
+#: patterns/pricing-addon.php:52
+msgctxt "placeholder"
+msgid "Get in touch"
+msgstr ""
+
+#: patterns/pricing-comparison.php
+msgctxt "Pattern title"
+msgid "Pricing: comparison table"
+msgstr ""
+
+#: patterns/pricing-comparison.php
+msgctxt "Pattern description"
+msgid "Feature comparison across plans. Type ✓ in a cell for \"included\" and leave it empty for \"not included\" (shown as a dash). A row whose first cell is bold and the rest empty is a group heading. The header row stays visible while scrolling; on phones the table fits the screen (with many plans it scrolls sideways, the feature column fixed)."
+msgstr ""
+
+#: patterns/pricing-comparison.php:27
+msgctxt "placeholder"
+msgid "Compare the plans"
+msgstr ""
+
+#: patterns/pricing-comparison.php:31
+msgctxt "placeholder"
+msgid "Feature"
+msgstr ""
+
+#: patterns/pricing-comparison.php:31
+#: patterns/pricing-plans.php:67
+msgctxt "placeholder"
+msgid "Starter"
+msgstr ""
+
+#: patterns/pricing-comparison.php:31
+#: patterns/pricing-plans.php:76
+msgctxt "placeholder"
+msgid "Professional"
+msgstr ""
+
+#: patterns/pricing-comparison.php:31
+#: patterns/pricing-plans.php:86
+msgctxt "placeholder"
+msgid "Enterprise"
+msgstr ""
+
+#: patterns/pricing-comparison.php:32
+msgctxt "placeholder"
+msgid "First group of features"
+msgstr ""
+
+#: patterns/pricing-comparison.php:36
+msgctxt "placeholder"
+msgid "Second group of features"
+msgstr ""
+
+#: patterns/pricing-comparison.php:37
+#: patterns/pricing-plans.php:81
+msgctxt "placeholder"
+msgid "Fourth feature"
+msgstr ""
+
+#: patterns/pricing-comparison.php:38
+msgctxt "placeholder"
+msgid "Fifth feature"
+msgstr ""
+
+#: patterns/pricing-comparison.php:39
+msgctxt "placeholder"
+msgid "Sixth feature"
+msgstr ""
+
+#: patterns/pricing-plans.php
+msgctxt "Pattern title"
+msgid "Pricing: three plans"
+msgstr ""
+
+#: patterns/pricing-plans.php
+msgctxt "Pattern description"
+msgid "Three plan cards of equal height with the middle plan highlighted. Centred card header: name, short description, the price in bold (the period text after it goes on its own line below), a line for the yearly price. Then a left-aligned checklist and a button aligned at the bottom."
+msgstr ""
+
+#: patterns/pricing-plans.php:20
+msgctxt "placeholder"
+msgid "Most popular"
+msgstr ""
+
+#: patterns/pricing-plans.php:57
+msgctxt "placeholder"
+msgid "Simple pricing that grows with you"
+msgstr ""
+
+#: patterns/pricing-plans.php:61
+msgctxt "placeholder"
+msgid "One sentence on how the plans differ and what every plan includes."
+msgstr ""
+
+#: patterns/pricing-plans.php:68
+msgctxt "placeholder"
+msgid "For small teams getting started."
+msgstr ""
+
+#: patterns/pricing-plans.php:69
+msgctxt "placeholder"
+msgid "€ 2"
+msgstr ""
+
+#: patterns/pricing-plans.php:70
+#: patterns/pricing-plans.php:79
+msgctxt "placeholder"
+msgid "per user / month"
+msgstr ""
+
+#: patterns/pricing-plans.php:71
+msgctxt "placeholder"
+msgid "Or € 1.75 per month, billed yearly."
+msgstr ""
+
+#: patterns/pricing-plans.php:73
+#: patterns/pricing-plans.php:82
+msgctxt "placeholder"
+msgid "Start free trial"
+msgstr ""
+
+#: patterns/pricing-plans.php:77
+msgctxt "placeholder"
+msgid "For growing teams that want more control."
+msgstr ""
+
+#: patterns/pricing-plans.php:78
+msgctxt "placeholder"
+msgid "€ 3"
+msgstr ""
+
+#: patterns/pricing-plans.php:80
+msgctxt "placeholder"
+msgid "Or € 2.50 per month, billed yearly."
+msgstr ""
+
+#: patterns/pricing-plans.php:81
+msgctxt "placeholder"
+msgid "Everything in Starter"
+msgstr ""
+
+#: patterns/pricing-plans.php:87
+msgctxt "placeholder"
+msgid "For large organisations with several locations."
+msgstr ""
+
+#: patterns/pricing-plans.php:88
+msgctxt "placeholder"
+msgid "Custom"
+msgstr ""
+
+#: patterns/pricing-plans.php:90
+msgctxt "placeholder"
+msgid "A quote that fits your organisation."
+msgstr ""
+
+#: patterns/pricing-plans.php:91
+msgctxt "placeholder"
+msgid "Everything in Professional"
+msgstr ""
+
+#: patterns/pricing-plans.php:92
+msgctxt "placeholder"
+msgid "Book a demo"
+msgstr ""
+
+#: patterns/pricing-plans.php:98
+msgctxt "placeholder"
+msgid "All prices exclude VAT."
 msgstr ""
 
 #: patterns/stats.php
