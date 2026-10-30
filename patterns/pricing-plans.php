@@ -5,7 +5,7 @@
  * Categories: evive-pricing
  * Keywords: pricing, plans, prices, tiers, subscription
  * Viewport Width: 1280
- * Description: Three plan cards of equal height with the middle plan highlighted: name, short description, large price with its period, a line for the yearly price, a checklist and a button aligned at the bottom.
+ * Description: Three plan cards of equal height with the middle plan highlighted. Centred card header: name, short description, the price in bold (the period text after it goes on its own line below), a line for the yearly price. Then a left-aligned checklist and a button aligned at the bottom.
  *
  * @package evive
  */
@@ -20,20 +20,20 @@ $evive_plan = function ( $name, $desc, $price, $period, $note, $features, $butto
 <p class="evive-plan-badge"><?php echo esc_html_x( 'Most popular', 'placeholder', 'evive' ); ?></p>
 <!-- /wp:paragraph -->
 
-<?php endif; ?><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading"><?php echo esc_html( $name ); ?></h3>
+<?php endif; ?><!-- wp:heading {"textAlign":"center","level":3} -->
+<h3 class="wp-block-heading has-text-align-center"><?php echo esc_html( $name ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"muted","fontSize":"s"} -->
-<p class="has-muted-color has-text-color has-s-font-size"><?php echo esc_html( $desc ); ?></p>
+<!-- wp:paragraph {"align":"center","textColor":"muted","fontSize":"s"} -->
+<p class="has-text-align-center has-muted-color has-text-color has-s-font-size"><?php echo esc_html( $desc ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"evive-price"} -->
-<p class="evive-price"><strong><?php echo esc_html( $price ); ?></strong> <?php echo esc_html( $period ); ?></p>
+<!-- wp:paragraph {"align":"center","className":"evive-price"} -->
+<p class="has-text-align-center evive-price"><strong><?php echo esc_html( $price ); ?></strong><?php echo esc_html( $period ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"textColor":"muted","fontSize":"xs"} -->
-<p class="has-muted-color has-text-color has-xs-font-size"><?php echo esc_html( $note ); ?></p>
+<!-- wp:paragraph {"align":"center","textColor":"muted","fontSize":"xs"} -->
+<p class="has-text-align-center has-muted-color has-text-color has-xs-font-size"><?php echo esc_html( $note ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"evive-checklist"} -->

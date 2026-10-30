@@ -2,6 +2,10 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.4.2 — 2026-10-30
+- `evive/pricing-plans`: centred card header (badge centred on the top border, name, description, price, yearly note); the checklist stays left-aligned. The bold price is on its own line with the period text below it (CSS, so existing pages built from 0.4.0 follow).
+- New pattern `evive/pricing-addon`: one wide card for an add-on or separate offer, with text and checklist on the left and a centred price box on the right in the plan price style.
+
 ## 0.4.1 — 2026-10-30
 - Fix: a heading inside a section with its own text colour (e.g. a CTA band on the primary colour) takes that colour. Before, it kept the theme's heading colour and could be invisible (navy on navy).
 

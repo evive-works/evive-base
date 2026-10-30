@@ -127,12 +127,13 @@
 .evive-plan.is-featured {
 	position: relative;
 }
-/* The badge sits on the top border, so plan names line up across the cards. */
+/* The badge sits centred on the top border, so plan names line up across the cards. */
 .evive-plan-badge {
-	left: var(--wp--preset--spacing--50);
+	left: 50%;
 	position: absolute;
 	top: 0;
-	transform: translateY(-50%);
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
 	background: var(--wp--preset--color--accent);
 	border-radius: 999px;
 	color: var(--wp--preset--color--accent-contrast);
@@ -146,11 +147,26 @@
 }
 .evive-price strong {
 	color: var(--wp--preset--color--contrast);
+	display: block;
 	font-family: var(--wp--preset--font-family--heading);
 	font-size: var(--wp--preset--font-size--xxl);
 	font-weight: 700;
-	line-height: 1;
-	margin-right: 0.15em;
+	line-height: 1.1;
+}
+
+/* Add-on card (pattern evive/pricing-addon): the price box on the right uses the plan price style. */
+.evive-addon-price {
+	border-radius: var(--wp--custom--radius--m);
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+	padding: var(--wp--preset--spacing--50) var(--wp--preset--spacing--40);
+}
+.evive-addon-price > * {
+	margin-block: 0;
+}
+.evive-addon-price > .evive-plan-actions {
+	padding-top: var(--wp--preset--spacing--20);
 }
 
 /* Checklist: list items with a check mark in the primary colour. */
