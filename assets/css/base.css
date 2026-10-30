@@ -256,3 +256,9 @@
 		z-index: 1;
 	}
 }
+
+/* Headings take the text colour of a section that sets one (e.g. a CTA band on the primary colour);
+   theme.json gives headings their own colour, which would otherwise disappear on a coloured background. */
+.has-text-color :where(h1, h2, h3, h4, h5, h6):not(.has-text-color) {
+	color: inherit;
+}

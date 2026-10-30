@@ -2,6 +2,9 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.4.1 — 2026-10-30
+- Fix: a heading inside a section with its own text colour (e.g. a CTA band on the primary colour) takes that colour. Before, it kept the theme's heading colour and could be invisible (navy on navy).
+
 ## 0.4.0 — 2026-10-29
 - Pricing patterns (evive #400): `evive/pricing-plans` (three equal-height plan cards, the middle one highlighted with a badge on its top border, large price with period, a line for the yearly price, a checklist, buttons aligned at the bottom) and `evive/pricing-comparison` (feature table across plans). New pattern category **Pricing**.
 - Block style **Comparison** for the Table block: plan columns centred, ✓ in the primary colour, an empty cell shows a muted dash, a row with a bold first cell and empty plan cells is a group heading, sticky header row; on phones the feature column stays fixed and the table scrolls sideways if it has to.

@@ -8,7 +8,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EVIVE_BASE_VERSION', '0.4.0' );
+define( 'EVIVE_BASE_VERSION', '0.4.1' );
 
 require_once __DIR__ . '/inc/updates.php';
 
