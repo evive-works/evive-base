@@ -2,6 +2,13 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.6.0 — 2026-10-30
+- New pattern `evive/steps`: "how it works" in three numbered steps, joined by a dashed line on wide screens (evive #401).
+- Device frames for screenshots: image block styles "Phone", "Browser window" and "Laptop", drawn in CSS around a plain screenshot; new pattern `evive/product-screenshot` (text + framed screenshot) and placeholder `placeholder-phone.svg` (evive #402).
+- New pattern `evive/bento`: features as tiles of different sizes on the core four-column grid layout; tiles stack on phones (evive #403).
+- New pattern `evive/problem-solution`: "without us" (cross list) next to "with us" (checklist, highlighted card); new list class `evive-crosslist` (evive #404).
+- nl_NL translations for all new strings (246 of 246).
+
 ## 0.5.1 — 2026-10-30
 - Dutch (nl_NL) translations for the pricing patterns, the CTA band with image and the Comparison table style (200 of 200 strings).
 - Updates come from the GitHub org `evive-works` by default (was `stackpros`, which doesn't exist). `EVIVE_GITHUB_OWNER` still overrides it.

@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: evive base 0.5.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive\n"
+"Project-Id-Version: evive base 0.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive-base\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-30T09:42:02+01:00\n"
+"POT-Creation-Date: 2026-10-30T18:36:33+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: evive\n"
@@ -69,19 +69,120 @@ msgctxt "pattern category"
 msgid "Pricing"
 msgstr ""
 
-#: functions.php:42
+#: functions.php:43
 msgctxt "block style"
 msgid "Card"
 msgstr ""
 
-#: functions.php:43
+#: functions.php:44
 msgctxt "block style"
 msgid "Motif"
 msgstr ""
 
-#: functions.php:44
+#: functions.php:45
 msgctxt "block style"
 msgid "Comparison"
+msgstr ""
+
+#: functions.php:46
+msgctxt "block style"
+msgid "Phone"
+msgstr ""
+
+#: functions.php:47
+msgctxt "block style"
+msgid "Browser window"
+msgstr ""
+
+#: functions.php:48
+msgctxt "block style"
+msgid "Laptop"
+msgstr ""
+
+#: patterns/bento.php
+msgctxt "Pattern title"
+msgid "Bento grid"
+msgstr ""
+
+#: patterns/bento.php
+msgctxt "Pattern description"
+msgid "Features as a mosaic of tiles of different sizes on a four-column grid: one large tile with an image, a tile on the primary colour, a key figure, an icon tile and two wide tiles. Each tile's size is set in the block settings (column span, row span); keep every row filled to four columns. On phones all tiles stack."
+msgstr ""
+
+#: patterns/bento.php:17
+msgctxt "placeholder"
+msgid "Everything your team needs"
+msgstr ""
+
+#: patterns/bento.php:21
+msgctxt "placeholder"
+msgid "One sentence that ties the features together."
+msgstr ""
+
+#: patterns/bento.php:27
+msgctxt "placeholder"
+msgid "The main feature"
+msgstr ""
+
+#: patterns/bento.php:31
+msgctxt "placeholder"
+msgid "Two sentences on the feature that matters most, with a screenshot below."
+msgstr ""
+
+#: patterns/bento.php:41
+msgctxt "placeholder"
+msgid "A bold promise"
+msgstr ""
+
+#: patterns/bento.php:45
+msgctxt "placeholder"
+msgid "One sentence that backs it up."
+msgstr ""
+
+#: patterns/bento.php:51
+msgctxt "placeholder"
+msgid "98%"
+msgstr ""
+
+#: patterns/bento.php:55
+msgctxt "placeholder"
+msgid "of customers would recommend us."
+msgstr ""
+
+#: patterns/bento.php:65
+msgctxt "placeholder"
+msgid "A smaller feature"
+msgstr ""
+
+#: patterns/bento.php:69
+#: patterns/features-icon-list.php:41
+#: patterns/features-icon-list.php:57
+#: patterns/features-icon-list.php:73
+#: patterns/features-icon-list.php:91
+#: patterns/features-icon-list.php:107
+#: patterns/features-icon-list.php:123
+msgctxt "placeholder"
+msgid "One sentence about this point."
+msgstr ""
+
+#: patterns/bento.php:75
+msgctxt "placeholder"
+msgid "Works with your tools"
+msgstr ""
+
+#: patterns/bento.php:79
+msgctxt "placeholder"
+msgid "One or two sentences about integrations or where it fits in."
+msgstr ""
+
+#: patterns/bento.php:85
+msgctxt "placeholder"
+msgid "Secure by default"
+msgstr ""
+
+#: patterns/bento.php:89
+msgctxt "placeholder"
+msgid "One or two sentences about privacy, security or support."
 msgstr ""
 
 #: patterns/cta-media.php
@@ -110,6 +211,7 @@ msgstr ""
 #: patterns/hero-media.php:28
 #: patterns/hero-primary.php:27
 #: patterns/hero-split.php:32
+#: patterns/product-screenshot.php:42
 msgctxt "placeholder"
 msgid "Primary action"
 msgstr ""
@@ -267,6 +369,7 @@ msgstr ""
 #: patterns/pricing-addon.php:27
 #: patterns/pricing-comparison.php:33
 #: patterns/pricing-plans.php:72
+#: patterns/product-screenshot.php:28
 msgctxt "placeholder"
 msgid "First feature"
 msgstr ""
@@ -284,6 +387,7 @@ msgstr ""
 #: patterns/pricing-plans.php:72
 #: patterns/pricing-plans.php:81
 #: patterns/pricing-plans.php:91
+#: patterns/product-screenshot.php:32
 msgctxt "placeholder"
 msgid "Second feature"
 msgstr ""
@@ -294,6 +398,7 @@ msgstr ""
 #: patterns/pricing-plans.php:72
 #: patterns/pricing-plans.php:81
 #: patterns/pricing-plans.php:91
+#: patterns/product-screenshot.php:36
 msgctxt "placeholder"
 msgid "Third feature"
 msgstr ""
@@ -321,16 +426,6 @@ msgstr ""
 #: patterns/features-icon-list.php:37
 msgctxt "placeholder"
 msgid "First point"
-msgstr ""
-
-#: patterns/features-icon-list.php:41
-#: patterns/features-icon-list.php:57
-#: patterns/features-icon-list.php:73
-#: patterns/features-icon-list.php:91
-#: patterns/features-icon-list.php:107
-#: patterns/features-icon-list.php:123
-msgctxt "placeholder"
-msgid "One sentence about this point."
 msgstr ""
 
 #: patterns/features-icon-list.php:53
@@ -896,6 +991,96 @@ msgctxt "placeholder"
 msgid "All prices exclude VAT."
 msgstr ""
 
+#: patterns/problem-solution.php
+msgctxt "Pattern title"
+msgid "Problem → solution"
+msgstr ""
+
+#: patterns/problem-solution.php
+msgctxt "Pattern description"
+msgid "Two cards side by side: on the left the situation without you (a cross list of pains, on the surface colour), on the right the situation with you (a checklist, highlighted with a primary border). Keep the points short and paired: each pain on the left has its answer on the right, in the same order. Stacks on phones."
+msgstr ""
+
+#: patterns/problem-solution.php:38
+msgctxt "placeholder"
+msgid "There is a better way"
+msgstr ""
+
+#: patterns/problem-solution.php:42
+msgctxt "placeholder"
+msgid "One sentence that names the problem your visitor recognises."
+msgstr ""
+
+#: patterns/problem-solution.php:50
+msgctxt "placeholder"
+msgid "Without us"
+msgstr ""
+
+#: patterns/problem-solution.php:51
+msgctxt "placeholder"
+msgid "Today"
+msgstr ""
+
+#: patterns/problem-solution.php:53
+msgctxt "placeholder"
+msgid "First pain point"
+msgstr ""
+
+#: patterns/problem-solution.php:53
+msgctxt "placeholder"
+msgid "Second pain point"
+msgstr ""
+
+#: patterns/problem-solution.php:53
+msgctxt "placeholder"
+msgid "Third pain point"
+msgstr ""
+
+#: patterns/problem-solution.php:58
+msgctxt "placeholder"
+msgid "With us"
+msgstr ""
+
+#: patterns/problem-solution.php:59
+msgctxt "placeholder"
+msgid "Tomorrow"
+msgstr ""
+
+#: patterns/problem-solution.php:61
+msgctxt "placeholder"
+msgid "First answer"
+msgstr ""
+
+#: patterns/problem-solution.php:61
+msgctxt "placeholder"
+msgid "Second answer"
+msgstr ""
+
+#: patterns/problem-solution.php:61
+msgctxt "placeholder"
+msgid "Third answer"
+msgstr ""
+
+#: patterns/product-screenshot.php
+msgctxt "Pattern title"
+msgid "Product screenshot in a device frame"
+msgstr ""
+
+#: patterns/product-screenshot.php
+msgctxt "Pattern description"
+msgid "Text with a checklist and a button on the left, a screenshot in a browser-window frame on the right. Use a plain screenshot: the frame is drawn by the image's block style, so switch the style to \"Phone\" for an app screen (portrait) or \"Laptop\" for a desktop screen. Never use an image with a device baked in."
+msgstr ""
+
+#: patterns/product-screenshot.php:19
+msgctxt "placeholder"
+msgid "Everything in one clear overview"
+msgstr ""
+
+#: patterns/product-screenshot.php:23
+msgctxt "placeholder"
+msgid "One or two sentences on what the screen shows and why it saves time."
+msgstr ""
+
 #: patterns/stats.php
 msgctxt "Pattern title"
 msgid "Stats"
@@ -924,6 +1109,56 @@ msgstr ""
 #: patterns/stats.php:53
 msgctxt "placeholder"
 msgid "Label for the fourth number"
+msgstr ""
+
+#: patterns/steps.php
+msgctxt "Pattern title"
+msgid "Steps: how it works"
+msgstr ""
+
+#: patterns/steps.php
+msgctxt "Pattern description"
+msgid "\"How it works\" in three numbered steps: a centred heading, then per step a number in a circle, a short heading and one sentence. On wide screens a dashed line joins the steps. For four steps, duplicate a column and change its number; the columns stack on phones."
+msgstr ""
+
+#: patterns/steps.php:34
+msgctxt "placeholder"
+msgid "How it works"
+msgstr ""
+
+#: patterns/steps.php:38
+msgctxt "placeholder"
+msgid "From first click to daily use in three simple steps."
+msgstr ""
+
+#: patterns/steps.php:43
+msgctxt "placeholder"
+msgid "Sign up"
+msgstr ""
+
+#: patterns/steps.php:43
+msgctxt "placeholder"
+msgid "Create your account in a minute, no credit card needed."
+msgstr ""
+
+#: patterns/steps.php:44
+msgctxt "placeholder"
+msgid "Set it up"
+msgstr ""
+
+#: patterns/steps.php:44
+msgctxt "placeholder"
+msgid "Add your team and locations, or let us do it for you."
+msgstr ""
+
+#: patterns/steps.php:45
+msgctxt "placeholder"
+msgid "Get going"
+msgstr ""
+
+#: patterns/steps.php:45
+msgctxt "placeholder"
+msgid "Everyone starts using it from the tools they already know."
 msgstr ""
 
 #: patterns/testimonial.php

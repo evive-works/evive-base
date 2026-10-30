@@ -4,14 +4,14 @@ msgid ""
 msgstr ""
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Project-Id-Version: evive base 0.5.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive\n"
+"Project-Id-Version: evive base 0.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive-base\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-30T09:42:02+01:00\n"
+"POT-Creation-Date: 2026-10-30T18:36:33+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: evive\n"
@@ -71,20 +71,121 @@ msgctxt "pattern category"
 msgid "Pricing"
 msgstr "Prijzen"
 
-#: functions.php:42
+#: functions.php:43
 msgctxt "block style"
 msgid "Card"
 msgstr "Kaart"
 
-#: functions.php:43
+#: functions.php:44
 msgctxt "block style"
 msgid "Motif"
 msgstr "Motief"
 
-#: functions.php:44
+#: functions.php:45
 msgctxt "block style"
 msgid "Comparison"
 msgstr "Vergelijking"
+
+#: functions.php:46
+msgctxt "block style"
+msgid "Phone"
+msgstr "Telefoon"
+
+#: functions.php:47
+msgctxt "block style"
+msgid "Browser window"
+msgstr "Browservenster"
+
+#: functions.php:48
+msgctxt "block style"
+msgid "Laptop"
+msgstr "Laptop"
+
+#: patterns/bento.php
+msgctxt "Pattern title"
+msgid "Bento grid"
+msgstr "Bento-raster"
+
+#: patterns/bento.php
+msgctxt "Pattern description"
+msgid "Features as a mosaic of tiles of different sizes on a four-column grid: one large tile with an image, a tile on the primary colour, a key figure, an icon tile and two wide tiles. Each tile's size is set in the block settings (column span, row span); keep every row filled to four columns. On phones all tiles stack."
+msgstr "Functies als mozaïek van tegels in verschillende maten op een raster van vier kolommen: één grote tegel met een afbeelding, een tegel op de primaire kleur, een kerncijfer, een icoontegel en twee brede tegels. De maat van elke tegel staat in de blokinstellingen (kolombreedte, rijhoogte); vul elke rij tot vier kolommen. Op telefoons staan alle tegels onder elkaar."
+
+#: patterns/bento.php:17
+msgctxt "placeholder"
+msgid "Everything your team needs"
+msgstr "Alles wat je team nodig heeft"
+
+#: patterns/bento.php:21
+msgctxt "placeholder"
+msgid "One sentence that ties the features together."
+msgstr "Eén zin die de functies met elkaar verbindt."
+
+#: patterns/bento.php:27
+msgctxt "placeholder"
+msgid "The main feature"
+msgstr "De belangrijkste functie"
+
+#: patterns/bento.php:31
+msgctxt "placeholder"
+msgid "Two sentences on the feature that matters most, with a screenshot below."
+msgstr "Twee zinnen over de functie die het meest telt, met een screenshot eronder."
+
+#: patterns/bento.php:41
+msgctxt "placeholder"
+msgid "A bold promise"
+msgstr "Een stevige belofte"
+
+#: patterns/bento.php:45
+msgctxt "placeholder"
+msgid "One sentence that backs it up."
+msgstr "Eén zin die het onderbouwt."
+
+#: patterns/bento.php:51
+msgctxt "placeholder"
+msgid "98%"
+msgstr "98%"
+
+#: patterns/bento.php:55
+msgctxt "placeholder"
+msgid "of customers would recommend us."
+msgstr "van de klanten raadt ons aan."
+
+#: patterns/bento.php:65
+msgctxt "placeholder"
+msgid "A smaller feature"
+msgstr "Een kleinere functie"
+
+#: patterns/bento.php:69
+#: patterns/features-icon-list.php:41
+#: patterns/features-icon-list.php:57
+#: patterns/features-icon-list.php:73
+#: patterns/features-icon-list.php:91
+#: patterns/features-icon-list.php:107
+#: patterns/features-icon-list.php:123
+msgctxt "placeholder"
+msgid "One sentence about this point."
+msgstr "Eén zin over dit punt."
+
+#: patterns/bento.php:75
+msgctxt "placeholder"
+msgid "Works with your tools"
+msgstr "Werkt met je eigen tools"
+
+#: patterns/bento.php:79
+msgctxt "placeholder"
+msgid "One or two sentences about integrations or where it fits in."
+msgstr "Een of twee zinnen over koppelingen of waar het in past."
+
+#: patterns/bento.php:85
+msgctxt "placeholder"
+msgid "Secure by default"
+msgstr "Standaard veilig"
+
+#: patterns/bento.php:89
+msgctxt "placeholder"
+msgid "One or two sentences about privacy, security or support."
+msgstr "Een of twee zinnen over privacy, beveiliging of support."
 
 #: patterns/cta-media.php
 msgctxt "Pattern title"
@@ -112,6 +213,7 @@ msgstr "Eén zin die de laatste twijfel wegneemt, en wat er gebeurt als je klikt
 #: patterns/hero-media.php:28
 #: patterns/hero-primary.php:27
 #: patterns/hero-split.php:32
+#: patterns/product-screenshot.php:42
 msgctxt "placeholder"
 msgid "Primary action"
 msgstr "Primaire actie"
@@ -269,6 +371,7 @@ msgstr "Een samenvatting in één regel van de functies hieronder."
 #: patterns/pricing-addon.php:27
 #: patterns/pricing-comparison.php:33
 #: patterns/pricing-plans.php:72
+#: patterns/product-screenshot.php:28
 msgctxt "placeholder"
 msgid "First feature"
 msgstr "Eerste functie"
@@ -286,6 +389,7 @@ msgstr "Een korte beschrijving van deze functie en wat die oplevert."
 #: patterns/pricing-plans.php:72
 #: patterns/pricing-plans.php:81
 #: patterns/pricing-plans.php:91
+#: patterns/product-screenshot.php:32
 msgctxt "placeholder"
 msgid "Second feature"
 msgstr "Tweede functie"
@@ -296,6 +400,7 @@ msgstr "Tweede functie"
 #: patterns/pricing-plans.php:72
 #: patterns/pricing-plans.php:81
 #: patterns/pricing-plans.php:91
+#: patterns/product-screenshot.php:36
 msgctxt "placeholder"
 msgid "Third feature"
 msgstr "Derde functie"
@@ -324,16 +429,6 @@ msgstr "Een korte regel die de lijst inleidt."
 msgctxt "placeholder"
 msgid "First point"
 msgstr "Eerste punt"
-
-#: patterns/features-icon-list.php:41
-#: patterns/features-icon-list.php:57
-#: patterns/features-icon-list.php:73
-#: patterns/features-icon-list.php:91
-#: patterns/features-icon-list.php:107
-#: patterns/features-icon-list.php:123
-msgctxt "placeholder"
-msgid "One sentence about this point."
-msgstr "Eén zin over dit punt."
 
 #: patterns/features-icon-list.php:53
 msgctxt "placeholder"
@@ -898,6 +993,96 @@ msgctxt "placeholder"
 msgid "All prices exclude VAT."
 msgstr "Alle prijzen zijn exclusief btw."
 
+#: patterns/problem-solution.php
+msgctxt "Pattern title"
+msgid "Problem → solution"
+msgstr "Probleem → oplossing"
+
+#: patterns/problem-solution.php
+msgctxt "Pattern description"
+msgid "Two cards side by side: on the left the situation without you (a cross list of pains, on the surface colour), on the right the situation with you (a checklist, highlighted with a primary border). Keep the points short and paired: each pain on the left has its answer on the right, in the same order. Stacks on phones."
+msgstr "Twee kaarten naast elkaar: links de situatie zonder jou (een lijst met kruisjes, op de vlakkleur), rechts de situatie met jou (een checklist, uitgelicht met een rand in de primaire kleur). Houd de punten kort en in paren: elk pijnpunt links heeft rechts zijn antwoord, in dezelfde volgorde. Op telefoons onder elkaar."
+
+#: patterns/problem-solution.php:38
+msgctxt "placeholder"
+msgid "There is a better way"
+msgstr "Het kan beter"
+
+#: patterns/problem-solution.php:42
+msgctxt "placeholder"
+msgid "One sentence that names the problem your visitor recognises."
+msgstr "Eén zin die het probleem benoemt dat je bezoeker herkent."
+
+#: patterns/problem-solution.php:50
+msgctxt "placeholder"
+msgid "Without us"
+msgstr "Zonder ons"
+
+#: patterns/problem-solution.php:51
+msgctxt "placeholder"
+msgid "Today"
+msgstr "Nu"
+
+#: patterns/problem-solution.php:53
+msgctxt "placeholder"
+msgid "First pain point"
+msgstr "Eerste pijnpunt"
+
+#: patterns/problem-solution.php:53
+msgctxt "placeholder"
+msgid "Second pain point"
+msgstr "Tweede pijnpunt"
+
+#: patterns/problem-solution.php:53
+msgctxt "placeholder"
+msgid "Third pain point"
+msgstr "Derde pijnpunt"
+
+#: patterns/problem-solution.php:58
+msgctxt "placeholder"
+msgid "With us"
+msgstr "Met ons"
+
+#: patterns/problem-solution.php:59
+msgctxt "placeholder"
+msgid "Tomorrow"
+msgstr "Straks"
+
+#: patterns/problem-solution.php:61
+msgctxt "placeholder"
+msgid "First answer"
+msgstr "Eerste antwoord"
+
+#: patterns/problem-solution.php:61
+msgctxt "placeholder"
+msgid "Second answer"
+msgstr "Tweede antwoord"
+
+#: patterns/problem-solution.php:61
+msgctxt "placeholder"
+msgid "Third answer"
+msgstr "Derde antwoord"
+
+#: patterns/product-screenshot.php
+msgctxt "Pattern title"
+msgid "Product screenshot in a device frame"
+msgstr "Productscreenshot in een apparaatframe"
+
+#: patterns/product-screenshot.php
+msgctxt "Pattern description"
+msgid "Text with a checklist and a button on the left, a screenshot in a browser-window frame on the right. Use a plain screenshot: the frame is drawn by the image's block style, so switch the style to \"Phone\" for an app screen (portrait) or \"Laptop\" for a desktop screen. Never use an image with a device baked in."
+msgstr "Tekst met een checklist en een knop links, een screenshot in een browservensterframe rechts. Gebruik een kale screenshot: het frame komt van de blokstijl van de afbeelding, dus kies de stijl \"Telefoon\" voor een appscherm (staand) of \"Laptop\" voor een desktopscherm. Gebruik nooit een afbeelding met een ingebakken apparaat."
+
+#: patterns/product-screenshot.php:19
+msgctxt "placeholder"
+msgid "Everything in one clear overview"
+msgstr "Alles in één helder overzicht"
+
+#: patterns/product-screenshot.php:23
+msgctxt "placeholder"
+msgid "One or two sentences on what the screen shows and why it saves time."
+msgstr "Een of twee zinnen over wat het scherm laat zien en waarom het tijd scheelt."
+
 #: patterns/stats.php
 msgctxt "Pattern title"
 msgid "Stats"
@@ -927,6 +1112,56 @@ msgstr "Label bij het derde getal"
 msgctxt "placeholder"
 msgid "Label for the fourth number"
 msgstr "Label bij het vierde getal"
+
+#: patterns/steps.php
+msgctxt "Pattern title"
+msgid "Steps: how it works"
+msgstr "Stappen: zo werkt het"
+
+#: patterns/steps.php
+msgctxt "Pattern description"
+msgid "\"How it works\" in three numbered steps: a centred heading, then per step a number in a circle, a short heading and one sentence. On wide screens a dashed line joins the steps. For four steps, duplicate a column and change its number; the columns stack on phones."
+msgstr "\"Zo werkt het\" in drie genummerde stappen: een gecentreerde kop, dan per stap een nummer in een cirkel, een korte kop en één zin. Op brede schermen verbindt een stippellijn de stappen. Voor vier stappen: dupliceer een kolom en pas het nummer aan; op telefoons staan de kolommen onder elkaar."
+
+#: patterns/steps.php:34
+msgctxt "placeholder"
+msgid "How it works"
+msgstr "Zo werkt het"
+
+#: patterns/steps.php:38
+msgctxt "placeholder"
+msgid "From first click to daily use in three simple steps."
+msgstr "Van de eerste klik tot dagelijks gebruik in drie eenvoudige stappen."
+
+#: patterns/steps.php:43
+msgctxt "placeholder"
+msgid "Sign up"
+msgstr "Aanmelden"
+
+#: patterns/steps.php:43
+msgctxt "placeholder"
+msgid "Create your account in a minute, no credit card needed."
+msgstr "Maak in een minuut je account aan, zonder creditcard."
+
+#: patterns/steps.php:44
+msgctxt "placeholder"
+msgid "Set it up"
+msgstr "Inrichten"
+
+#: patterns/steps.php:44
+msgctxt "placeholder"
+msgid "Add your team and locations, or let us do it for you."
+msgstr "Voeg je team en locaties toe, of laat ons dat voor je doen."
+
+#: patterns/steps.php:45
+msgctxt "placeholder"
+msgid "Get going"
+msgstr "Aan de slag"
+
+#: patterns/steps.php:45
+msgctxt "placeholder"
+msgid "Everyone starts using it from the tools they already know."
+msgstr "Iedereen gebruikt het vanuit de tools die ze al kennen."
 
 #: patterns/testimonial.php
 msgctxt "Pattern title"

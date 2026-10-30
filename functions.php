@@ -8,7 +8,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EVIVE_BASE_VERSION', '0.5.1' );
+define( 'EVIVE_BASE_VERSION', '0.6.0' );
 
 require_once __DIR__ . '/inc/updates.php';
 
@@ -37,11 +37,15 @@ add_action( 'init', function () {
 } );
 
 // Block styles used by the patterns: "Card" (rounded, soft shadow; values in theme.json), "Motif"
-// (large faded rounded-rectangle outlines behind a section) and "Comparison" for tables (CSS in base.css).
+// (large faded rounded-rectangle outlines behind a section), "Comparison" for tables and the device frames
+// "Phone", "Browser window" and "Laptop" for screenshots (CSS in base.css).
 add_action( 'init', function () {
 	register_block_style( 'core/group', [ 'name' => 'card', 'label' => _x( 'Card', 'block style', 'evive' ) ] );
 	register_block_style( 'core/group', [ 'name' => 'motif', 'label' => _x( 'Motif', 'block style', 'evive' ) ] );
 	register_block_style( 'core/table', [ 'name' => 'comparison', 'label' => _x( 'Comparison', 'block style', 'evive' ) ] );
+	register_block_style( 'core/image', [ 'name' => 'phone', 'label' => _x( 'Phone', 'block style', 'evive' ) ] );
+	register_block_style( 'core/image', [ 'name' => 'browser', 'label' => _x( 'Browser window', 'block style', 'evive' ) ] );
+	register_block_style( 'core/image', [ 'name' => 'laptop', 'label' => _x( 'Laptop', 'block style', 'evive' ) ] );
 } );
 
 // FAQ pattern: a group with the class "evive-faq" gets FAQPage structured data built from its
