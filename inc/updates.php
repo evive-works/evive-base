@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 	}
 	require_once __DIR__ . '/../lib/plugin-update-checker/plugin-update-checker.php';
 
-	$owner   = defined( 'EVIVE_GITHUB_OWNER' ) ? EVIVE_GITHUB_OWNER : 'stackpros';
+	$owner   = defined( 'EVIVE_GITHUB_OWNER' ) ? EVIVE_GITHUB_OWNER : 'evive-works';
 	$checker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
 		'https://github.com/' . rawurlencode( $owner ) . '/evive-base/',
 		get_template_directory() . '/functions.php',

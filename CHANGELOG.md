@@ -4,6 +4,7 @@ All notable changes. Semantic versioning: a slug change in the token contract is
 
 ## 0.5.1 — 2026-10-30
 - Dutch (nl_NL) translations for the pricing patterns, the CTA band with image and the Comparison table style (200 of 200 strings).
+- Updates come from the GitHub org `evive-works` by default (was `stackpros`, which doesn't exist). `EVIVE_GITHUB_OWNER` still overrides it.
 
 ## 0.5.0 — 2026-10-30
 - New pattern `evive/cta-media`: call-to-action band on the primary colour with text and two buttons on the left and an image on the right that rises above the band (wide screens) and rests on its bottom edge. Made for a product mockup with a transparent background; on phones the image sits centred below the text.
