@@ -175,6 +175,36 @@
 	padding-top: var(--wp--preset--spacing--20);
 }
 
+/* CTA band with image (pattern evive/cta-media): on wide screens the image rises above the band and
+   rests on its bottom edge; on phones it sits centred below the text. */
+.evive-cta-media-image {
+	margin: 0;
+}
+.evive-cta-media-image img {
+	display: block;
+	height: auto;
+	margin-inline: auto;
+	max-width: 100%;
+}
+@media (min-width: 782px) {
+	/* Two classes: core's layout rules zero the first/last child's block margins at one class. */
+	.evive-cta-media .evive-cta-media-image {
+		margin-bottom: calc(-1 * var(--wp--preset--spacing--60));
+		margin-top: calc(-1 * var(--wp--preset--spacing--70) - var(--wp--preset--spacing--60));
+	}
+	.evive-cta-media-image img {
+		max-height: 28rem;
+		object-fit: contain;
+		width: auto;
+	}
+}
+@media (max-width: 781px) {
+	.evive-cta-media-image img {
+		max-height: 18rem;
+		width: auto;
+	}
+}
+
 /* Checklist: list items with a check mark in the primary colour. */
 .evive-checklist {
 	list-style: none;

@@ -2,6 +2,9 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.5.0 — 2026-10-30
+- New pattern `evive/cta-media`: call-to-action band on the primary colour with text and two buttons on the left and an image on the right that rises above the band (wide screens) and rests on its bottom edge. Made for a product mockup with a transparent background; on phones the image sits centred below the text.
+
 ## 0.4.3 — 2026-10-30
 - Comparison table on phones: tighter plan columns, and long words in the feature column hyphenate, so a table with three plans fits a 390px screen without sideways scrolling. Group headings aren't uppercased on phones.
 - Top-level page parts get `min-width: 0`, so wide content scrolls inside its own box instead of widening the page.
