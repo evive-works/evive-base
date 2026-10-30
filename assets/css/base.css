@@ -55,6 +55,12 @@
 	flex: 1 0 auto;
 }
 
+/* Flex items default to min-width: auto, so wide content (a table) would stretch the page instead of
+   scrolling inside its own box. */
+.wp-site-blocks > * {
+	min-width: 0;
+}
+
 /* Very narrow screens: let the header actions wrap instead of overflowing. */
 @media (max-width: 30em) {
 	.evive-header .wp-block-group.alignwide {
@@ -254,10 +260,18 @@
 }
 @media (max-width: 781px) {
 	.wp-block-table.is-style-comparison {
+		max-width: 100%;
 		overflow-x: auto;
+	}
+	.is-style-comparison tr:has(> td:first-child > strong):has(> td:nth-child(2):empty) td {
+		letter-spacing: normal;
+		text-transform: none;
 	}
 	.is-style-comparison :is(th, td) {
 		padding-inline: var(--wp--preset--spacing--10);
+	}
+	.is-style-comparison :is(th, td):not(:first-child) {
+		padding-inline: 0.2em;
 	}
 	.is-style-comparison thead th {
 		font-size: var(--wp--preset--font-size--xs);
@@ -266,6 +280,7 @@
 	.is-style-comparison :is(th, td):first-child {
 		background: var(--wp--preset--color--base);
 		font-size: var(--wp--preset--font-size--s);
+		hyphens: auto;
 		left: 0;
 		position: sticky;
 		width: auto;

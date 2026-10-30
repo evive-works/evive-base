@@ -2,6 +2,10 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.4.3 — 2026-10-30
+- Comparison table on phones: tighter plan columns, and long words in the feature column hyphenate, so a table with three plans fits a 390px screen without sideways scrolling. Group headings aren't uppercased on phones.
+- Top-level page parts get `min-width: 0`, so wide content scrolls inside its own box instead of widening the page.
+
 ## 0.4.2 — 2026-10-30
 - `evive/pricing-plans`: centred card header (badge centred on the top border, name, description, price, yearly note); the checklist stays left-aligned. The bold price is on its own line with the period text below it (CSS, so existing pages built from 0.4.0 follow).
 - New pattern `evive/pricing-addon`: one wide card for an add-on or separate offer, with text and checklist on the left and a centred price box on the right in the plan price style.
