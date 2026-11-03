@@ -215,5 +215,42 @@ T = {
  "Add your team and locations, or let us do it for you.": "Voeg je team en locaties toe, of laat ons dat voor je doen.",
  "Get going": "Aan de slag",
  "Everyone starts using it from the tools they already know.": "Iedereen gebruikt het vanuit de tools die ze al kennen.",
+
+ "Case archive grid": "Raster met cases",
+ "The cards on the \"Cases\" category page: featured image, title, excerpt and a link, three per row.": "De kaarten op de categoriepagina \"Cases\": uitgelichte afbeelding, titel, samenvatting en een link, drie per rij.",
+ "Read the case": "Lees de case",
+ "Case cards": "Casekaarten",
+ "Three customer cards side by side: logo, the result in one number, a short quote and a link to the full case. Link each card to its case post (category \"Cases\"). Stacks on phones.":
+  "Drie klantkaarten naast elkaar: logo, het resultaat in één getal, een kort citaat en een link naar de volledige case. Link elke kaart naar het bericht van die case (categorie \"Cases\"). Op telefoons onder elkaar.",
+ "What our customers achieved": "Wat onze klanten bereikten",
+ "Real organisations, real results. Read how they did it.": "Echte organisaties, echte resultaten. Lees hoe ze het deden.",
+ "less time spent on scheduling": "minder tijd kwijt aan plannen",
+ "One short sentence from the customer about what changed for them.": "Eén korte zin van de klant over wat er voor hen veranderde.",
+ "Customer one": "Klant een",
+ "more people reached": "meer mensen bereikt",
+ "Customer two": "Klant twee",
+ "from start to live": "van start tot live",
+ "Customer three": "Klant drie",
+ "Case study": "Klantcase",
+ "The body of one customer case, offered when you start a new post: key figures, the challenge, the solution and the result, a fact box with the customer's logo, a quote and a call to action. Put the post in the category \"Cases\" and it gets the case layout (title, excerpt as intro, featured image) automatically.":
+  "De inhoud van één klantcase, aangeboden als je een nieuw bericht begint: kerncijfers, de uitdaging, de oplossing en het resultaat, een feitenblok met het logo van de klant, een citaat en een call-to-action. Zet het bericht in de categorie \"Cases\" en het krijgt vanzelf de case-opmaak (titel, samenvatting als intro, uitgelichte afbeelding).",
+ "employees using it every week": "medewerkers gebruiken het elke week",
+ "The challenge": "De uitdaging",
+ "Describe the situation before: what was not working, what it cost the customer and why they started looking for something else. Concrete beats general.":
+  "Beschrijf de situatie ervoor: wat werkte niet, wat kostte dat de klant en waarom gingen ze op zoek naar iets anders. Concreet wint van algemeen.",
+ "The solution": "De oplossing",
+ "Describe what you did together: what was set up, how long it took and who was involved. Mention the parts of your product that made the difference.":
+  "Beschrijf wat jullie samen deden: wat er is ingericht, hoe lang het duurde en wie erbij betrokken waren. Noem de onderdelen van je product die het verschil maakten.",
+ "The result": "Het resultaat",
+ "Describe what changed, in numbers where you can. The key figures above should come back here with a sentence of context.":
+  "Beschrijf wat er veranderde, waar het kan in cijfers. De kerncijfers hierboven komen hier terug met een zin context.",
+ "Customer": "Klant",
+ "Company name": "Bedrijfsnaam",
+ "Industry": "Branche",
+ "Healthcare": "Zorg",
+ "Size": "Omvang",
+ "1,500 employees": "1.500 medewerkers",
+ "Customer since": "Klant sinds",
+ "Case": "Case",
 }
 CTX = {}

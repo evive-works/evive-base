@@ -4,14 +4,14 @@ msgid ""
 msgstr ""
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Project-Id-Version: evive base 0.5.1\n"
+"Project-Id-Version: evive base 0.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive-base\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-30T18:36:33+01:00\n"
+"POT-Creation-Date: 2026-11-03T15:33:12+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: evive\n"
@@ -186,6 +186,202 @@ msgstr "Standaard veilig"
 msgctxt "placeholder"
 msgid "One or two sentences about privacy, security or support."
 msgstr "Een of twee zinnen over privacy, beveiliging of support."
+
+#: patterns/case-archive.php
+msgctxt "Pattern title"
+msgid "Case archive grid"
+msgstr "Raster met cases"
+
+#: patterns/case-archive.php
+msgctxt "Pattern description"
+msgid "The cards on the \"Cases\" category page: featured image, title, excerpt and a link, three per row."
+msgstr "De kaarten op de categoriepagina \"Cases\": uitgelichte afbeelding, titel, samenvatting en een link, drie per rij."
+
+#: patterns/case-archive.php:20
+msgctxt "link"
+msgid "Read the case"
+msgstr "Lees de case"
+
+#: patterns/case-cards.php
+msgctxt "Pattern title"
+msgid "Case cards"
+msgstr "Casekaarten"
+
+#: patterns/case-cards.php
+msgctxt "Pattern description"
+msgid "Three customer cards side by side: logo, the result in one number, a short quote and a link to the full case. Link each card to its case post (category \"Cases\"). Stacks on phones."
+msgstr "Drie klantkaarten naast elkaar: logo, het resultaat in één getal, een kort citaat en een link naar de volledige case. Link elke kaart naar het bericht van die case (categorie \"Cases\"). Op telefoons onder elkaar."
+
+#: patterns/case-cards.php:37
+msgctxt "placeholder"
+msgid "Read the case"
+msgstr "Lees de case"
+
+#: patterns/case-cards.php:46
+msgctxt "placeholder"
+msgid "What our customers achieved"
+msgstr "Wat onze klanten bereikten"
+
+#: patterns/case-cards.php:50
+msgctxt "placeholder"
+msgid "Real organisations, real results. Read how they did it."
+msgstr "Echte organisaties, echte resultaten. Lees hoe ze het deden."
+
+#: patterns/case-cards.php:55
+#: patterns/case-study.php:73
+msgctxt "placeholder"
+msgid "less time spent on scheduling"
+msgstr "minder tijd kwijt aan plannen"
+
+#: patterns/case-cards.php:55
+#: patterns/case-cards.php:56
+#: patterns/case-cards.php:57
+msgctxt "placeholder"
+msgid "One short sentence from the customer about what changed for them."
+msgstr "Eén korte zin van de klant over wat er voor hen veranderde."
+
+#: patterns/case-cards.php:55
+msgctxt "placeholder"
+msgid "Customer one"
+msgstr "Klant een"
+
+#: patterns/case-cards.php:56
+msgctxt "placeholder"
+msgid "more people reached"
+msgstr "meer mensen bereikt"
+
+#: patterns/case-cards.php:56
+msgctxt "placeholder"
+msgid "Customer two"
+msgstr "Klant twee"
+
+#: patterns/case-cards.php:57
+#: patterns/case-study.php:75
+msgctxt "placeholder"
+msgid "from start to live"
+msgstr "van start tot live"
+
+#: patterns/case-cards.php:57
+msgctxt "placeholder"
+msgid "Customer three"
+msgstr "Klant drie"
+
+#: patterns/case-study.php
+msgctxt "Pattern title"
+msgid "Case study"
+msgstr "Klantcase"
+
+#: patterns/case-study.php
+msgctxt "Pattern description"
+msgid "The body of one customer case, offered when you start a new post: key figures, the challenge, the solution and the result, a fact box with the customer's logo, a quote and a call to action. Put the post in the category \"Cases\" and it gets the case layout (title, excerpt as intro, featured image) automatically."
+msgstr "De inhoud van één klantcase, aangeboden als je een nieuw bericht begint: kerncijfers, de uitdaging, de oplossing en het resultaat, een feitenblok met het logo van de klant, een citaat en een call-to-action. Zet het bericht in de categorie \"Cases\" en het krijgt vanzelf de case-opmaak (titel, samenvatting als intro, uitgelichte afbeelding)."
+
+#: patterns/case-study.php:74
+msgctxt "placeholder"
+msgid "employees using it every week"
+msgstr "medewerkers gebruiken het elke week"
+
+#: patterns/case-study.php:82
+msgctxt "placeholder"
+msgid "The challenge"
+msgstr "De uitdaging"
+
+#: patterns/case-study.php:82
+msgctxt "placeholder"
+msgid "Describe the situation before: what was not working, what it cost the customer and why they started looking for something else. Concrete beats general."
+msgstr "Beschrijf de situatie ervoor: wat werkte niet, wat kostte dat de klant en waarom gingen ze op zoek naar iets anders. Concreet wint van algemeen."
+
+#: patterns/case-study.php:83
+msgctxt "placeholder"
+msgid "The solution"
+msgstr "De oplossing"
+
+#: patterns/case-study.php:83
+msgctxt "placeholder"
+msgid "Describe what you did together: what was set up, how long it took and who was involved. Mention the parts of your product that made the difference."
+msgstr "Beschrijf wat jullie samen deden: wat er is ingericht, hoe lang het duurde en wie erbij betrokken waren. Noem de onderdelen van je product die het verschil maakten."
+
+#: patterns/case-study.php:84
+msgctxt "placeholder"
+msgid "The result"
+msgstr "Het resultaat"
+
+#: patterns/case-study.php:84
+msgctxt "placeholder"
+msgid "Describe what changed, in numbers where you can. The key figures above should come back here with a sentence of context."
+msgstr "Beschrijf wat er veranderde, waar het kan in cijfers. De kerncijfers hierboven komen hier terug met een zin context."
+
+#: patterns/case-study.php:91
+#: patterns/logo-wall.php:22
+#: patterns/logo-wall.php:26
+#: patterns/logo-wall.php:30
+#: patterns/logo-wall.php:34
+#: patterns/logo-wall.php:38
+msgctxt "placeholder"
+msgid "Customer logo"
+msgstr "Klantlogo"
+
+#: patterns/case-study.php:94
+msgctxt "case fact"
+msgid "Customer"
+msgstr "Klant"
+
+#: patterns/case-study.php:94
+msgctxt "placeholder"
+msgid "Company name"
+msgstr "Bedrijfsnaam"
+
+#: patterns/case-study.php:95
+msgctxt "case fact"
+msgid "Industry"
+msgstr "Branche"
+
+#: patterns/case-study.php:95
+msgctxt "placeholder"
+msgid "Healthcare"
+msgstr "Zorg"
+
+#: patterns/case-study.php:96
+msgctxt "case fact"
+msgid "Size"
+msgstr "Omvang"
+
+#: patterns/case-study.php:96
+msgctxt "placeholder"
+msgid "1,500 employees"
+msgstr "1.500 medewerkers"
+
+#: patterns/case-study.php:97
+msgctxt "case fact"
+msgid "Customer since"
+msgstr "Klant sinds"
+
+#: patterns/case-study.php:105
+#: patterns/testimonial.php:19
+#: patterns/testimonials-grid.php:28
+#: patterns/testimonials-grid.php:52
+#: patterns/testimonials-grid.php:76
+msgctxt "placeholder"
+msgid "A short, specific quote about the result a customer got. Real words from a real person."
+msgstr "Een kort, concreet citaat over het resultaat dat een klant behaalde. Echte woorden van een echt persoon."
+
+#: patterns/case-study.php:115
+#: patterns/testimonial.php:29
+#: patterns/testimonials-grid.php:38
+#: patterns/testimonials-grid.php:62
+#: patterns/testimonials-grid.php:86
+msgctxt "placeholder"
+msgid "Name Surname"
+msgstr "Voornaam Achternaam"
+
+#: patterns/case-study.php:119
+#: patterns/testimonial.php:33
+#: patterns/testimonials-grid.php:42
+#: patterns/testimonials-grid.php:66
+#: patterns/testimonials-grid.php:90
+msgctxt "placeholder"
+msgid "Role, Company"
+msgstr "Functie, bedrijf"
 
 #: patterns/cta-media.php
 msgctxt "Pattern title"
@@ -716,15 +912,6 @@ msgctxt "placeholder"
 msgid "Trusted by teams at"
 msgstr "Teams die op ons vertrouwen"
 
-#: patterns/logo-wall.php:22
-#: patterns/logo-wall.php:26
-#: patterns/logo-wall.php:30
-#: patterns/logo-wall.php:34
-#: patterns/logo-wall.php:38
-msgctxt "placeholder"
-msgid "Customer logo"
-msgstr "Klantlogo"
-
 #: patterns/no-results.php
 msgctxt "Pattern title"
 msgid "No results"
@@ -1173,30 +1360,6 @@ msgctxt "Pattern description"
 msgid "One large customer quote with name, role and photo."
 msgstr "Eén groot klantcitaat met naam, functie en foto."
 
-#: patterns/testimonial.php:19
-#: patterns/testimonials-grid.php:28
-#: patterns/testimonials-grid.php:52
-#: patterns/testimonials-grid.php:76
-msgctxt "placeholder"
-msgid "A short, specific quote about the result a customer got. Real words from a real person."
-msgstr "Een kort, concreet citaat over het resultaat dat een klant behaalde. Echte woorden van een echt persoon."
-
-#: patterns/testimonial.php:29
-#: patterns/testimonials-grid.php:38
-#: patterns/testimonials-grid.php:62
-#: patterns/testimonials-grid.php:86
-msgctxt "placeholder"
-msgid "Name Surname"
-msgstr "Voornaam Achternaam"
-
-#: patterns/testimonial.php:33
-#: patterns/testimonials-grid.php:42
-#: patterns/testimonials-grid.php:66
-#: patterns/testimonials-grid.php:90
-msgctxt "placeholder"
-msgid "Role, Company"
-msgstr "Functie, bedrijf"
-
 #: patterns/testimonials-grid.php
 msgctxt "Pattern title"
 msgid "Testimonials: grid of three"
@@ -1366,3 +1529,8 @@ msgstr "Footer"
 msgctxt "Custom template name"
 msgid "Page without title (hero first)"
 msgstr "Pagina zonder titel (hero eerst)"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Case"
+msgstr "Case"

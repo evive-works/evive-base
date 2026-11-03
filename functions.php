@@ -101,3 +101,20 @@ add_filter( 'render_block_core/navigation', function ( $html ) {
 		$html
 	);
 } );
+
+// Cases are ordinary posts in the category "Cases" (slug filterable). They get single-case.html
+// automatically, unless the post has another template picked in the editor; the category page
+// itself uses category-cases.html.
+add_filter( 'single_template_hierarchy', function ( $templates ) {
+	$post = get_queried_object();
+	if ( ! $post instanceof WP_Post || 'post' !== $post->post_type || ! has_category( apply_filters( 'evive_case_category', 'cases' ), $post ) ) {
+		return $templates;
+	}
+	foreach ( $templates as $i => $template ) {
+		if ( str_starts_with( $template, 'single-post' ) ) {
+			array_splice( $templates, $i, 0, 'single-case.php' );
+			break;
+		}
+	}
+	return $templates;
+} );

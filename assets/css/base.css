@@ -488,3 +488,9 @@
 	border: 2px solid var(--wp--preset--color--primary);
 	box-shadow: var(--wp--preset--shadow--m);
 }
+
+/* Case cards: the link to the full case sits at the bottom, so cards in a row line up. */
+.evive-case-card > .evive-case-link {
+	margin-top: auto;
+	padding-top: var(--wp--preset--spacing--20);
+}
