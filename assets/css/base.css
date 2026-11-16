@@ -197,10 +197,19 @@
 		object-fit: contain;
 		width: auto;
 	}
-	/* Phone frame in the CTA: the height cap sets the size and the phone shape sets the width. */
-	.evive-cta-media-image.is-style-phone img {
+	/* Phone frames in the CTA: the height cap sets the size and the phone shape sets the width. They
+	   don't rest on the band's bottom edge like a cut-out mockup: they stand inside the band. */
+	.evive-cta-media-image.is-style-phone img,
+	.evive-cta-media-image.is-style-phone-float img {
 		object-fit: cover;
 		width: auto;
+	}
+	.evive-cta-media .evive-cta-media-image.is-style-phone {
+		margin-bottom: 0;
+	}
+	/* The turned phone reaches lower than its box, so it keeps clear space under it in the band. */
+	.evive-cta-media .evive-cta-media-image.is-style-phone-float {
+		margin-bottom: var(--wp--preset--spacing--50);
 	}
 }
 @media (max-width: 781px) {
@@ -208,7 +217,8 @@
 		max-height: 18rem;
 		width: auto;
 	}
-	.evive-cta-media-image.is-style-phone img {
+	.evive-cta-media-image.is-style-phone img,
+	.evive-cta-media-image.is-style-phone-float img {
 		width: auto;
 	}
 }
@@ -367,6 +377,7 @@
 /* Device frames for screenshots: image block styles "Phone", "Browser window" and "Laptop". The frame is
    drawn around any image, so a plain screenshot is enough (no mockup with a baked-in device). */
 .wp-block-image.is-style-phone,
+.wp-block-image.is-style-phone-float,
 .wp-block-image.is-style-browser,
 .wp-block-image.is-style-laptop {
 	margin-left: auto;
@@ -374,38 +385,65 @@
 	position: relative;
 }
 .wp-block-image.is-style-phone img,
+.wp-block-image.is-style-phone-float img,
 .wp-block-image.is-style-browser img,
 .wp-block-image.is-style-laptop img {
 	display: block;
 	height: auto;
 	width: 100%;
 }
-.wp-block-image.is-style-phone {
+.wp-block-image.is-style-phone,
+.wp-block-image.is-style-phone-float {
 	max-width: 300px;
 	/* The frame hugs the screen, so the notch stays centred on it at any size. */
 	width: fit-content;
 }
 /* A fixed phone shape: a screenshot of any size fills the screen from the top, and whatever is too
    long is cut off at the bottom (like a phone showing the top of a scrolling page). */
-.wp-block-image.is-style-phone img {
+.wp-block-image.is-style-phone img,
+.wp-block-image.is-style-phone-float img {
 	aspect-ratio: 9 / 19.5;
 	border: 0.6rem solid var(--wp--preset--color--contrast);
-	border-radius: 2.4rem;
+	/* Corners in proportion (horizontal / vertical), so a small phone keeps its shape. */
+	border-radius: 15% / 7%;
 	box-shadow: var(--wp--preset--shadow--m);
 	object-fit: cover;
 	object-position: top;
 }
-.wp-block-image.is-style-phone::before {
+.wp-block-image.is-style-phone::before,
+.wp-block-image.is-style-phone-float::before {
 	background: var(--wp--preset--color--contrast);
 	border-radius: 1rem;
 	content: "";
-	height: 1.4rem;
+	aspect-ratio: 4 / 1;
 	left: 50%;
 	position: absolute;
-	top: 1.1rem;
+	top: 2.4%;
 	transform: translateX(-50%);
 	width: 30%;
 	z-index: 1;
+}
+/* "Phone, floating": the same phone, slightly turned in 3D, with a metal edge, a side button and a
+   soft shadow below, so it seems to hover. Static (no animation), so reduced motion needs nothing. */
+.wp-block-image.is-style-phone-float {
+	margin-bottom: var(--wp--preset--spacing--50);
+	transform: perspective(1400px) rotateX(5deg) rotateY(-16deg) rotateZ(4deg);
+}
+.wp-block-image.is-style-phone-float img {
+	border-width: 0.5rem;
+	box-shadow:
+		0 0 0 2px color-mix(in srgb, var(--wp--preset--color--contrast) 55%, var(--wp--preset--color--base)),
+		1.5rem 2.5rem 3rem -0.5rem color-mix(in srgb, var(--wp--preset--color--contrast) 45%, transparent);
+}
+.wp-block-image.is-style-phone-float::after {
+	background: color-mix(in srgb, var(--wp--preset--color--contrast) 70%, var(--wp--preset--color--base));
+	border-radius: 0 3px 3px 0;
+	content: "";
+	height: 12%;
+	position: absolute;
+	right: -4px;
+	top: 22%;
+	width: 4px;
 }
 .wp-block-image.is-style-browser {
 	background: var(--wp--preset--color--surface);
@@ -443,6 +481,7 @@
 	margin: 0 -8%;
 }
 .wp-block-image.is-style-phone figcaption,
+.wp-block-image.is-style-phone-float figcaption,
 .wp-block-image.is-style-browser figcaption,
 .wp-block-image.is-style-laptop figcaption {
 	text-align: center;

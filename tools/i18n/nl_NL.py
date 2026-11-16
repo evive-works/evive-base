@@ -166,6 +166,7 @@ T = {
  "One sentence that removes the last doubt, and what happens when you click.": "Eén zin die de laatste twijfel wegneemt, en wat er gebeurt als je klikt.",
  "Secondary action": "Secundaire actie",
  "Phone": "Telefoon",
+ "Phone, floating": "Telefoon, zwevend",
  "Browser window": "Browservenster",
  "Laptop": "Laptop",
  "Bento grid": "Bento-raster",

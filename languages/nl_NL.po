@@ -5,13 +5,13 @@ msgstr ""
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: evive base 0.6.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive-base\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/evive\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-03T15:33:12+01:00\n"
+"POT-Creation-Date: 2026-11-16T16:48:21+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: evive\n"
@@ -93,10 +93,15 @@ msgstr "Telefoon"
 
 #: functions.php:47
 msgctxt "block style"
+msgid "Phone, floating"
+msgstr "Telefoon, zwevend"
+
+#: functions.php:48
+msgctxt "block style"
 msgid "Browser window"
 msgstr "Browservenster"
 
-#: functions.php:48
+#: functions.php:49
 msgctxt "block style"
 msgid "Laptop"
 msgstr "Laptop"

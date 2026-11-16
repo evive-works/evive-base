@@ -44,6 +44,7 @@ add_action( 'init', function () {
 	register_block_style( 'core/group', [ 'name' => 'motif', 'label' => _x( 'Motif', 'block style', 'evive' ) ] );
 	register_block_style( 'core/table', [ 'name' => 'comparison', 'label' => _x( 'Comparison', 'block style', 'evive' ) ] );
 	register_block_style( 'core/image', [ 'name' => 'phone', 'label' => _x( 'Phone', 'block style', 'evive' ) ] );
+	register_block_style( 'core/image', [ 'name' => 'phone-float', 'label' => _x( 'Phone, floating', 'block style', 'evive' ) ] );
 	register_block_style( 'core/image', [ 'name' => 'browser', 'label' => _x( 'Browser window', 'block style', 'evive' ) ] );
 	register_block_style( 'core/image', [ 'name' => 'laptop', 'label' => _x( 'Laptop', 'block style', 'evive' ) ] );
 } );
