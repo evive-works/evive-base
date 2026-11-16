@@ -197,10 +197,18 @@
 		object-fit: contain;
 		width: auto;
 	}
+	/* Phone frame in the CTA: the height cap sets the size and the phone shape sets the width. */
+	.evive-cta-media-image.is-style-phone img {
+		object-fit: cover;
+		width: auto;
+	}
 }
 @media (max-width: 781px) {
 	.evive-cta-media-image img {
 		max-height: 18rem;
+		width: auto;
+	}
+	.evive-cta-media-image.is-style-phone img {
 		width: auto;
 	}
 }
@@ -374,11 +382,18 @@
 }
 .wp-block-image.is-style-phone {
 	max-width: 300px;
+	/* The frame hugs the screen, so the notch stays centred on it at any size. */
+	width: fit-content;
 }
+/* A fixed phone shape: a screenshot of any size fills the screen from the top, and whatever is too
+   long is cut off at the bottom (like a phone showing the top of a scrolling page). */
 .wp-block-image.is-style-phone img {
+	aspect-ratio: 9 / 19.5;
 	border: 0.6rem solid var(--wp--preset--color--contrast);
 	border-radius: 2.4rem;
 	box-shadow: var(--wp--preset--shadow--m);
+	object-fit: cover;
+	object-position: top;
 }
 .wp-block-image.is-style-phone::before {
 	background: var(--wp--preset--color--contrast);
