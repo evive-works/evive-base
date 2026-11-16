@@ -410,8 +410,7 @@
 	object-fit: cover;
 	object-position: top;
 }
-.wp-block-image.is-style-phone::before,
-.wp-block-image.is-style-phone-float::before {
+.wp-block-image.is-style-phone::before {
 	background: var(--wp--preset--color--contrast);
 	border-radius: 1rem;
 	content: "";
@@ -423,7 +422,7 @@
 	width: 30%;
 	z-index: 1;
 }
-/* "Phone, floating": the same phone, slightly turned in 3D, with a metal edge, a side button and a
+/* "Phone, floating": the same phone (without the camera notch, which would cover the top of a screenshot without a status bar), slightly turned in 3D, with a metal edge, a side button and a
    soft shadow below, so it seems to hover. Static (no animation), so reduced motion needs nothing. */
 .wp-block-image.is-style-phone-float {
 	margin-bottom: var(--wp--preset--spacing--50);
