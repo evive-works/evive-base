@@ -2,7 +2,7 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
-## Unreleased (0.7.0)
+## 0.7.0 — 2026-11-17
 - Cases as ordinary posts in the category "Cases" (slug `cases`, filter `evive_case_category`): new template `single-case` (hero with category, title and excerpt as intro, wide featured image, previous/next case), picked automatically for posts in that category and selectable as "Case"; category page `category-cases` with a card grid (hidden pattern `evive/case-archive`). New pattern `evive/case-study` (key figures, challenge / solution / result, fact box with logo, quote, CTA), offered as a starter when you create a post, and `evive/case-cards` (three customer cards: logo, result in one number, quote, link) (evive #405).
 - nl_NL translations for all new strings (278 of 278).
 
