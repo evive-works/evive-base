@@ -2,6 +2,11 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New pattern `evive/contact` (category Call to action): contact or demo request section with a small label, heading, intro and contact details (email, phone, address; links where they have one) on one side, and a form in a card on the other: name, email (both required, side by side), company, message (required). The form is the "Form" block of the evive Forms plugin (spam trap, minimum fill time and rate limit, entries, mail via `wp_mail`, so via FluentSMTP where that is set up). Without evive Forms active the form side stays empty. Stacks on phones, text first (evive #407).
+- nl_NL translations for the new strings (298 of 298).
+- Block validator: also checks the evive Forms blocks (`evive/form`, `evive/field`, with the plugin's own `save()`), and installs again from a clean checkout: one `@wordpress/element` (two copies turned every rich text into `<div>` and failed every pattern), lockfile in sync with `package.json`.
+
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
 - New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).

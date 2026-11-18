@@ -253,5 +253,24 @@ T = {
  "1,500 employees": "1.500 medewerkers",
  "Customer since": "Klant sinds",
  "Case": "Case",
+
+ # evive #407: pattern evive/contact
+ "Contact: text and form": "Contact: tekst en formulier",
+ "Contact or demo request section: heading, intro and contact details (email, phone, address) on one side, a form (name, email, company, message) in a card on the other. The form is the \"Form\" block of the evive Forms plugin, which handles spam (hidden trap field, minimum fill time, rate limit), stores entries and emails them; set the recipient in the Form block settings or in Settings → evive Forms. Stacks on phones, text first.":
+  "Sectie voor contact of een demo-aanvraag: kop, intro en contactgegevens (e-mail, telefoon, adres) aan de ene kant, een formulier (naam, e-mail, bedrijf, bericht) in een kaart aan de andere. Het formulier is het blok \"Formulier\" van de plugin evive Forms, die spam tegenhoudt (verborgen valveld, minimale invultijd, limiet per bezoeker), inzendingen bewaart en mailt; stel de ontvanger in bij de instellingen van het Formulier-blok of onder Instellingen → evive Forms. Op telefoons onder elkaar, tekst eerst.",
+ "Email": "E-mail",
+ "Address": "Adres",
+ "Street 1": "Straat 1",
+ "1234 AB City": "1234 AB Plaats",
+ "Let’s talk": "Laten we kennismaken",
+ "Ask a question or plan a demo. Tell us briefly what you are looking for and we will get back to you.":
+  "Stel een vraag of plan een demo. Vertel kort wat je zoekt, dan nemen we contact met je op.",
+ "We answer within one working day.": "We reageren binnen één werkdag.",
+ "Send message": "Bericht versturen",
+ "Thank you! We received your message and will get back to you within one working day.":
+  "Bedankt! We hebben je bericht ontvangen en reageren binnen één werkdag.",
+ "Name": "Naam",
+ "Message": "Bericht",
+ "What can we help you with?": "Waarmee kunnen we je helpen?",
 }
 CTX = {}

@@ -1539,3 +1539,98 @@ msgstr "Pagina zonder titel (hero eerst)"
 msgctxt "Custom template name"
 msgid "Case"
 msgstr "Case"
+
+#: patterns/contact.php
+msgctxt "Pattern title"
+msgid "Contact: text and form"
+msgstr "Contact: tekst en formulier"
+
+#: patterns/contact.php
+msgctxt "Pattern description"
+msgid "Contact or demo request section: heading, intro and contact details (email, phone, address) on one side, a form (name, email, company, message) in a card on the other. The form is the \"Form\" block of the evive Forms plugin, which handles spam (hidden trap field, minimum fill time, rate limit), stores entries and emails them; set the recipient in the Form block settings or in Settings → evive Forms. Stacks on phones, text first."
+msgstr "Sectie voor contact of een demo-aanvraag: kop, intro en contactgegevens (e-mail, telefoon, adres) aan de ene kant, een formulier (naam, e-mail, bedrijf, bericht) in een kaart aan de andere. Het formulier is het blok \"Formulier\" van de plugin evive Forms, die spam tegenhoudt (verborgen valveld, minimale invultijd, limiet per bezoeker), inzendingen bewaart en mailt; stel de ontvanger in bij de instellingen van het Formulier-blok of onder Instellingen → evive Forms. Op telefoons onder elkaar, tekst eerst."
+
+#: patterns/contact.php:15
+msgctxt "contact detail label"
+msgid "Email"
+msgstr "E-mail"
+
+#: patterns/contact.php:16
+msgctxt "contact detail label"
+msgid "Phone"
+msgstr "Telefoon"
+
+#: patterns/contact.php:17
+msgctxt "contact detail label"
+msgid "Address"
+msgstr "Adres"
+
+#: patterns/contact.php:17
+msgctxt "placeholder"
+msgid "Street 1"
+msgstr "Straat 1"
+
+#: patterns/contact.php:17
+msgctxt "placeholder"
+msgid "1234 AB City"
+msgstr "1234 AB Plaats"
+
+#: patterns/contact.php:24
+msgctxt "placeholder"
+msgid "Contact"
+msgstr "Contact"
+
+#: patterns/contact.php:28
+msgctxt "placeholder"
+msgid "Let’s talk"
+msgstr "Laten we kennismaken"
+
+#: patterns/contact.php:32
+msgctxt "placeholder"
+msgid "Ask a question or plan a demo. Tell us briefly what you are looking for and we will get back to you."
+msgstr "Stel een vraag of plan een demo. Vertel kort wat je zoekt, dan nemen we contact met je op."
+
+#: patterns/contact.php:48
+msgctxt "placeholder"
+msgid "We answer within one working day."
+msgstr "We reageren binnen één werkdag."
+
+#: patterns/contact.php:54
+msgctxt "form name"
+msgid "Contact"
+msgstr "Contact"
+
+#: patterns/contact.php:54
+msgctxt "form button"
+msgid "Send message"
+msgstr "Bericht versturen"
+
+#: patterns/contact.php:54
+msgctxt "form message"
+msgid "Thank you! We received your message and will get back to you within one working day."
+msgstr "Bedankt! We hebben je bericht ontvangen en reageren binnen één werkdag."
+
+#: patterns/contact.php:55
+msgctxt "form field"
+msgid "Name"
+msgstr "Naam"
+
+#: patterns/contact.php:57
+msgctxt "form field"
+msgid "Email"
+msgstr "E-mail"
+
+#: patterns/contact.php:59
+msgctxt "form field"
+msgid "Company"
+msgstr "Bedrijf"
+
+#: patterns/contact.php:61
+msgctxt "form field"
+msgid "Message"
+msgstr "Bericht"
+
+#: patterns/contact.php:61
+msgctxt "form field placeholder"
+msgid "What can we help you with?"
+msgstr "Waarmee kunnen we je helpen?"
