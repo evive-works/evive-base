@@ -36,8 +36,8 @@ $evive_img = get_template_directory_uri() . "/assets/images/";
 <p class="has-muted-color has-text-color has-s-font-size"><?php echo esc_html_x( 'Job title', 'placeholder', 'evive' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:social-links {"size":"has-small-icon-size","className":"is-style-logos-only"} -->
-<ul class="wp-block-social-links has-small-icon-size is-style-logos-only"><!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
+<!-- wp:social-links {"size":"has-normal-icon-size","className":"is-style-logos-only"} -->
+<ul class="wp-block-social-links has-normal-icon-size is-style-logos-only"><!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:group -->
 
