@@ -2,11 +2,14 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## 0.7.1 — 2026-11-18
+- Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
+- New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).
+- nl_NL translations for the new style name (279 of 279).
+
 ## 0.7.0 — 2026-11-17
 - Cases as ordinary posts in the category "Cases" (slug `cases`, filter `evive_case_category`): new template `single-case` (hero with category, title and excerpt as intro, wide featured image, previous/next case), picked automatically for posts in that category and selectable as "Case"; category page `category-cases` with a card grid (hidden pattern `evive/case-archive`). New pattern `evive/case-study` (key figures, challenge / solution / result, fact box with logo, quote, CTA), offered as a starter when you create a post, and `evive/case-cards` (three customer cards: logo, result in one number, quote, link) (evive #405).
 - nl_NL translations for all new strings (278 of 278).
-- Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
-- New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).
 
 ## 0.6.0 — 2026-10-30
 - New pattern `evive/steps`: "how it works" in three numbered steps, joined by a dashed line on wide screens (evive #401).
