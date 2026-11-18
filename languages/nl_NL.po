@@ -375,6 +375,7 @@ msgstr "Een kort, concreet citaat over het resultaat dat een klant behaalde. Ech
 #: patterns/testimonials-grid.php:38
 #: patterns/testimonials-grid.php:62
 #: patterns/testimonials-grid.php:86
+#: patterns/team.php:32
 msgctxt "placeholder"
 msgid "Name Surname"
 msgstr "Voornaam Achternaam"
@@ -1539,3 +1540,28 @@ msgstr "Pagina zonder titel (hero eerst)"
 msgctxt "Custom template name"
 msgid "Case"
 msgstr "Case"
+
+#: patterns/team.php:18
+msgctxt "placeholder"
+msgid "The people behind it"
+msgstr "De mensen erachter"
+
+#: patterns/team.php:22
+msgctxt "placeholder"
+msgid "One sentence about the team and how they work together."
+msgstr "Eén zin over het team en hoe ze samenwerken."
+
+#: patterns/team.php:36
+msgctxt "placeholder"
+msgid "Job title"
+msgstr "Functie"
+
+#: patterns/team.php
+msgctxt "Pattern title"
+msgid "Team"
+msgstr "Team"
+
+#: patterns/team.php
+msgctxt "Pattern description"
+msgid "A grid of people with a square photo with rounded corners, name, role and a LinkedIn link. Four per row on wide screens (change the column count in the grid settings), two on phones. Set each LinkedIn link's URL, or remove the icon for someone without one."
+msgstr "Een raster met mensen: vierkante foto met afgeronde hoeken, naam, functie en een LinkedIn-link. Vier per rij op brede schermen (pas het aantal kolommen aan in de rasterinstellingen), twee op telefoons. Vul bij elke LinkedIn-link de URL in, of verwijder het icoon bij wie geen LinkedIn heeft."

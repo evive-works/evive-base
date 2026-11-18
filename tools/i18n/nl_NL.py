@@ -253,5 +253,12 @@ T = {
  "1,500 employees": "1.500 medewerkers",
  "Customer since": "Klant sinds",
  "Case": "Case",
+ # evive #406: pattern evive/team
+ "Team": "Team",
+ "A grid of people with a square photo with rounded corners, name, role and a LinkedIn link. Four per row on wide screens (change the column count in the grid settings), two on phones. Set each LinkedIn link's URL, or remove the icon for someone without one.":
+  "Een raster met mensen: vierkante foto met afgeronde hoeken, naam, functie en een LinkedIn-link. Vier per rij op brede schermen (pas het aantal kolommen aan in de rasterinstellingen), twee op telefoons. Vul bij elke LinkedIn-link de URL in, of verwijder het icoon bij wie geen LinkedIn heeft.",
+ "The people behind it": "De mensen erachter",
+ "One sentence about the team and how they work together.": "Eén zin over het team en hoe ze samenwerken.",
+ "Job title": "Functie",
 }
 CTX = {}
