@@ -139,5 +139,14 @@ Four big numbers with a label each.
 |---|---|---|
 | ![Stats, default](patterns/stats-default-1280.webp) | ![Stats, dark primary](patterns/stats-dark-1280.webp) | ![Stats, mobile](patterns/stats-default-390.webp) |
 
+## Contact: text and form
+`evive/contact` · category `evive-cta`
+
+Contact or demo request section: a small label, heading, intro and contact details (email, phone, address; links where they have one) on the left, a form in a Card on the right: name and email side by side (required), company, message (required). The form is the **Form** block of the evive Forms plugin: spam trap, minimum fill time and rate limit, entries under "Form entries", mail through `wp_mail` (so through FluentSMTP where that is set up). Set the recipient in the Form block's settings or in Settings → evive Forms; add a consent field there if the site needs one. Needs evive Forms active. Stacks on phones, text first.
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Contact: text and form, default](patterns/contact-default-1280.webp) | ![Contact: text and form, dark primary](patterns/contact-dark-1280.webp) | ![Contact: text and form, mobile](patterns/contact-default-390.webp) |
+
 ## Header and footer (0.2.0)
 `evive/header` (default), `evive/header-no-cta`, `evive/header-sticky`; `evive/footer` (extended), `evive/footer-simple`. See `CHANGELOG.md`.
