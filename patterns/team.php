@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Team
+ * Title: Team: grid of people
  * Slug: evive/team
  * Categories: evive-content
  * Keywords: team, people, staff, about us, employees, linkedin

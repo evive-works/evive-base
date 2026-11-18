@@ -1558,8 +1558,8 @@ msgstr "Functie"
 
 #: patterns/team.php
 msgctxt "Pattern title"
-msgid "Team"
-msgstr "Team"
+msgid "Team: grid of people"
+msgstr "Team: raster met mensen"
 
 #: patterns/team.php
 msgctxt "Pattern description"
