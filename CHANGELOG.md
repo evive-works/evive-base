@@ -2,6 +2,10 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New paragraph style "Count up" (`is-style-count-up`): a number that counts up from 0 once, when it scrolls into view (IntersectionObserver, about 1.6 s). The real number stays in the HTML, so search engines, visitors without JavaScript and visitors with reduced motion see the final number at once and nothing counts. Prefix and suffix stay (`€`, `+`, `%`), the thousands separator and decimals are kept (`1,200`, `1.200`, `4,8`); text with more than one number (`24/7`) is left alone. The script (`assets/js/count-up.js`, deferred, in the footer) loads only on pages with such a paragraph. `evive/stats` uses the style on its numbers; pages already built from the pattern get it by picking the style on a number (evive #414).
+- nl_NL translations for the style name and the new pattern description (280 of 280).
+
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
 - New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).

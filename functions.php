@@ -47,7 +47,19 @@ add_action( 'init', function () {
 	register_block_style( 'core/image', [ 'name' => 'phone-float', 'label' => _x( 'Phone, floating', 'block style', 'evive' ) ] );
 	register_block_style( 'core/image', [ 'name' => 'browser', 'label' => _x( 'Browser window', 'block style', 'evive' ) ] );
 	register_block_style( 'core/image', [ 'name' => 'laptop', 'label' => _x( 'Laptop', 'block style', 'evive' ) ] );
+	// evive #414: a big number that counts up once when it scrolls into view (assets/js/count-up.js).
+	register_block_style( 'core/paragraph', [ 'name' => 'count-up', 'label' => _x( 'Count up', 'block style', 'evive' ) ] );
 } );
+
+// evive #414: the count-up script loads only on pages with a "Count up" paragraph. Block themes render
+// the template before wp_head, so enqueueing here still lands in the footer of the same page. The number
+// itself stays in the HTML; without JavaScript or with reduced motion it simply shows.
+add_filter( 'render_block_core/paragraph', function ( $html, $block ) {
+	if ( ! is_admin() && str_contains( $block['attrs']['className'] ?? '', 'is-style-count-up' ) ) {
+		wp_enqueue_script( 'evive-count-up', get_template_directory_uri() . '/assets/js/count-up.js', [], EVIVE_BASE_VERSION, [ 'in_footer' => true, 'strategy' => 'defer' ] );
+	}
+	return $html;
+}, 10, 2 );
 
 // FAQ pattern: a group with the class "evive-faq" gets FAQPage structured data built from its
 // Details blocks (question = summary, answer = the content), so editors only edit the visible text.

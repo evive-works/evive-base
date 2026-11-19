@@ -104,6 +104,11 @@ msgctxt "block style"
 msgid "Laptop"
 msgstr ""
 
+#: functions.php:51
+msgctxt "block style"
+msgid "Count up"
+msgstr ""
+
 #: patterns/bento.php
 msgctxt "Pattern title"
 msgid "Bento grid"
@@ -1280,7 +1285,7 @@ msgstr ""
 
 #: patterns/stats.php
 msgctxt "Pattern description"
-msgid "Four big numbers with a label each."
+msgid "Four big numbers with a label each; the numbers count up once when they scroll into view."
 msgstr ""
 
 #: patterns/stats.php:23
