@@ -27,6 +27,7 @@ wp-content/themes/<customer>/
 | `blocks/` | Theme blocks: `evive/tabs` + `evive/tab` (Tabs). Plain JS on the `wp.*` globals, no build step; script and CSS load only where a block is used |
 | `blocks/` | The theme's own blocks (`block.json` + plain scripts, no build step): `evive/before-after`, `evive/media-overlap` (+ `evive/media-overlap-card`) |
 | `assets/css/base.css` | Focus rings, reduced motion, form inputs — tokens only |
+| `docs/patterns.md`, `tools/pattern-shots/` | Pattern library with screenshots; `tools/pattern-shots/README.md` makes new screenshots with one command (not in the release zip) |
 
 `front-page.html` renders a static front page's content without a title (the H1 comes from the page's hero). When the front page shows the latest posts, the theme falls back to `index.html`.
 

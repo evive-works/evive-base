@@ -4,7 +4,7 @@ Generic patterns every customer can use. They contain neutral placeholder text (
 
 **Live gallery:** https://whyatwork.cloud/pattern-gallery/ (staging; shown with the active theme, so with a child theme active it shows the customer's brand).
 
-Screenshots per pattern: **default palette** (desktop), **dark-primary test palette** (desktop) and **mobile** (390px, default palette). The dark-primary palette is the test palette from `tools/` / card D.1: deep green primary with an orange accent.
+Screenshots per pattern: **default palette** (desktop), **dark-primary test palette** (desktop) and **mobile** (390px, default palette). The dark-primary palette is the test palette of card D.1: deep green primary with an orange accent; its values are in `tools/pattern-shots/palettes.json`. New screenshots: `tools/pattern-shots/README.md` (one command per batch).
 
 ## Building blocks used by the patterns
 - **Card** block style for Group (`is-style-card`): `base` background, `border` hairline, radius `l`, shadow `s`.
@@ -214,6 +214,99 @@ Section heading, a row of static category labels (pills; the one with class `is-
 | Default | Dark primary | Mobile |
 |---|---|---|
 | ![Integrations grid, default](patterns/integrations-default-1280.webp) | ![Integrations grid, dark primary](patterns/integrations-dark-1280.webp) | ![Integrations grid, mobile](patterns/integrations-default-390.webp) |
+
+## Batch 2: newer patterns (screenshots evive #482)
+Made with `tools/pattern-shots/` (see its README): evive-base alone on a throwaway test site, no child theme.
+
+## Steps: how it works
+`evive/steps` · category `evive-features`
+
+“How it works” in three numbered steps: a centred heading, then per step a number in a circle, a short heading and one sentence. On wide screens a dashed line joins the steps; for four steps duplicate a column. The columns stack on phones. (evive #401)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Steps: how it works, default](patterns/steps-default-1280.webp) | ![Steps: how it works, dark primary](patterns/steps-dark-1280.webp) | ![Steps: how it works, mobile](patterns/steps-default-390.webp) |
+
+## Problem → solution
+`evive/problem-solution` · category `evive-features`
+
+Two cards side by side: the situation without you (cross list on the surface colour) and with you (checklist, primary border). Keep the points paired, in the same order. Stacks on phones. (evive #404)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Problem → solution, default](patterns/problem-solution-default-1280.webp) | ![Problem → solution, dark primary](patterns/problem-solution-dark-1280.webp) | ![Problem → solution, mobile](patterns/problem-solution-default-390.webp) |
+
+## Bento grid
+`evive/bento` · category `evive-features`
+
+Features as a mosaic of tiles on a four-column grid: a large tile with an image, a tile on the primary colour, a key figure, an icon tile and two wide tiles. Column and row span per tile in the block settings; keep every row filled to four columns. All tiles stack on phones. (evive #403)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Bento grid, default](patterns/bento-default-1280.webp) | ![Bento grid, dark primary](patterns/bento-dark-1280.webp) | ![Bento grid, mobile](patterns/bento-default-390.webp) |
+
+## Product screenshot in a device frame
+`evive/product-screenshot` · category `evive-features`
+
+Text with a checklist and a button, next to a plain screenshot in a browser-window frame. The frame is the image's block style (Browser, Phone, Laptop), so never use an image with a device baked in. (evive #402)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Product screenshot in a device frame, default](patterns/product-screenshot-default-1280.webp) | ![Product screenshot in a device frame, dark primary](patterns/product-screenshot-dark-1280.webp) | ![Product screenshot in a device frame, mobile](patterns/product-screenshot-default-390.webp) |
+
+## Pricing: three plans
+`evive/pricing-plans` · category `evive-pricing`
+
+Three plan cards of equal height, the middle one highlighted. Centred header with name, description, price (period on its own line) and yearly price; a checklist and a button aligned at the bottom. (evive #400)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Pricing: three plans, default](patterns/pricing-plans-default-1280.webp) | ![Pricing: three plans, dark primary](patterns/pricing-plans-dark-1280.webp) | ![Pricing: three plans, mobile](patterns/pricing-plans-default-390.webp) |
+
+## Pricing: comparison table
+`evive/pricing-comparison` · category `evive-pricing`
+
+Feature comparison across plans: ✓ for included, an empty cell shows a dash; a row with only a bold first cell is a group heading. The header row stays visible while scrolling; on phones the table fits the screen. (evive #400)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Pricing: comparison table, default](patterns/pricing-comparison-default-1280.webp) | ![Pricing: comparison table, dark primary](patterns/pricing-comparison-dark-1280.webp) | ![Pricing: comparison table, mobile](patterns/pricing-comparison-default-390.webp) |
+
+## Pricing: add-on or single offer
+`evive/pricing-addon` · category `evive-pricing`
+
+One wide card for an add-on next to the plans: name, explanation and checklist on the left, a centred price box with a note and one button on the right. Stacks on phones. (evive #400)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Pricing: add-on or single offer, default](patterns/pricing-addon-default-1280.webp) | ![Pricing: add-on or single offer, dark primary](patterns/pricing-addon-dark-1280.webp) | ![Pricing: add-on or single offer, mobile](patterns/pricing-addon-default-390.webp) |
+
+## CTA band with image
+`evive/cta-media` · category `evive-cta`
+
+Call-to-action band on the primary colour with text and buttons on the left and an image on the right that sticks out above the band on desktop (made for a transparent product mockup). Real text, never text in the image. (evive #400)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![CTA band with image, default](patterns/cta-media-default-1280.webp) | ![CTA band with image, dark primary](patterns/cta-media-dark-1280.webp) | ![CTA band with image, mobile](patterns/cta-media-default-390.webp) |
+
+## Case cards
+`evive/case-cards` · category `evive-proof`
+
+Three customer cards: logo, the result in one number, a short quote and a link to the full case post (category “Cases”). Stacks on phones. (evive #405)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Case cards, default](patterns/case-cards-default-1280.webp) | ![Case cards, dark primary](patterns/case-cards-dark-1280.webp) | ![Case cards, mobile](patterns/case-cards-default-390.webp) |
+
+## Case study
+`evive/case-study` · category `evive-proof`
+
+The body of one customer case, offered when you start a new post: key figures, challenge, solution and result, a fact box with the customer's logo, a quote and a call to action. In the category “Cases” the post gets the case layout (title, excerpt as intro, featured image). (evive #405)
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Case study, default](patterns/case-study-default-1280.webp) | ![Case study, dark primary](patterns/case-study-dark-1280.webp) | ![Case study, mobile](patterns/case-study-default-390.webp) |
 
 ## Header and footer (0.2.0)
 `evive/header` (default), `evive/header-no-cta`, `evive/header-sticky`; `evive/footer` (extended), `evive/footer-simple`. See `CHANGELOG.md`.

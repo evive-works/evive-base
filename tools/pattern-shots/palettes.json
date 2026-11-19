@@ -1,0 +1,15 @@
+{
+  "_comment": "Test palettes for the pattern screenshots (evive #482). 'default' is evive-base's own theme.json (nothing is overridden). 'dark' is the dark-primary test palette of card D.1: deep green primary with an orange accent. Its values were not written down when batch 1 was made; primary, accent, surface and contrast were sampled from the batch 1 dark screenshots, muted and border were chosen to match. Check it with: tools/contrast-check.py (see README.md).",
+  "default": {},
+  "dark": {
+    "base": "#ffffff",
+    "contrast": "#17221d",
+    "primary": "#0f3d2e",
+    "primary-contrast": "#ffffff",
+    "accent": "#f4a259",
+    "accent-contrast": "#1d1d1f",
+    "surface": "#eff4f0",
+    "muted": "#4f5d56",
+    "border": "#d3ddd7"
+  }
+}
