@@ -139,5 +139,16 @@ Four big numbers with a label each.
 |---|---|---|
 | ![Stats, default](patterns/stats-default-1280.webp) | ![Stats, dark primary](patterns/stats-dark-1280.webp) | ![Stats, mobile](patterns/stats-default-390.webp) |
 
+## Blog teasers
+`evive/blog-teasers` · category `evive-content`
+
+The three latest posts as cards: featured image, category, title, excerpt and date, with an "All articles" link to the posts page (or the home page when the latest posts are on the front page). The cards fill themselves from the site's posts: with one or two posts the row shows fewer cards, with none it shows "No articles yet.". Three per row from about 1000px, one on phones. A post without a featured image gets a card without an image (evive #408).
+
+Screenshots from a fresh test site with only WordPress's sample post (no featured image), so they show one card.
+
+| Default (1280) | Mobile (390) |
+|---|---|
+| ![Blog teasers, default](patterns/blog-teasers-default-1280.webp) | ![Blog teasers, mobile](patterns/blog-teasers-default-390.webp) |
+
 ## Header and footer (0.2.0)
 `evive/header` (default), `evive/header-no-cta`, `evive/header-sticky`; `evive/footer` (extended), `evive/footer-simple`. See `CHANGELOG.md`.
