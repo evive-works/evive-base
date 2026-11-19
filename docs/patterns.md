@@ -142,7 +142,7 @@ Four big numbers with a label each.
 ## Blog teasers
 `evive/blog-teasers` · category `evive-content`
 
-The three latest posts as cards: featured image, category, title, excerpt and date, with an "All articles" link to the posts page (or the home page when the latest posts are on the front page). The cards fill themselves from the site's posts: with one or two posts the row shows fewer cards, with none it shows "No articles yet.". Three per row from about 1000px, one on phones. A post without a featured image gets a card without an image (evive #408).
+The three latest posts as cards: featured image, category, title, excerpt and date, with an "All articles" link to the posts page (or the home page when the latest posts are on the front page). The cards fill themselves from the site's posts: with one or two posts the row shows fewer cards, with none it shows "No articles yet.". Three per row on wide screens, one on phones. A post without a featured image gets a card without an image (evive #408).
 
 Screenshots from a fresh test site with only WordPress's sample post (no featured image), so they show one card.
 
