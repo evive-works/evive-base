@@ -1359,11 +1359,6 @@ msgctxt "Pattern title"
 msgid "Stats"
 msgstr ""
 
-#: patterns/stats.php
-msgctxt "Pattern description"
-msgid "Four big numbers with a label each."
-msgstr ""
-
 #: patterns/stats.php:23
 msgctxt "placeholder"
 msgid "Label for the first number"

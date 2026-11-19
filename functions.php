@@ -53,11 +53,10 @@ add_action( 'init', function () {
 
 // evive #411: theme blocks in blocks/ (Tabs). Their front-end script and CSS load only on pages that use them;
 // the editor script's strings come from languages/evive-<locale>-<md5 of blocks/tabs/index.js>.json.
+// (0.8.0 batch: the blocks themselves are registered by the blocks/*/block.json loop further down, evive #412.)
 add_action( 'init', function () {
-	register_block_type( __DIR__ . '/blocks/tabs' );
-	register_block_type( __DIR__ . '/blocks/tab' );
 	wp_set_script_translations( 'evive-tabs-editor-script', 'evive', get_template_directory() . '/languages' );
-} );
+}, 11 );
 
 // evive #413: moving variants of the logo wall and the testimonials grid, as block styles an editor can
 // switch on. "Moving strip" (Group): a slow continuous strip, CSS only. The server repeats the logos
@@ -122,6 +121,8 @@ add_filter( 'render_block_core/columns', function ( $html, $block ) {
 		. '</div>';
 	wp_enqueue_script( 'evive-carousel' );
 	return $tags->get_updated_html() . $nav;
+}, 10, 2 );
+
 // evive #414: the count-up script loads only on pages with a "Count up" paragraph. Block themes render
 // the template before wp_head, so enqueueing here still lands in the footer of the same page. The number
 // itself stays in the HTML; without JavaScript or with reduced motion it simply shows.

@@ -397,6 +397,8 @@ msgstr "Eén regel over wat deze koppeling doet."
 #: patterns/logo-wall.php:30
 #: patterns/logo-wall.php:34
 #: patterns/logo-wall.php:38
+#: patterns/case-study.php:91
+#: patterns/testimonial-photo.php:43
 msgctxt "placeholder"
 msgid "Customer logo"
 msgstr "Klantlogo"
@@ -441,6 +443,7 @@ msgstr "Klant sinds"
 #: patterns/testimonials-grid.php:28
 #: patterns/testimonials-grid.php:52
 #: patterns/testimonials-grid.php:76
+#: patterns/testimonial-photo.php:27
 msgctxt "placeholder"
 msgid "A short, specific quote about the result a customer got. Real words from a real person."
 msgstr "Een kort, concreet citaat over het resultaat dat een klant behaalde. Echte woorden van een echt persoon."
@@ -451,6 +454,7 @@ msgstr "Een kort, concreet citaat over het resultaat dat een klant behaalde. Ech
 #: patterns/testimonials-grid.php:62
 #: patterns/testimonials-grid.php:86
 #: patterns/team.php:32
+#: patterns/testimonial-photo.php:34
 msgctxt "placeholder"
 msgid "Name Surname"
 msgstr "Voornaam Achternaam"
@@ -460,6 +464,7 @@ msgstr "Voornaam Achternaam"
 #: patterns/testimonials-grid.php:42
 #: patterns/testimonials-grid.php:66
 #: patterns/testimonials-grid.php:90
+#: patterns/testimonial-photo.php:38
 msgctxt "placeholder"
 msgid "Role, Company"
 msgstr "Functie, bedrijf"
@@ -1356,11 +1361,6 @@ msgctxt "Pattern title"
 msgid "Stats"
 msgstr "Cijfers"
 
-#: patterns/stats.php
-msgctxt "Pattern description"
-msgid "Four big numbers with a label each."
-msgstr "Vier grote getallen met elk een label."
-
 #: patterns/stats.php:23
 msgctxt "placeholder"
 msgid "Label for the first number"
@@ -1640,3 +1640,273 @@ msgstr "Team: raster met mensen"
 msgctxt "Pattern description"
 msgid "A grid of people with a square photo with rounded corners, name, role and a LinkedIn link. Four per row on wide screens (change the column count in the grid settings), two on phones. Set each LinkedIn link's URL, or remove the icon for someone without one."
 msgstr "Een raster met mensen: vierkante foto met afgeronde hoeken, naam, functie en een LinkedIn-link. Vier per rij op brede schermen (pas het aantal kolommen aan in de rasterinstellingen), twee op telefoons. Vul bij elke LinkedIn-link de URL in, of verwijder het icoon bij wie geen LinkedIn heeft."
+
+#: patterns/contact.php
+msgctxt "Pattern title"
+msgid "Contact: text and form"
+msgstr "Contact: tekst en formulier"
+
+#: patterns/contact.php
+msgctxt "Pattern description"
+msgid "Contact or demo request section: heading, intro and contact details (email, phone, address) on one side, a form (name, email, company, message) in a card on the other. The form is the \"Form\" block of the evive Forms plugin, which handles spam (hidden trap field, minimum fill time, rate limit), stores entries and emails them; set the recipient in the Form block settings or in Settings → evive Forms. Stacks on phones, text first."
+msgstr "Sectie voor contact of een demo-aanvraag: kop, intro en contactgegevens (e-mail, telefoon, adres) aan de ene kant, een formulier (naam, e-mail, bedrijf, bericht) in een kaart aan de andere. Het formulier is het blok \"Formulier\" van de plugin evive Forms, die spam tegenhoudt (verborgen valveld, minimale invultijd, limiet per bezoeker), inzendingen bewaart en mailt; stel de ontvanger in bij de instellingen van het Formulier-blok of onder Instellingen → evive Forms. Op telefoons onder elkaar, tekst eerst."
+
+#: patterns/contact.php:15
+msgctxt "contact detail label"
+msgid "Email"
+msgstr "E-mail"
+
+#: patterns/contact.php:16
+msgctxt "contact detail label"
+msgid "Phone"
+msgstr "Telefoon"
+
+#: patterns/contact.php:17
+msgctxt "contact detail label"
+msgid "Address"
+msgstr "Adres"
+
+#: patterns/contact.php:17
+msgctxt "placeholder"
+msgid "Street 1"
+msgstr "Straat 1"
+
+#: patterns/contact.php:17
+msgctxt "placeholder"
+msgid "1234 AB City"
+msgstr "1234 AB Plaats"
+
+#: patterns/contact.php:24
+msgctxt "placeholder"
+msgid "Contact"
+msgstr "Contact"
+
+#: patterns/contact.php:28
+msgctxt "placeholder"
+msgid "Let’s talk"
+msgstr "Laten we kennismaken"
+
+#: patterns/contact.php:32
+msgctxt "placeholder"
+msgid "Ask a question or plan a demo. Tell us briefly what you are looking for and we will get back to you."
+msgstr "Stel een vraag of plan een demo. Vertel kort wat je zoekt, dan nemen we contact met je op."
+
+#: patterns/contact.php:48
+msgctxt "placeholder"
+msgid "We answer within one working day."
+msgstr "We reageren binnen één werkdag."
+
+#: patterns/contact.php:54
+msgctxt "form name"
+msgid "Contact"
+msgstr "Contact"
+
+#: patterns/contact.php:54
+msgctxt "form button"
+msgid "Send message"
+msgstr "Bericht versturen"
+
+#: patterns/contact.php:54
+msgctxt "form message"
+msgid "Thank you! We received your message and will get back to you within one working day."
+msgstr "Bedankt! We hebben je bericht ontvangen en reageren binnen één werkdag."
+
+#: patterns/contact.php:55
+msgctxt "form field"
+msgid "Name"
+msgstr "Naam"
+
+#: patterns/contact.php:57
+msgctxt "form field"
+msgid "Email"
+msgstr "E-mail"
+
+#: patterns/contact.php:59
+msgctxt "form field"
+msgid "Company"
+msgstr "Bedrijf"
+
+#: patterns/contact.php:61
+msgctxt "form field"
+msgid "Message"
+msgstr "Bericht"
+
+#: patterns/contact.php:61
+msgctxt "form field placeholder"
+msgid "What can we help you with?"
+msgstr "Waarmee kunnen we je helpen?"
+
+#: patterns/testimonial-photo.php
+msgctxt "Pattern title"
+msgid "Testimonial: large photo"
+msgstr "Klantverhaal: grote foto"
+
+#: patterns/testimonial-photo.php
+msgctxt "Pattern description"
+msgid "A large photo of the person next to a big quote, with name, role and company logo. On phones the photo sits above the quote."
+msgstr "Een grote foto van de persoon naast een groot citaat, met naam, functie en bedrijfslogo. Op telefoons staat de foto boven het citaat."
+
+#: patterns/testimonial-photo.php:20
+msgctxt "placeholder"
+msgid "Portrait of the customer"
+msgstr "Portret van de klant"
+
+#. translators: %d: number of the tab
+#: blocks/tabs/render.php:24
+#, php-format
+msgid "Tab %d"
+msgstr "Tabblad %d"
+
+#: blocks/tabs/block.json
+msgctxt "block title"
+msgid "Tabs"
+msgstr "Tabbladen"
+
+#: blocks/tabs/block.json
+msgctxt "block description"
+msgid "Content in tabs: one tab is shown at a time. Each tab holds any blocks. Without JavaScript all tabs are shown one below the other."
+msgstr "Inhoud in tabbladen: er is steeds één tabblad zichtbaar. Elk tabblad kan alle blokken bevatten. Zonder JavaScript staan alle tabbladen onder elkaar."
+
+#: blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tabs"
+msgstr "tabbladen"
+
+#: blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tab panel"
+msgstr "tabpaneel"
+
+#: blocks/tab/block.json
+msgctxt "block title"
+msgid "Tab"
+msgstr "Tabblad"
+
+#: blocks/tab/block.json
+msgctxt "block description"
+msgid "One tab of a Tabs block: a label and any blocks."
+msgstr "Eén tabblad van een Tabbladen-blok: een label en alle blokken die je wilt."
+
+#: blocks/tabs/index.js:18
+msgid "First tab"
+msgstr "Eerste tabblad"
+
+#: blocks/tabs/index.js:18
+msgid "Content of the first tab. Add any blocks."
+msgstr "Inhoud van het eerste tabblad. Voeg blokken toe."
+
+#: blocks/tabs/index.js:19
+msgid "Second tab"
+msgstr "Tweede tabblad"
+
+#: blocks/tabs/index.js:19
+msgid "Content of the second tab. Add any blocks."
+msgstr "Inhoud van het tweede tabblad. Voeg blokken toe."
+
+#: blocks/tabs/index.js:20
+msgid "Third tab"
+msgstr "Derde tabblad"
+
+#: blocks/tabs/index.js:20
+msgid "Content of the third tab. Add any blocks."
+msgstr "Inhoud van het derde tabblad. Voeg blokken toe."
+
+#: blocks/tabs/index.js:44
+msgid "Tab label"
+msgstr "Label van het tabblad"
+
+#: functions.php:141 blocks/before-after/render.php:22
+msgctxt "before/after label"
+msgid "Before"
+msgstr "Voor"
+
+#: functions.php:142 blocks/before-after/render.php:23
+msgctxt "before/after label"
+msgid "After"
+msgstr "Na"
+
+#: functions.php:143 blocks/before-after/block.json
+msgctxt "block title"
+msgid "Before / after"
+msgstr "Voor / na"
+
+#: functions.php:144
+msgid "Label of the before image"
+msgstr "Label van de voor-afbeelding"
+
+#: functions.php:145
+msgid "Label of the after image"
+msgstr "Label van de na-afbeelding"
+
+#: functions.php:146
+msgid "Start position of the divider (%)"
+msgstr "Beginpositie van de scheidslijn (%)"
+
+#: functions.php:147
+msgid "Visitors drag the divider or use the arrow keys. Without JavaScript both images are shown side by side."
+msgstr "Bezoekers slepen de scheidslijn of gebruiken de pijltjestoetsen. Zonder JavaScript staan beide afbeeldingen naast elkaar."
+
+#: blocks/before-after/render.php:30
+msgctxt "before/after slider"
+msgid "Divider between before and after"
+msgstr "Scheidslijn tussen voor en na"
+
+#: blocks/before-after/block.json
+msgctxt "block description"
+msgid "Two images with a divider visitors drag (mouse, touch or keyboard) to compare them. Without JavaScript both images are shown side by side."
+msgstr "Twee afbeeldingen met een scheidslijn die bezoekers verslepen (muis, touch of toetsenbord) om ze te vergelijken. Zonder JavaScript staan beide afbeeldingen naast elkaar."
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "compare"
+msgstr "vergelijken"
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "slider"
+msgstr "schuifregelaar"
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "make-over"
+msgstr "make-over"
+
+#: functions.php:59
+msgctxt "block style"
+msgid "Moving strip"
+msgstr "Bewegende strook"
+
+#: functions.php:60
+msgctxt "block style"
+msgid "Carousel"
+msgstr "Carrousel"
+
+#: functions.php:88
+msgctxt "logo strip"
+msgid "Pause animation"
+msgstr "Animatie pauzeren"
+
+#: functions.php:106
+msgctxt "carousel region"
+msgid "Carousel"
+msgstr "Carrousel"
+
+#: functions.php:110
+msgctxt "carousel"
+msgid "Previous"
+msgstr "Vorige"
+
+#: functions.php:111
+msgctxt "carousel"
+msgid "Next"
+msgstr "Volgende"
+
+#: functions.php:51
+msgctxt "block style"
+msgid "Count up"
+msgstr "Optellen"
+
+#: patterns/stats.php
+msgctxt "Pattern description"
+msgid "Four big numbers with a label each; the numbers count up once when they scroll into view."
+msgstr "Vier grote getallen met elk een label; de getallen tellen één keer op zodra ze in beeld komen."
