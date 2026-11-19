@@ -169,6 +169,8 @@ T = {
  "Phone, floating": "Telefoon, zwevend",
  "Browser window": "Browservenster",
  "Laptop": "Laptop",
+ "Moving strip": "Bewegende strook", "Carousel": "Carrousel", "Pause animation": "Animatie pauzeren",
+ "Previous": "Vorige", "Next": "Volgende",
  "Bento grid": "Bento-raster",
  "Features as a mosaic of tiles of different sizes on a four-column grid: one large tile with an image, a tile on the primary colour, a key figure, an icon tile and two wide tiles. Each tile's size is set in the block settings (column span, row span); keep every row filled to four columns. On phones all tiles stack.":
   "Functies als mozaïek van tegels in verschillende maten op een raster van vier kolommen: één grote tegel met een afbeelding, een tegel op de primaire kleur, een kerncijfer, een icoontegel en twee brede tegels. De maat van elke tegel staat in de blokinstellingen (kolombreedte, rijhoogte); vul elke rij tot vier kolommen. Op telefoons staan alle tegels onder elkaar.",

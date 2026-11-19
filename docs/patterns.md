@@ -11,6 +11,7 @@ Screenshots per pattern: **default palette** (desktop), **dark-primary test pale
 - **Motif** block style for Group (`is-style-motif`): two large, faded rounded-rectangle outlines in the text colour behind the section. Used by *Hero: on primary colour*.
 - **Shadow tokens** `s`, `m`, `l` (added in 0.3.0, as proposed in D.1). They are built from the `contrast` colour with `color-mix()`, so they follow the palette.
 - **Page without title** template (`page-no-title`) for pages that start with a hero (the hero has the H1).
+- **Moving strip** block style for Group (`is-style-logo-strip`) and **Carousel** block style for Columns (`is-style-carousel`): see *Logo wall* and *Testimonials: grid of three* below (evive #413).
 - **FAQ structured data:** a Group with class `evive-faq` outputs `FAQPage` JSON-LD built from its Details blocks (summary = question, content = answer). Editors only edit the visible text.
 
 ## Hero: text and image
@@ -112,6 +113,12 @@ A short line and a row of customer logos.
 |---|---|---|
 | ![Logo wall, default](patterns/logo-wall-default-1280.webp) | ![Logo wall, dark primary](patterns/logo-wall-dark-1280.webp) | ![Logo wall, mobile](patterns/logo-wall-default-390.webp) |
 
+**Moving strip** (evive #413): select the row of logos (the inner Group) and pick the block style *Moving strip*. On the site the logos then glide slowly to the side in an endless loop (CSS only; the theme repeats the logos so the loop has no gap, the copies are hidden from screen readers and keyboard). It pauses on hover, while something in it has keyboard focus, and with the small *Pause animation* checkbox below it. With *reduce motion* switched on in the visitor's system it stands still as a normal row of logos that scrolls sideways. In the editor it shows as that still row. The speed follows the number of logos (5 s per logo per round).
+
+| Moving strip, desktop (1280) | Moving strip, mobile (390) |
+|---|---|
+| ![Logo wall as moving strip, desktop](patterns/logo-wall-strip-default-1280.webp) | ![Logo wall as moving strip, mobile](patterns/logo-wall-strip-default-390.webp) |
+
 ## Testimonial
 `evive/testimonial` · category `evive-proof`
 
@@ -129,6 +136,12 @@ Three customer quotes as cards.
 | Default | Dark primary | Mobile |
 |---|---|---|
 | ![Testimonials: grid of three, default](patterns/testimonials-grid-default-1280.webp) | ![Testimonials: grid of three, dark primary](patterns/testimonials-grid-dark-1280.webp) | ![Testimonials: grid of three, mobile](patterns/testimonials-grid-default-390.webp) |
+
+**Carousel** (evive #413): select the Columns block and pick the block style *Carousel*. The cards become one row that scrolls sideways and snaps to a card: about one card on phones, two on tablets and laptops, three on wide screens (1100px and up) when there are four or more columns. Add more cards by adding columns. A small script (`assets/js/carousel.js`, only loaded on pages with a carousel) shows *previous* / *next* buttons under the row, only when there is something to scroll; they are real buttons (Tab, Enter/Space) and the row itself can be focused and scrolled with the arrow keys. Without JavaScript there are no buttons and the row simply scrolls (touch, trackpad, scrollbar, arrow keys).
+
+| Carousel, desktop (1280) | Carousel, mobile (390) |
+|---|---|
+| ![Testimonials as carousel, desktop](patterns/testimonials-carousel-default-1280.webp) | ![Testimonials as carousel, mobile](patterns/testimonials-carousel-default-390.webp) |
 
 ## Stats
 `evive/stats` · category `evive-proof`

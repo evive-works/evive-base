@@ -104,6 +104,36 @@ msgctxt "block style"
 msgid "Laptop"
 msgstr ""
 
+#: functions.php:59
+msgctxt "block style"
+msgid "Moving strip"
+msgstr ""
+
+#: functions.php:60
+msgctxt "block style"
+msgid "Carousel"
+msgstr ""
+
+#: functions.php:88
+msgctxt "logo strip"
+msgid "Pause animation"
+msgstr ""
+
+#: functions.php:106
+msgctxt "carousel region"
+msgid "Carousel"
+msgstr ""
+
+#: functions.php:110
+msgctxt "carousel"
+msgid "Previous"
+msgstr ""
+
+#: functions.php:111
+msgctxt "carousel"
+msgid "Next"
+msgstr ""
+
 #: patterns/bento.php
 msgctxt "Pattern title"
 msgid "Bento grid"
