@@ -817,8 +817,8 @@
    comes from WordPress's admin-bar.css; core only sets its own position offset on .is-position-sticky itself,
    so not on the wrapper). Up to 600px the admin bar scrolls away with the page, so no offset there, as in core.
    The background is a fallback for a sticky group without its own background. Anchor targets land below
-   the header via scroll-padding-top; --evive-sticky-header-offset is a generous default for the header's
-   height that a child theme can set to its own. */
+   the header via scroll-padding-top: assets/js/sticky-header.js sets --evive-sticky-header-offset to the
+   header's real height; 6rem without JavaScript. */
 header.wp-block-template-part:has(> .is-position-sticky) {
 	--evive-admin-bar-offset: var(--wp-admin--admin-bar--height, 0px);
 	background-color: var(--wp--preset--color--base);

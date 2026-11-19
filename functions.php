@@ -133,6 +133,15 @@ add_filter( 'render_block_core/paragraph', function ( $html, $block ) {
 	return $html;
 }, 10, 2 );
 
+// evive #513: a sticky group (the "Header, sticky" pattern, or a header group set to sticky) loads a small
+// script that keeps the anchor offset (scroll-padding-top in base.css) equal to the sticky header's height.
+add_filter( 'render_block_core/group', function ( $html, $block ) {
+	if ( ! is_admin() && 'sticky' === ( $block['attrs']['style']['position']['type'] ?? '' ) ) {
+		wp_enqueue_script( 'evive-sticky-header', get_template_directory_uri() . '/assets/js/sticky-header.js', [], EVIVE_BASE_VERSION, [ 'in_footer' => true, 'strategy' => 'defer' ] );
+	}
+	return $html;
+}, 10, 2 );
+
 // FAQ pattern: a group with the class "evive-faq" gets FAQPage structured data built from its
 // Details blocks (question = summary, answer = the content), so editors only edit the visible text.
 add_filter( 'render_block_core/group', function ( $html, $block ) {
