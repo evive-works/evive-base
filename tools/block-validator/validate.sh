@@ -10,7 +10,7 @@ for f in "$@"; do
       function esc_html($s){return htmlspecialchars($s,ENT_QUOTES);} function esc_attr($s){return htmlspecialchars($s,ENT_QUOTES);} function esc_url($s){return $s;}
       function home_url($p=""){return "https://example.test".$p;} function get_template_directory_uri(){return "https://example.test/wp-content/themes/evive-base";}
       function get_stylesheet_directory_uri(){return "https://example.test/wp-content/themes/child";}
-      function get_option($o){return 0;} function get_the_title($i){return "T";} function wp_date($f){return "2026";} function get_bloginfo($k){return "Site";}
+      function get_option($o){return 0;} function get_permalink($i){return "https://example.test/p";} function get_the_title($i){return "T";} function wp_date($f){return "2026";} function get_bloginfo($k){return "Site";}
       class WP_Block_Type_Registry{static function get_instance(){return new self;} function is_registered($n){return true;}}
       include $argv[1];' "$f" > "$OUT/$(basename "$f").html" ;;
     *) cp "$f" "$OUT/$(basename "$f").html" ;;

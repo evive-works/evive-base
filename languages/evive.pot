@@ -104,6 +104,31 @@ msgctxt "block style"
 msgid "Laptop"
 msgstr ""
 
+#: patterns/blog-teasers.php
+msgctxt "Pattern title"
+msgid "Blog teasers"
+msgstr ""
+
+#: patterns/blog-teasers.php
+msgctxt "Pattern description"
+msgid "The three latest posts as cards (featured image, category, title, excerpt, date) with a link to all articles. Fills itself; with fewer posts it shows fewer cards. Three per row on wide screens, stacked on phones."
+msgstr ""
+
+#: patterns/blog-teasers.php:20
+msgctxt "placeholder"
+msgid "Latest articles"
+msgstr ""
+
+#: patterns/blog-teasers.php:24
+msgctxt "link"
+msgid "All articles"
+msgstr ""
+
+#: patterns/blog-teasers.php:45
+msgctxt "placeholder"
+msgid "No articles yet."
+msgstr ""
+
 #: patterns/bento.php
 msgctxt "Pattern title"
 msgid "Bento grid"
