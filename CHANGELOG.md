@@ -2,6 +2,11 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New pattern `evive/blog-teasers` (category Content): the three latest posts as cards (featured image, category, title, excerpt, date) with an "All articles" link to the posts page (or the home page when the latest posts are on the front page). The cards fill themselves; with one or two posts the row shows fewer cards, with none it shows "No articles yet.". Three per row on wide screens, one on phones (evive #408).
+- nl_NL translations for the new strings (284 of 284).
+- Block validator: `validate.sh` stubs `get_permalink()` (evive #408).
+
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
 - New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).

@@ -253,5 +253,11 @@ T = {
  "1,500 employees": "1.500 medewerkers",
  "Customer since": "Klant sinds",
  "Case": "Case",
+ "Blog teasers": "Blogteasers",
+ "The three latest posts as cards (featured image, category, title, excerpt, date) with a link to all articles. Fills itself; with fewer posts it shows fewer cards. Three per row on wide screens, stacked on phones.":
+  "De drie nieuwste berichten als kaarten (uitgelichte afbeelding, categorie, titel, samenvatting, datum) met een link naar alle artikelen. Vult zichzelf; met minder berichten toont het minder kaarten. Drie per rij op brede schermen, op telefoons onder elkaar.",
+ "Latest articles": "Nieuwste artikelen",
+ "All articles": "Alle artikelen",
+ "No articles yet.": "Nog geen artikelen.",
 }
 CTX = {}
