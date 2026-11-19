@@ -242,4 +242,32 @@ add_action( 'enqueue_block_editor_assets', function () {
 		'placeholderAfter'  => $images . 'placeholder-after.svg',
 	];
 	wp_add_inline_script( generate_block_asset_handle( 'evive/before-after', 'editorScript' ), 'window.eviveBeforeAfter = ' . wp_json_encode( $strings ) . ';', 'before' );
+
+	// evive #516: media with an overlapping card.
+	$strings = [
+		'panel'          => _x( 'Card', 'media-overlap panel', 'evive' ),
+		'corner'         => __( 'Card position', 'evive' ),
+		'bottomLeft'     => __( 'Bottom left', 'evive' ),
+		'bottomRight'    => __( 'Bottom right', 'evive' ),
+		'topLeft'        => __( 'Top left', 'evive' ),
+		'topRight'       => __( 'Top right', 'evive' ),
+		'offsetX'        => __( 'Sticks out sideways', 'evive' ),
+		'offsetY'        => __( 'Sticks out vertically', 'evive' ),
+		'offsetHelp'     => __( 'How far the card sticks out beyond the image (spacing steps). The block reserves that space, so nothing next to or below it is covered.', 'evive' ),
+		'width'          => __( 'Card width (% of the image)', 'evive' ),
+		'background'     => __( 'Card background', 'evive' ),
+		'backgroundHelp' => __( 'Theme colours only. No colour: transparent card.', 'evive' ),
+		'radius'         => __( 'Card corners', 'evive' ),
+		'padding'        => __( 'Padding inside the card', 'evive' ),
+		'shadow'         => __( 'Shadow', 'evive' ),
+		'none'           => _x( 'None', 'media-overlap option', 'evive' ),
+		'small'          => _x( 'Small', 'media-overlap option', 'evive' ),
+		'medium'         => _x( 'Medium', 'media-overlap option', 'evive' ),
+		'large'          => _x( 'Large', 'media-overlap option', 'evive' ),
+		'phone'          => __( 'Keep the overlap on phones', 'evive' ),
+		'phoneHelp'      => __( 'Off: on screens below 782px the card stacks under the image.', 'evive' ),
+		'cardText'       => __( 'Card content: an image, SVG, text or any blocks.', 'evive' ),
+		'placeholder'    => $images . 'placeholder.svg',
+	];
+	wp_add_inline_script( generate_block_asset_handle( 'evive/media-overlap', 'editorScript' ), 'window.eviveMediaOverlap = ' . wp_json_encode( $strings ) . ';', 'before' );
 } );

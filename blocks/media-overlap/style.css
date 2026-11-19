@@ -1,0 +1,110 @@
+/* evive #516: media with an overlapping card. Tokens only: the variables are set per block (render.php and
+   index.js) from spacing, colour, radius and shadow presets. Loaded on pages with the block and in the editor.
+
+   One grid: the image in one cell, the card spanning the image and the strip it sticks out into. The strip
+   (--evive-mo-ox wide, --evive-mo-oy high) is part of the block, so the block reserves the space the card hangs
+   out and never covers what stands next to or below it. A card taller than the image makes the block taller. */
+.evive-mo {
+	display: grid;
+	grid-template-columns: var(--evive-mo-ox, 0px) minmax(0, 1fr);
+	grid-template-rows: auto var(--evive-mo-oy, 0px);
+	position: relative;
+}
+.evive-mo.is-card-bottom-right,
+.evive-mo.is-card-top-right {
+	grid-template-columns: minmax(0, 1fr) var(--evive-mo-ox, 0px);
+}
+.evive-mo.is-card-top-left,
+.evive-mo.is-card-top-right {
+	grid-template-rows: var(--evive-mo-oy, 0px) auto;
+}
+
+.evive-mo > .wp-block-image {
+	align-self: start;
+	grid-column: 2;
+	grid-row: 1;
+	margin: 0;
+	min-width: 0;
+}
+.evive-mo.is-card-bottom-right > .wp-block-image,
+.evive-mo.is-card-top-right > .wp-block-image {
+	grid-column: 1;
+}
+.evive-mo.is-card-top-left > .wp-block-image,
+.evive-mo.is-card-top-right > .wp-block-image {
+	grid-row: 2;
+}
+.evive-mo > .wp-block-image img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.evive-mo > .evive-mo__card {
+	align-self: end;
+	background: var(--evive-mo-bg, var(--wp--preset--color--base));
+	border-radius: var(--evive-mo-radius, 0px);
+	box-shadow: var(--evive-mo-shadow, none);
+	box-sizing: border-box;
+	color: var(--evive-mo-fg, inherit);
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+	justify-self: start;
+	margin: 0;
+	max-width: 100%;
+	min-width: 0;
+	overflow-wrap: break-word;
+	padding: var(--evive-mo-pad, 0px);
+	position: relative;
+	/* A share of the image's width (the block minus the strip). */
+	width: calc((100% - var(--evive-mo-ox, 0px)) * var(--evive-mo-w, 60) / 100);
+	z-index: 1;
+}
+.evive-mo.is-card-bottom-right > .evive-mo__card,
+.evive-mo.is-card-top-right > .evive-mo__card {
+	justify-self: end;
+}
+.evive-mo.is-card-top-left > .evive-mo__card,
+.evive-mo.is-card-top-right > .evive-mo__card {
+	align-self: start;
+}
+
+/* Inside the card: blocks one below the other with a small gap, no outer margins. */
+.evive-mo__card > * {
+	margin-block: 0;
+}
+.evive-mo__card > * + * {
+	margin-block-start: var(--wp--preset--spacing--20);
+}
+.evive-mo__card .wp-block-image {
+	margin-block: 0;
+}
+.evive-mo__card img,
+.evive-mo__card svg {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+/* Phones (same breakpoint as core's columns): the card stacks under the image, full width, no overlap,
+   unless "Keep the overlap on phones" is on. */
+@media (max-width: 781px) {
+	.evive-mo:not(.is-overlap-on-phone) {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: auto auto;
+		row-gap: var(--wp--preset--spacing--30);
+	}
+	.evive-mo:not(.is-overlap-on-phone) > .wp-block-image,
+	.evive-mo:not(.is-overlap-on-phone) > .evive-mo__card {
+		align-self: start;
+		grid-column: 1;
+		justify-self: stretch;
+	}
+	.evive-mo:not(.is-overlap-on-phone) > .wp-block-image {
+		grid-row: 1;
+	}
+	.evive-mo:not(.is-overlap-on-phone) > .evive-mo__card {
+		grid-row: 2;
+		width: auto;
+	}
+}

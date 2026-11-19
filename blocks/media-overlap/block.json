@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "evive/media-overlap",
+	"title": "Media with overlapping card",
+	"category": "media",
+	"icon": "align-pull-left",
+	"description": "An image with a card that overlaps one of its corners. Position, offset, width, colour, radius, padding and shadow of the card are set in the sidebar. On phones the card stacks under the image.",
+	"keywords": [ "overlap", "card", "hero image" ],
+	"textdomain": "evive",
+	"allowedBlocks": [ "core/image", "evive/media-overlap-card" ],
+	"attributes": {
+		"corner": { "type": "string", "enum": [ "bottom-left", "bottom-right", "top-left", "top-right" ], "default": "bottom-left" },
+		"offsetX": { "type": "string", "default": "50" },
+		"offsetY": { "type": "string", "default": "60" },
+		"cardWidth": { "type": "number", "default": 60 },
+		"cardBackground": { "type": "string", "default": "base" },
+		"cardRadius": { "type": "string", "enum": [ "none", "s", "m", "l" ], "default": "l" },
+		"cardPadding": { "type": "string", "default": "30" },
+		"cardShadow": { "type": "string", "enum": [ "none", "s", "m", "l" ], "default": "m" },
+		"overlapOnPhone": { "type": "boolean", "default": false }
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"spacing": { "margin": [ "top", "bottom" ] }
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

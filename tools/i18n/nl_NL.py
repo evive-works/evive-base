@@ -330,5 +330,31 @@ T = {
  "Two images with a divider visitors drag (mouse, touch or keyboard) to compare them. Without JavaScript both images are shown side by side.":
   "Twee afbeeldingen met een scheidslijn die bezoekers verslepen (muis, touch of toetsenbord) om ze te vergelijken. Zonder JavaScript staan beide afbeeldingen naast elkaar.",
  "compare": "vergelijken", "slider": "schuifregelaar", "make-over": "make-over",
+ # evive #516: media with overlapping card
+ "Card position": "Positie van de kaart",
+ "Bottom left": "Linksonder", "Bottom right": "Rechtsonder", "Top left": "Linksboven", "Top right": "Rechtsboven",
+ "Sticks out sideways": "Steekt opzij uit", "Sticks out vertically": "Steekt verticaal uit",
+ "How far the card sticks out beyond the image (spacing steps). The block reserves that space, so nothing next to or below it is covered.":
+  "Hoe ver de kaart buiten de afbeelding uitsteekt (spacing-stappen). Het blok houdt die ruimte vrij, zodat niets ernaast of eronder wordt bedekt.",
+ "Card width (% of the image)": "Breedte van de kaart (% van de afbeelding)",
+ "Card background": "Achtergrond van de kaart",
+ "Theme colours only. No colour: transparent card.": "Alleen themakleuren. Geen kleur: transparante kaart.",
+ "Card corners": "Hoeken van de kaart", "Padding inside the card": "Binnenruimte van de kaart", "Shadow": "Schaduw",
+ "None": "Geen",
+ "Keep the overlap on phones": "Overlap ook op telefoons houden",
+ "Off: on screens below 782px the card stacks under the image.": "Uit: op schermen smaller dan 782px staat de kaart onder de afbeelding.",
+ "Card content: an image, SVG, text or any blocks.": "Inhoud van de kaart: een afbeelding, SVG, tekst of andere blokken.",
+ "Media with overlapping card": "Beeld met overlappende kaart",
+ "An image with a card that overlaps one of its corners. Position, offset, width, colour, radius, padding and shadow of the card are set in the sidebar. On phones the card stacks under the image.":
+  "Een afbeelding met een kaart die over een van de hoeken valt. Positie, uitsteek, breedte, kleur, afronding, binnenruimte en schaduw van de kaart stel je in de zijbalk in. Op telefoons staat de kaart onder de afbeelding.",
+ "overlap": "overlap", "card": "kaart", "hero image": "hero-afbeelding",
+ "Overlapping card": "Overlappende kaart",
+ "The card of a Media with overlapping card block: holds any blocks (an image or SVG, text, a button). Its look is set on the parent block.":
+  "De kaart van een blok Beeld met overlappende kaart: bevat willekeurige blokken (een afbeelding of SVG, tekst, een knop). Het uiterlijk stel je in op het bovenliggende blok.",
+ "Hero: image with overlapping card": "Hero: afbeelding met overlappende kaart",
+ "Text on the left; on the right an image with a card that overlaps its bottom-left corner (block \"Media with overlapping card\": position, size and colour of the card in the sidebar). On phones the card stacks under the image.":
+  "Tekst links; rechts een afbeelding met een kaart over de hoek linksonder (blok \"Beeld met overlappende kaart\": positie, grootte en kleur van de kaart in de zijbalk). Op telefoons staat de kaart onder de afbeelding.",
+ "A headline with a picture that tells the rest": "Een kop met een beeld dat de rest vertelt",
+ "One short line that backs up the headline with a fact.": "Eén korte regel die de kop met een feit onderbouwt.",
 }
 CTX = {}

@@ -1908,3 +1908,152 @@ msgstr ""
 msgctxt "Pattern description"
 msgid "Four big numbers with a label each; the numbers count up once when they scroll into view."
 msgstr ""
+
+#: functions.php
+msgctxt "media-overlap panel"
+msgid "Card"
+msgstr ""
+
+#: functions.php
+msgid "Card position"
+msgstr ""
+
+#: functions.php
+msgid "Bottom left"
+msgstr ""
+
+#: functions.php
+msgid "Bottom right"
+msgstr ""
+
+#: functions.php
+msgid "Top left"
+msgstr ""
+
+#: functions.php
+msgid "Top right"
+msgstr ""
+
+#: functions.php
+msgid "Sticks out sideways"
+msgstr ""
+
+#: functions.php
+msgid "Sticks out vertically"
+msgstr ""
+
+#: functions.php
+msgid "How far the card sticks out beyond the image (spacing steps). The block reserves that space, so nothing next to or below it is covered."
+msgstr ""
+
+#, no-php-format
+#: functions.php
+msgid "Card width (% of the image)"
+msgstr ""
+
+#: functions.php
+msgid "Card background"
+msgstr ""
+
+#: functions.php
+msgid "Theme colours only. No colour: transparent card."
+msgstr ""
+
+#: functions.php
+msgid "Card corners"
+msgstr ""
+
+#: functions.php
+msgid "Padding inside the card"
+msgstr ""
+
+#: functions.php
+msgid "Shadow"
+msgstr ""
+
+#: functions.php
+msgctxt "media-overlap option"
+msgid "None"
+msgstr ""
+
+#: functions.php
+msgctxt "media-overlap option"
+msgid "Small"
+msgstr ""
+
+#: functions.php
+msgctxt "media-overlap option"
+msgid "Medium"
+msgstr ""
+
+#: functions.php
+msgctxt "media-overlap option"
+msgid "Large"
+msgstr ""
+
+#: functions.php
+msgid "Keep the overlap on phones"
+msgstr ""
+
+#: functions.php
+msgid "Off: on screens below 782px the card stacks under the image."
+msgstr ""
+
+#: functions.php
+msgid "Card content: an image, SVG, text or any blocks."
+msgstr ""
+
+#: blocks/media-overlap/block.json
+msgctxt "block title"
+msgid "Media with overlapping card"
+msgstr ""
+
+#: blocks/media-overlap/block.json
+msgctxt "block description"
+msgid "An image with a card that overlaps one of its corners. Position, offset, width, colour, radius, padding and shadow of the card are set in the sidebar. On phones the card stacks under the image."
+msgstr ""
+
+#: blocks/media-overlap/block.json
+msgctxt "block keyword"
+msgid "overlap"
+msgstr ""
+
+#: blocks/media-overlap/block.json
+msgctxt "block keyword"
+msgid "card"
+msgstr ""
+
+#: blocks/media-overlap/block.json
+msgctxt "block keyword"
+msgid "hero image"
+msgstr ""
+
+#: blocks/media-overlap-card/block.json
+msgctxt "block title"
+msgid "Overlapping card"
+msgstr ""
+
+#: blocks/media-overlap-card/block.json
+msgctxt "block description"
+msgid "The card of a Media with overlapping card block: holds any blocks (an image or SVG, text, a button). Its look is set on the parent block."
+msgstr ""
+
+#: patterns/hero-media-overlap.php
+msgctxt "Pattern title"
+msgid "Hero: image with overlapping card"
+msgstr ""
+
+#: patterns/hero-media-overlap.php
+msgctxt "Pattern description"
+msgid "Text on the left; on the right an image with a card that overlaps its bottom-left corner (block \"Media with overlapping card\": position, size and colour of the card in the sidebar). On phones the card stacks under the image."
+msgstr ""
+
+#: patterns/hero-media-overlap.php
+msgctxt "placeholder"
+msgid "A headline with a picture that tells the rest"
+msgstr ""
+
+#: patterns/hero-media-overlap.php
+msgctxt "placeholder"
+msgid "One short line that backs up the headline with a fact."
+msgstr ""

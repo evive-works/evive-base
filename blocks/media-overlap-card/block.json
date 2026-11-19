@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "evive/media-overlap-card",
+	"title": "Overlapping card",
+	"category": "media",
+	"icon": "index-card",
+	"description": "The card of a Media with overlapping card block: holds any blocks (an image or SVG, text, a button). Its look is set on the parent block.",
+	"parent": [ "evive/media-overlap" ],
+	"textdomain": "evive",
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"render": "file:./render.php"
+}
