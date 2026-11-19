@@ -2,6 +2,10 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New pattern `evive/device-duo` ("Device duo: laptop with phone in front", category Features): a laptop with a desktop screenshot and a floating phone with an app screenshot overlapping its bottom-right corner, drawn in CSS by the existing image block styles "Laptop" and "Phone, floating" (no mockup images). Swap in two plain screenshots; the laptop screen is 16:10 and fills from the top. One group (`evive-device-duo`, CSS in `base.css`), so it works on its own, next to text or in the image column of a hero or `evive/cta-media`; on phones the pair keeps its overlap, scaled down. Static, no animation (evive #484).
+- nl_NL translations for the new strings (389 of 389). Docs: section and screenshots in `docs/patterns.md`.
+
 ## 0.9.1 — 2026-11-20
 - Docs: screenshots for ten newer patterns in `docs/patterns.md` (steps, problem-solution, bento, product-screenshot, pricing-plans, pricing-comparison, pricing-addon, cta-media, case-cards, case-study): default palette at 1280, dark-primary test palette at 1280, phone at 390, same format as the earlier shots. No theme code changes (evive #482).
 - Tools: `tools/pattern-shots/` makes these screenshots with one command (`node tools/pattern-shots/shoot.mjs --card <card> <pattern...>` on an evive-base test site: one page per pattern, Playwright at real viewport widths, lazy images loaded, every shot taken twice and checked for a stable layout, WebP encoded in the browser). The dark-primary test palette is written down in `tools/pattern-shots/palettes.json`; how it works in `tools/pattern-shots/README.md` (evive #482).

@@ -493,6 +493,8 @@
    shape fills it from the top. Static, so reduced motion needs nothing. */
 .evive-device-duo {
 	display: grid;
+	/* The turned phone reaches a little below its box. */
+	padding-bottom: var(--wp--preset--spacing--30);
 	grid-template-columns: minmax(0, 1fr);
 	grid-template-rows: auto;
 }

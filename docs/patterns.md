@@ -215,6 +215,15 @@ Section heading, a row of static category labels (pills; the one with class `is-
 |---|---|---|
 | ![Integrations grid, default](patterns/integrations-default-1280.webp) | ![Integrations grid, dark primary](patterns/integrations-dark-1280.webp) | ![Integrations grid, mobile](patterns/integrations-default-390.webp) |
 
+## Device duo: laptop with phone in front
+`evive/device-duo` · category `evive-features` (evive #484)
+
+A laptop with a desktop screenshot and a "Phone, floating" phone with an app screenshot in front of its bottom-right corner, like a classic laptop + phone mockup, but drawn in CSS: both are ordinary Image blocks with the block styles **Laptop** and **Phone, floating**, so swap in two plain screenshots (never an image with a device baked in) and set their alt text. The laptop screen has a fixed 16:10 shape and a desktop screenshot of another shape fills it from the top; the phone screen is 9:19.5 as in the Phone style. The pattern is one Group (class `evive-device-duo`) without section padding, so it can stand on its own, sit in a column next to text, or replace the image in a hero or the CTA band. Both devices are in one grid cell, so the group is as tall as the pair and nothing around it is covered. On phones the pair keeps its overlap, scaled down, with the phone a bit larger relative to the laptop. Static (no animation). The dark-primary shot shows it inside `evive/cta-media`.
+
+| Default | Dark primary (in the CTA band) | Mobile |
+|---|---|---|
+| ![Device duo, default](patterns/device-duo-default-1280.webp) | ![Device duo, dark primary](patterns/device-duo-dark-1280.webp) | ![Device duo, mobile](patterns/device-duo-default-390.webp) |
+
 ## Batch 2: newer patterns (screenshots evive #482)
 Made with `tools/pattern-shots/` (see its README): evive-base alone on a throwaway test site, no child theme.
 

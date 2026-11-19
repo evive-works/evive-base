@@ -356,5 +356,9 @@ T = {
   "Tekst links; rechts een afbeelding met een kaart over de hoek linksonder (blok \"Beeld met overlappende kaart\": positie, grootte en kleur van de kaart in de zijbalk). Op telefoons staat de kaart onder de afbeelding.",
  "A headline with a picture that tells the rest": "Een kop met een beeld dat de rest vertelt",
  "One short line that backs up the headline with a fact.": "Eén korte regel die de kop met een feit onderbouwt.",
+  # evive #484: device duo
+ "Device duo: laptop with phone in front": "Apparaatduo: laptop met telefoon ervoor",
+ "A laptop with a desktop screenshot and a floating phone with an app screenshot in front of it, overlapping its bottom-right corner. Swap in two plain screenshots: both devices are drawn by the image block styles \"Laptop\" and \"Phone, floating\" (never use an image with a device baked in). The desktop screenshot fills the screen from the top. One group, so it works on its own, in a column next to text or in the image column of a hero or CTA band.":
+  "Een laptop met een desktopscreenshot en daarvoor een zwevende telefoon met een appscreenshot, over de hoek rechtsonder. Zet er twee gewone screenshots in: beide apparaten worden getekend door de afbeeldingsstijlen \"Laptop\" en \"Telefoon, zwevend\" (gebruik nooit een afbeelding met een ingebakken apparaat). Het desktopscreenshot vult het scherm vanaf de bovenkant. Eén groep, dus het werkt los, in een kolom naast tekst of in de beeldkolom van een hero of CTA-band.",
 }
 CTX = {}

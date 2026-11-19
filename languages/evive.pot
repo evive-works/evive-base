@@ -2057,3 +2057,13 @@ msgstr ""
 msgctxt "placeholder"
 msgid "One short line that backs up the headline with a fact."
 msgstr ""
+
+#: patterns/device-duo.php
+msgctxt "Pattern title"
+msgid "Device duo: laptop with phone in front"
+msgstr ""
+
+#: patterns/device-duo.php
+msgctxt "Pattern description"
+msgid "A laptop with a desktop screenshot and a floating phone with an app screenshot in front of it, overlapping its bottom-right corner. Swap in two plain screenshots: both devices are drawn by the image block styles \"Laptop\" and \"Phone, floating\" (never use an image with a device baked in). The desktop screenshot fills the screen from the top. One group, so it works on its own, in a column next to text or in the image column of a hero or CTA band."
+msgstr ""
