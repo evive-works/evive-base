@@ -113,7 +113,7 @@ A short line and a row of customer logos.
 |---|---|---|
 | ![Logo wall, default](patterns/logo-wall-default-1280.webp) | ![Logo wall, dark primary](patterns/logo-wall-dark-1280.webp) | ![Logo wall, mobile](patterns/logo-wall-default-390.webp) |
 
-**Moving strip** (evive #413): select the row of logos (the inner Group) and pick the block style *Moving strip*. On the site the logos then glide slowly to the side in an endless loop (CSS only; the theme repeats the logos so the loop has no gap, the copies are hidden from screen readers and keyboard). It pauses on hover, while something in it has keyboard focus, and with the small *Pause animation* checkbox below it. With *reduce motion* switched on in the visitor's system it stands still as a normal row of logos that scrolls sideways. In the editor it shows as that still row. The speed follows the number of logos (5 s per logo per round).
+**Moving strip** (evive #413): select the row of logos (the inner Group) and pick the block style *Moving strip*. On the site the logos then glide slowly to the side in an endless loop (CSS only; the theme repeats the logos so the loop has no gap, the copies are hidden from screen readers and keyboard). It pauses on hover, while something in it has keyboard focus, and with the small *Pause animation* checkbox below it. With *reduce motion* switched on in the visitor's system, or with JavaScript switched off in the browser (CSS `@media (scripting: none)`), it stands still as a normal row of logos that scrolls sideways. In the editor it shows as that still row. The speed follows the number of logos (5 s per logo per round).
 
 | Moving strip, desktop (1280) | Moving strip, mobile (390) |
 |---|---|

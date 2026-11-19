@@ -604,7 +604,9 @@
 	gap: var(--wp--preset--spacing--20);
 	justify-content: center;
 }
-@media (prefers-reduced-motion: reduce) {
+/* evive #413: also without JavaScript (scripting: none), so the strip is still CSS only. A browser that
+   doesn't know "scripting" ignores that part of the list and keeps the reduced-motion part. */
+@media (prefers-reduced-motion: reduce), (scripting: none) {
 	/* Stands still: one set of logos as a normal scrollable row, no copies and no pause control. */
 	.evive-strip-track {
 		animation: none;
