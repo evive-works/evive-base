@@ -12,6 +12,7 @@
 	},
 	"overrides": {
 		"@wordpress/private-apis": "2.0.0",
-		"@wordpress/blocks": "$@wordpress/blocks"
+		"@wordpress/blocks": "$@wordpress/blocks",
+		"@wordpress/element": "8.8.0"
 	}
 }

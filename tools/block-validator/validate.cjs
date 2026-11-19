@@ -6,6 +6,13 @@ const { parse, getBlockType, validateBlock } = require('@wordpress/blocks');
 const _log = console.log; console.error = () => {}; console.warn = () => {}; console.info = () => {};
 const { registerCoreBlocks } = require('@wordpress/block-library');
 registerCoreBlocks();
+// evive #407: the evive Forms blocks (plugin evive-forms) with the same save() as the plugin: the form saves only
+// its inner blocks, a field saves nothing (both are rendered on the server).
+const { registerBlockType } = require('@wordpress/blocks');
+const { createElement: el } = require('@wordpress/element');
+const { InnerBlocks } = require('@wordpress/block-editor');
+registerBlockType('evive/form', { title: 'Form', category: 'widgets', attributes: { formTitle: { type: 'string', default: '' }, notifyTo: { type: 'string', default: '' }, submitLabel: { type: 'string', default: '' }, successMessage: { type: 'string', default: '' }, confirmation: { type: 'boolean', default: false }, confirmationSubject: { type: 'string', default: '' }, confirmationMessage: { type: 'string', default: '' } }, supports: { html: false }, edit: () => null, save: () => el(InnerBlocks.Content) });
+registerBlockType('evive/field', { title: 'Form field', category: 'widgets', parent: ['evive/form'], attributes: { type: { type: 'string', default: 'text', enum: ['text', 'email', 'tel', 'textarea', 'select', 'checkbox', 'consent'] }, label: { type: 'string', default: '' }, name: { type: 'string', default: '' }, required: { type: 'boolean', default: false }, placeholder: { type: 'string', default: '' }, help: { type: 'string', default: '' }, options: { type: 'array', default: [], items: { type: 'string' } }, width: { type: 'string', default: 'full', enum: ['full', 'half'] } }, supports: { html: false }, edit: () => null, save: () => null });
 const fs = require('fs');
 let bad = 0, total = 0;
 function walk(blocks, file) {
