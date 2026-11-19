@@ -141,3 +141,20 @@ Four big numbers with a label each.
 
 ## Header and footer (0.2.0)
 `evive/header` (default), `evive/header-no-cta`, `evive/header-sticky`; `evive/footer` (extended), `evive/footer-simple`. See `CHANGELOG.md`.
+
+## Blocks: Before / after
+`evive/before-after` · block category Media · `blocks/before-after/` (evive #412)
+
+Two images with a divider for make-over cases: the left part shows the before image, the right part the after image.
+- **Mouse:** drag anywhere on the picture, or click a spot. **Touch:** drag sideways or tap a spot; a vertical swipe still scrolls the page. **Keyboard and screen readers:** a range input (Tab to it; arrow keys, Page Up/Down, Home/End), labelled "Divider between before and after", with the value read as a percentage. The grip shows a focus ring.
+- **Editor:** the block holds two ordinary Image blocks (locked to two), so alt text, the media library and image sizes work as usual. In the sidebar: the two labels (empty = translated "Before"/"After") and the start position of the divider. Wide and full alignment.
+- **Without JavaScript** both images are shown side by side with their labels (stacked on phones). The script (`view.js`) and the styles load only on pages that use the block.
+- The before image sets the size; the after image is fitted to it (`object-fit: cover`), so use two images with the same aspect ratio. A transparent after image sits on the `base` colour.
+
+| With JavaScript (divider at 45%) | Without JavaScript |
+|---|---|
+| ![Before / after, default](patterns/before-after-default-1280.webp) | ![Before / after, without JavaScript](patterns/before-after-nojs-1280.webp) |
+
+| Mobile | Mobile, without JavaScript |
+|---|---|
+| ![Before / after, mobile](patterns/before-after-default-390.webp) | ![Before / after, mobile without JavaScript](patterns/before-after-nojs-390.webp) |
