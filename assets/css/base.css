@@ -813,17 +813,26 @@
 
 /* evive #513: sticky header. A sticky group in the header sits inside <header class="wp-block-template-part">,
    which is exactly as tall as the group, so the group has no room to stick. When the header part holds a
-   sticky group, the wrapper itself sticks. --wp-admin--admin-bar--position-offset is the fixed admin bar's
-   height when logged in and 0 without one or under 600px, where the admin bar scrolls away with the page.
+   sticky group, the wrapper itself sticks, below the admin bar when logged in (--wp-admin--admin-bar--height
+   comes from WordPress's admin-bar.css; core only sets its own position offset on .is-position-sticky itself,
+   so not on the wrapper). Up to 600px the admin bar scrolls away with the page, so no offset there, as in core.
    The background is a fallback for a sticky group without its own background. Anchor targets land below
    the header via scroll-padding-top; --evive-sticky-header-offset is a generous default for the header's
    height that a child theme can set to its own. */
 header.wp-block-template-part:has(> .is-position-sticky) {
+	--evive-admin-bar-offset: var(--wp-admin--admin-bar--height, 0px);
 	background-color: var(--wp--preset--color--base);
 	position: sticky;
-	top: var(--wp-admin--admin-bar--position-offset, 0px);
+	top: var(--evive-admin-bar-offset);
 	z-index: 100;
 }
 html:has(body header.wp-block-template-part > .is-position-sticky) {
-	scroll-padding-top: calc(var(--wp-admin--admin-bar--position-offset, 0px) + var(--evive-sticky-header-offset, 6rem));
+	--evive-admin-bar-offset: var(--wp-admin--admin-bar--height, 0px);
+	scroll-padding-top: calc(var(--evive-admin-bar-offset) + var(--evive-sticky-header-offset, 6rem));
+}
+@media screen and (max-width: 600px) {
+	html:has(body header.wp-block-template-part > .is-position-sticky),
+	header.wp-block-template-part:has(> .is-position-sticky) {
+		--evive-admin-bar-offset: 0px;
+	}
 }
