@@ -46,11 +46,18 @@
 .wp-block-evive-tabs > .evive-tabs__panel[hidden] {
 	display: none;
 }
-.evive-tabs__panel > :first-child {
+.evive-tabs__panel > :first-child,
+.wp-block-evive-tabs.is-ready > .evive-tabs__panel > .evive-tabs__label + * {
 	margin-block-start: 0;
 }
 .evive-tabs__panel:focus-visible {
 	outline-offset: 4px;
+}
+/* Without JavaScript: the label heading of each panel, underlined like the tab list. */
+.evive-tabs__label {
+	margin-block-end: var(--wp--preset--spacing--30);
+	padding-block-end: var(--wp--preset--spacing--20);
+	border-bottom: 1px solid var(--wp--preset--color--border);
 }
 /* Editor: every tab as a framed box with its label on top. */
 .evive-tab-editor {
