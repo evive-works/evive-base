@@ -52,8 +52,10 @@
 	border-radius: 0;
 	-webkit-user-drag: none;
 }
-/* The before image sets the size; the after image fills the same box. */
+/* The before image sets the size. */
+/* The after image fills the same box, on the page background so a transparent image hides the one below. */
 .evive-ba.is-interactive .evive-ba__after {
+	background: var(--wp--preset--color--base);
 	clip-path: inset(0 0 0 var(--evive-ba-pos, 50%));
 	inset: 0;
 	position: absolute;
