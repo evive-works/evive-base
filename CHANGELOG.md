@@ -2,7 +2,7 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
-## Unreleased
+## 0.9.0 — 2026-11-19
 - New block **Media with overlapping card** (`evive/media-overlap`, with inner `evive/media-overlap-card`, in `blocks/media-overlap/` and `blocks/media-overlap-card/`): an image with a card that overlaps one of its corners; the card holds any blocks (an image or SVG, text, a button). Sidebar: card position (bottom left / bottom right / top left / top right), how far it sticks out sideways and vertically (spacing steps 0–7), card width (20–100 % of the image), card background (theme palette only, or none), corners (radius presets), padding (spacing steps) and shadow (shadow presets). The block reserves the space the card sticks out into, so text next to or below it is never covered; a card taller than the image makes the block taller instead of being cut off. Below 782px the card stacks under the image at full width, unless "Keep the overlap on phones" is on. Both blocks save only their inner blocks (settings in the block comment, wrapper rendered in PHP with the same classes and CSS variables as the editor), so the editor shows the front-end layout and later markup changes don't invalidate saved content. Its CSS loads only where the block is used. Replaces hand-written `position:absolute` groups with inline styles and a hard-coded white (evive #516).
 - New pattern `evive/hero-media-overlap` ("Hero: image with overlapping card", category Hero): text left, image with an overlapping card (a number and a line) right (evive #516).
 - nl_NL translations for the new strings (387 of 387). Block validator fixture `media-overlap.html`.
