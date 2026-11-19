@@ -121,6 +121,15 @@ One large customer quote with name, role and photo.
 |---|---|---|
 | ![Testimonial, default](patterns/testimonial-default-1280.webp) | ![Testimonial, dark primary](patterns/testimonial-dark-1280.webp) | ![Testimonial, mobile](patterns/testimonial-default-390.webp) |
 
+## Testimonial: large photo
+`evive/testimonial-photo` · category `evive-proof`
+
+A large photo of the person (4:5, cropped to fill) next to a big quote, with name, role and company logo. On phones the photo sits above the quote. Text uses `contrast` and `muted` on `surface`; the quote mark is `primary` (all pairs from the token contract's contrast rules).
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Testimonial: large photo, default](patterns/testimonial-photo-default-1280.webp) | ![Testimonial: large photo, dark primary](patterns/testimonial-photo-dark-1280.webp) | ![Testimonial: large photo, mobile](patterns/testimonial-photo-default-390.webp) |
+
 ## Testimonials: grid of three
 `evive/testimonials-grid` · category `evive-proof`
 

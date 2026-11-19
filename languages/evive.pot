@@ -395,6 +395,8 @@ msgstr ""
 #: patterns/logo-wall.php:30
 #: patterns/logo-wall.php:34
 #: patterns/logo-wall.php:38
+#: patterns/case-study.php:91
+#: patterns/testimonial-photo.php:43
 msgctxt "placeholder"
 msgid "Customer logo"
 msgstr ""
@@ -439,6 +441,7 @@ msgstr ""
 #: patterns/testimonials-grid.php:28
 #: patterns/testimonials-grid.php:52
 #: patterns/testimonials-grid.php:76
+#: patterns/testimonial-photo.php:27
 msgctxt "placeholder"
 msgid "A short, specific quote about the result a customer got. Real words from a real person."
 msgstr ""
@@ -449,6 +452,7 @@ msgstr ""
 #: patterns/testimonials-grid.php:62
 #: patterns/testimonials-grid.php:86
 #: patterns/team.php:32
+#: patterns/testimonial-photo.php:34
 msgctxt "placeholder"
 msgid "Name Surname"
 msgstr ""
@@ -458,6 +462,7 @@ msgstr ""
 #: patterns/testimonials-grid.php:42
 #: patterns/testimonials-grid.php:66
 #: patterns/testimonials-grid.php:90
+#: patterns/testimonial-photo.php:38
 msgctxt "placeholder"
 msgid "Role, Company"
 msgstr ""
@@ -1732,4 +1737,19 @@ msgstr ""
 #: patterns/contact.php:61
 msgctxt "form field placeholder"
 msgid "What can we help you with?"
+msgstr ""
+
+#: patterns/testimonial-photo.php
+msgctxt "Pattern title"
+msgid "Testimonial: large photo"
+msgstr ""
+
+#: patterns/testimonial-photo.php
+msgctxt "Pattern description"
+msgid "A large photo of the person next to a big quote, with name, role and company logo. On phones the photo sits above the quote."
+msgstr ""
+
+#: patterns/testimonial-photo.php:20
+msgctxt "placeholder"
+msgid "Portrait of the customer"
 msgstr ""

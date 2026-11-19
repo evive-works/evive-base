@@ -297,5 +297,9 @@ T = {
  "Third category": "Derde categorie",
  "Integration name": "Naam van de koppeling",
  "One line on what this integration does.": "Eén regel over wat deze koppeling doet.",
+ "Testimonial: large photo": "Klantverhaal: grote foto",
+ "A large photo of the person next to a big quote, with name, role and company logo. On phones the photo sits above the quote.":
+  "Een grote foto van de persoon naast een groot citaat, met naam, functie en bedrijfslogo. Op telefoons staat de foto boven het citaat.",
+ "Portrait of the customer": "Portret van de klant",
 }
 CTX = {}
