@@ -24,6 +24,7 @@ wp-content/themes/<customer>/
 | `templates/` | `index`, `front-page`, `page`, `single`, `archive`, `404`, `search` |
 | `parts/` | `header`, `footer` |
 | `patterns/` | Hidden helper patterns used by templates (translatable strings); generic patterns follow in later releases |
+| `blocks/` | Theme blocks: `evive/tabs` + `evive/tab` (Tabs). Plain JS on the `wp.*` globals, no build step; script and CSS load only where a block is used |
 | `assets/css/base.css` | Focus rings, reduced motion, form inputs — tokens only |
 
 `front-page.html` renders a static front page's content without a title (the H1 comes from the page's hero). When the front page shows the latest posts, the theme falls back to `index.html`.

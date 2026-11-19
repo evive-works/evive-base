@@ -6,6 +6,20 @@ const { parse, getBlockType, validateBlock } = require('@wordpress/blocks');
 const _log = console.log; console.error = () => {}; console.warn = () => {}; console.info = () => {};
 const { registerCoreBlocks } = require('@wordpress/block-library');
 registerCoreBlocks();
+// evive #411: the theme's own blocks (blocks/*/index.js), loaded with the same wp.* globals the editor gives them,
+// so their markup is checked against their real save().
+window.wp = { blocks: require('@wordpress/blocks'), blockEditor: require('@wordpress/block-editor'), element: require('@wordpress/element'), i18n: require('@wordpress/i18n') };
+for (const dir of require('fs').readdirSync(__dirname + '/../../blocks')) {
+  const js = `${__dirname}/../../blocks/${dir}/index.js`;
+  if (!require('fs').existsSync(js)) continue;
+  const reg = window.wp.blocks.registerBlockType;
+  window.wp.blocks = { ...window.wp.blocks, registerBlockType: (name, settings) => {
+    const meta = JSON.parse(require('fs').readFileSync(`${__dirname}/../../blocks/${name.split('/')[1]}/block.json`, 'utf8'));
+    return reg(name, { ...meta, ...settings });
+  } };
+  require(js);
+  window.wp.blocks = require('@wordpress/blocks');
+}
 const fs = require('fs');
 let bad = 0, total = 0;
 function walk(blocks, file) {

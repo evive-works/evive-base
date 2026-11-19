@@ -1,0 +1,69 @@
+/* evive #411: Tabs block (evive/tabs, evive/tab). Tokens only. Loaded only where the block is used. */
+.wp-block-evive-tabs > .evive-tabs__list {
+	display: flex;
+	gap: var(--wp--preset--spacing--20);
+	overflow-x: auto;
+	border-bottom: 1px solid var(--wp--preset--color--border);
+	scrollbar-width: none;
+}
+.wp-block-evive-tabs > .evive-tabs__list[hidden] {
+	display: none;
+}
+.evive-tabs__tab {
+	flex: 0 0 auto;
+	margin: 0 0 -1px;
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--30);
+	border: 0;
+	border-bottom: 2px solid transparent;
+	background: none;
+	color: var(--wp--preset--color--muted);
+	font: inherit;
+	font-size: var(--wp--preset--font-size--m);
+	font-weight: 600;
+	line-height: 1.3;
+	cursor: pointer;
+}
+.evive-tabs__tab:hover {
+	color: var(--wp--preset--color--contrast);
+}
+.evive-tabs__tab[aria-selected="true"] {
+	color: var(--wp--preset--color--contrast);
+	border-bottom-color: var(--wp--preset--color--primary);
+}
+.evive-tabs__tab:focus-visible {
+	outline-offset: -2px;
+	border-radius: var(--wp--custom--radius--s);
+}
+/* Panels: without JavaScript all are shown, each with its label as a heading. */
+.wp-block-evive-tabs > .evive-tabs__panel + .evive-tabs__panel {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+.wp-block-evive-tabs.is-ready > .evive-tabs__panel {
+	margin-block-start: 0;
+	padding-block-start: var(--wp--preset--spacing--50);
+}
+.wp-block-evive-tabs.is-ready > .evive-tabs__panel > .evive-tabs__label,
+.wp-block-evive-tabs > .evive-tabs__panel[hidden] {
+	display: none;
+}
+.evive-tabs__panel > :first-child {
+	margin-block-start: 0;
+}
+.evive-tabs__panel:focus-visible {
+	outline-offset: 4px;
+}
+/* Editor: every tab as a framed box with its label on top. */
+.evive-tab-editor {
+	padding: var(--wp--preset--spacing--30);
+	border: 1px dashed var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--m);
+}
+.evive-tab-editor + .evive-tab-editor {
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+.evive-tab-editor__label {
+	margin: 0 0 var(--wp--preset--spacing--20);
+	padding-bottom: var(--wp--preset--spacing--20);
+	border-bottom: 2px solid var(--wp--preset--color--primary);
+	font-weight: 600;
+}

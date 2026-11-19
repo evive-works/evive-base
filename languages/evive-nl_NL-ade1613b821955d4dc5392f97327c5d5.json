@@ -1,0 +1,36 @@
+{
+	"translation-revision-date": "",
+	"generator": "evive tools/i18n",
+	"source": "blocks/tabs/index.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "nl_NL",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Content of the first tab. Add any blocks.": [
+				"Inhoud van het eerste tabblad. Voeg blokken toe."
+			],
+			"Content of the second tab. Add any blocks.": [
+				"Inhoud van het tweede tabblad. Voeg blokken toe."
+			],
+			"Content of the third tab. Add any blocks.": [
+				"Inhoud van het derde tabblad. Voeg blokken toe."
+			],
+			"First tab": [
+				"Eerste tabblad"
+			],
+			"Second tab": [
+				"Tweede tabblad"
+			],
+			"Tab label": [
+				"Label van het tabblad"
+			],
+			"Third tab": [
+				"Derde tabblad"
+			]
+		}
+	}
+}

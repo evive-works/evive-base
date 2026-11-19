@@ -2,6 +2,11 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New block **Tabs** (`evive/tabs`, with inner `evive/tab` blocks; theme blocks live in the new folder `blocks/`): content in tabs, each tab holding any blocks; starts with three tabs. Accessible tab list (WAI-ARIA tabs: `role="tablist"`/`tab`/`tabpanel`, arrow keys, Home and End, roving focus), works with mouse and touch. Without JavaScript the tab list stays hidden and every tab is shown with its label as a heading. Its small script and CSS load only on pages that use the block. Both blocks save only their inner blocks (labels in the block comment, tab list rendered in PHP), so later markup changes don't invalidate saved content (evive #411).
+- Block validator also checks the theme's own blocks against their real `save()`; `tools/i18n/build-json.py` makes the JSON translations for block editor scripts.
+- nl_NL translations for the new strings (293 of 293, editor script 7 of 7).
+
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
 - New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).

@@ -1539,3 +1539,67 @@ msgstr "Pagina zonder titel (hero eerst)"
 msgctxt "Custom template name"
 msgid "Case"
 msgstr "Case"
+
+#. translators: %d: number of the tab
+#: blocks/tabs/render.php:24
+#, php-format
+msgid "Tab %d"
+msgstr "Tabblad %d"
+
+#: blocks/tabs/block.json
+msgctxt "block title"
+msgid "Tabs"
+msgstr "Tabbladen"
+
+#: blocks/tabs/block.json
+msgctxt "block description"
+msgid "Content in tabs: one tab is shown at a time. Each tab holds any blocks. Without JavaScript all tabs are shown one below the other."
+msgstr "Inhoud in tabbladen: er is steeds één tabblad zichtbaar. Elk tabblad kan alle blokken bevatten. Zonder JavaScript staan alle tabbladen onder elkaar."
+
+#: blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tabs"
+msgstr "tabbladen"
+
+#: blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tab panel"
+msgstr "tabpaneel"
+
+#: blocks/tab/block.json
+msgctxt "block title"
+msgid "Tab"
+msgstr "Tabblad"
+
+#: blocks/tab/block.json
+msgctxt "block description"
+msgid "One tab of a Tabs block: a label and any blocks."
+msgstr "Eén tabblad van een Tabbladen-blok: een label en alle blokken die je wilt."
+
+#: blocks/tabs/index.js:18
+msgid "First tab"
+msgstr "Eerste tabblad"
+
+#: blocks/tabs/index.js:18
+msgid "Content of the first tab. Add any blocks."
+msgstr "Inhoud van het eerste tabblad. Voeg blokken toe."
+
+#: blocks/tabs/index.js:19
+msgid "Second tab"
+msgstr "Tweede tabblad"
+
+#: blocks/tabs/index.js:19
+msgid "Content of the second tab. Add any blocks."
+msgstr "Inhoud van het tweede tabblad. Voeg blokken toe."
+
+#: blocks/tabs/index.js:20
+msgid "Third tab"
+msgstr "Derde tabblad"
+
+#: blocks/tabs/index.js:20
+msgid "Content of the third tab. Add any blocks."
+msgstr "Inhoud van het derde tabblad. Voeg blokken toe."
+
+#: blocks/tabs/index.js:44
+msgid "Tab label"
+msgstr "Label van het tabblad"
