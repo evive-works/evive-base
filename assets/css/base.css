@@ -668,3 +668,131 @@
 		max-width: 28rem;
 	}
 }
+/* evive #413: "Moving strip" (Group block style, for the logo wall). In the editor and without the
+   server's track it is a plain scrollable row. On the site the logos are repeated in a track that moves
+   one set to the side and starts over; it pauses on hover, on focus and with the checkbox below it. */
+.wp-block-group.is-style-logo-strip {
+	flex-wrap: nowrap !important;
+	justify-content: flex-start !important;
+	overflow-x: auto;
+	scrollbar-width: thin;
+}
+.wp-block-group.is-style-logo-strip > *,
+.evive-strip-set > * {
+	flex-shrink: 0;
+	margin: 0;
+}
+.wp-block-group.is-style-logo-strip.evive-strip-on {
+	gap: 0;
+	overflow: hidden;
+	/* Soft edges: a mask only uses the alpha, the token colour itself doesn't show. */
+	-webkit-mask-image: linear-gradient(to right, transparent, var(--wp--preset--color--contrast) 8%, var(--wp--preset--color--contrast) 92%, transparent);
+	mask-image: linear-gradient(to right, transparent, var(--wp--preset--color--contrast) 8%, var(--wp--preset--color--contrast) 92%, transparent);
+}
+.evive-strip-track {
+	animation: evive-strip var(--evive-strip-duration, 30s) linear infinite;
+	display: flex;
+	flex-shrink: 0;
+	width: max-content;
+}
+.evive-strip-set {
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	gap: var(--wp--preset--spacing--50);
+	padding-inline-end: var(--wp--preset--spacing--50);
+}
+.evive-strip-on:hover .evive-strip-track,
+.evive-strip-on:focus-within .evive-strip-track,
+.evive-strip-on:has(+ .evive-strip-pause input:checked) .evive-strip-track {
+	animation-play-state: paused;
+}
+@keyframes evive-strip {
+	to { transform: translateX(calc(-100% / var(--evive-strip-copies, 2))); }
+}
+@keyframes evive-strip-rtl {
+	to { transform: translateX(calc(100% / var(--evive-strip-copies, 2))); }
+}
+.evive-strip-on:dir(rtl) .evive-strip-track {
+	animation-name: evive-strip-rtl;
+}
+.evive-strip-pause {
+	align-items: center;
+	color: var(--wp--preset--color--muted);
+	cursor: pointer;
+	display: flex;
+	gap: var(--wp--preset--spacing--20);
+	justify-content: center;
+}
+/* evive #413: also without JavaScript (scripting: none), so the strip is still CSS only. A browser that
+   doesn't know "scripting" ignores that part of the list and keeps the reduced-motion part. */
+@media (prefers-reduced-motion: reduce), (scripting: none) {
+	/* Stands still: one set of logos as a normal scrollable row, no copies and no pause control. */
+	.evive-strip-track {
+		animation: none;
+	}
+	.evive-strip-set[aria-hidden="true"],
+	.evive-strip-pause {
+		display: none;
+	}
+	.wp-block-group.is-style-logo-strip.evive-strip-on {
+		-webkit-mask-image: none;
+		mask-image: none;
+		overflow-x: auto;
+	}
+}
+
+/* evive #413: "Carousel" (Columns block style, for the testimonials grid; core stacks columns on phones with
+   !important, so these rules repeat .wp-block-column to win). A row that scrolls sideways
+   and snaps to a card: one card (and a bit of the next) on phones, two on tablets and laptops, three on
+   wide screens when there are four or more. assets/js/carousel.js adds the previous/next buttons. */
+.wp-block-columns.is-style-carousel {
+	flex-wrap: nowrap !important;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	padding-block: var(--wp--preset--spacing--20); /* room for the card shadow and the focus ring */
+	scroll-snap-type: x mandatory;
+	scrollbar-width: thin;
+}
+.wp-block-columns.is-style-carousel > .wp-block-column.wp-block-column {
+	flex: 0 0 85% !important;
+	scroll-snap-align: start;
+}
+@media (min-width: 782px) {
+	.wp-block-columns.is-style-carousel > .wp-block-column.wp-block-column {
+		flex-basis: calc(50% - var(--wp--preset--spacing--40) / 2) !important;
+	}
+}
+@media (min-width: 1100px) {
+	.wp-block-columns.is-style-carousel:has(> .wp-block-column:nth-child(4)) > .wp-block-column.wp-block-column {
+		flex-basis: calc((100% - 2 * var(--wp--preset--spacing--40)) / 3) !important;
+	}
+}
+.evive-carousel-nav:not([hidden]) {
+	display: flex;
+	gap: var(--wp--preset--spacing--30);
+	justify-content: center;
+}
+.evive-carousel-nav button {
+	align-items: center;
+	background: var(--wp--preset--color--base);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 999px;
+	color: var(--wp--preset--color--contrast);
+	cursor: pointer;
+	display: inline-flex;
+	height: 44px;
+	justify-content: center;
+	padding: 0;
+	width: 44px;
+}
+.evive-carousel-nav button:hover:not([aria-disabled="true"]) {
+	border-color: var(--wp--preset--color--contrast);
+}
+.evive-carousel-nav button[aria-disabled="true"] {
+	cursor: default;
+	opacity: 0.4;
+}
+.evive-carousel-nav button:dir(rtl) svg {
+	transform: scaleX(-1);
+}

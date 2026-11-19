@@ -22,6 +22,9 @@ All notable changes. Semantic versioning: a slug change in the token contract is
 - The theme registers every block in `blocks/*/block.json`; asset versions follow the theme version.
 - Dev tools: the block validator also validates the theme's own blocks; `tools/i18n/make-mo.py` compiles a .po without WP-CLI.
 - nl_NL translations for the new strings (291 of 291).
+- New block style **Moving strip** for Group, made for the logo wall (`evive/logo-wall`): the logos glide slowly in an endless loop, CSS only (the theme repeats the logos server-side; the copies are `aria-hidden` and `inert`). Pauses on hover, on keyboard focus and with a "Pause animation" checkbox under the strip; with reduced motion, and without JavaScript, it stands still as a normal scrollable row (evive #413).
+- New block style **Carousel** for Columns, made for the testimonials (`evive/testimonials-grid`): a scroll-snap row (one card on phones, two on tablets/laptops, three on wide screens from four columns), with previous/next buttons from a small deferred script (`assets/js/carousel.js`, only loaded on pages with a carousel). Without JavaScript it is a normal scrollable row (evive #413).
+- nl_NL translations for the new strings (285 of 285).
 
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
