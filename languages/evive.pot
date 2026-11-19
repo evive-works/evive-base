@@ -373,6 +373,7 @@ msgstr ""
 #: patterns/testimonials-grid.php:38
 #: patterns/testimonials-grid.php:62
 #: patterns/testimonials-grid.php:86
+#: patterns/team.php:32
 msgctxt "placeholder"
 msgid "Name Surname"
 msgstr ""
@@ -1536,4 +1537,29 @@ msgstr ""
 #: theme.json
 msgctxt "Custom template name"
 msgid "Case"
+msgstr ""
+
+#: patterns/team.php:18
+msgctxt "placeholder"
+msgid "The people behind it"
+msgstr ""
+
+#: patterns/team.php:22
+msgctxt "placeholder"
+msgid "One sentence about the team and how they work together."
+msgstr ""
+
+#: patterns/team.php:36
+msgctxt "placeholder"
+msgid "Job title"
+msgstr ""
+
+#: patterns/team.php
+msgctxt "Pattern title"
+msgid "Team: grid of people"
+msgstr ""
+
+#: patterns/team.php
+msgctxt "Pattern description"
+msgid "A grid of people with a square photo with rounded corners, name, role and a LinkedIn link. Four per row on wide screens (change the column count in the grid settings), two on phones. Set each LinkedIn link's URL, or remove the icon for someone without one."
 msgstr ""

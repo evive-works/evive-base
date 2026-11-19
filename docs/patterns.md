@@ -139,5 +139,14 @@ Four big numbers with a label each.
 |---|---|---|
 | ![Stats, default](patterns/stats-default-1280.webp) | ![Stats, dark primary](patterns/stats-dark-1280.webp) | ![Stats, mobile](patterns/stats-default-390.webp) |
 
+## Team: grid of people
+`evive/team` · category `evive-content`
+
+A grid of people: square photo with rounded corners (radius `l`), name, role and a LinkedIn link (Social Icons block, logos only, in the `muted` colour, `primary` on hover). Four per row on wide screens (the column count in the grid settings; set 3 for three per row), two per row on phones. Set each LinkedIn URL, or remove the icon for someone without one. The placeholder avatar is round itself; a real square photo shows the rounded corners.
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Team: grid of people, default](patterns/team-default-1280.webp) | ![Team: grid of people, dark primary](patterns/team-dark-1280.webp) | ![Team: grid of people, mobile](patterns/team-default-390.webp) |
+
 ## Header and footer (0.2.0)
 `evive/header` (default), `evive/header-no-cta`, `evive/header-sticky`; `evive/footer` (extended), `evive/footer-simple`. See `CHANGELOG.md`.

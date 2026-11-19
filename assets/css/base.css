@@ -547,3 +547,19 @@
 	margin-top: auto;
 	padding-top: var(--wp--preset--spacing--20);
 }
+
+/* Team grid (pattern evive/team, evive #406): the column count from the grid settings on wide screens,
+   two people per row on phones (!important because core prints the columns as a generated class). The
+   LinkedIn icon takes the muted colour instead of LinkedIn blue, and the primary colour on hover/focus. */
+@media (max-width: 781px) {
+	.evive-team {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+}
+.evive-team .wp-block-social-links.is-style-logos-only .wp-social-link {
+	color: var(--wp--preset--color--muted);
+}
+.evive-team .wp-block-social-links.is-style-logos-only .wp-social-link:hover,
+.evive-team .wp-block-social-links.is-style-logos-only .wp-social-link:focus-within {
+	color: var(--wp--preset--color--primary);
+}
