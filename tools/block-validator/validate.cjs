@@ -28,6 +28,23 @@ for (const dir of require('fs').readdirSync(__dirname + '/../../blocks')) {
   window.wp.blocks = require('@wordpress/blocks');
 }
 const fs = require('fs');
+// evive #412: register the theme's own blocks too (blocks/<name>/block.json + the editor's index.js, with the
+// npm packages standing in for window.wp), so markup that uses them is validated against their save().
+const path = require('path');
+const themeBlocks = path.resolve(__dirname, '../../blocks');
+if (fs.existsSync(themeBlocks)) {
+  const blocks = require('@wordpress/blocks');
+  for (const dir of fs.readdirSync(themeBlocks)) {
+    const meta = JSON.parse(fs.readFileSync(path.join(themeBlocks, dir, 'block.json'), 'utf8'));
+    window.wp = globalThis.wp = {
+      blocks: { ...blocks, registerBlockType: (name, settings) => blocks.registerBlockType({ ...meta, name }, settings) },
+      element: require('@wordpress/element'), blockEditor: require('@wordpress/block-editor'),
+      components: require('@wordpress/components'), i18n: require('@wordpress/i18n'),
+    };
+    require(path.join(themeBlocks, dir, 'index.js'));
+    if (!getBlockType(meta.name)) _log(`theme block ${meta.name} did not register`);
+  }
+}
 let bad = 0, total = 0;
 function walk(blocks, file) {
   for (const b of blocks) {

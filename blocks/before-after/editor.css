@@ -1,0 +1,18 @@
+/* evive #412: before/after block in the editor: both images side by side with their labels above. */
+.evive-ba-editor__labels,
+.evive-ba-editor__images > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.evive-ba-editor__images.block-editor-block-list__layout {
+	display: grid;
+	gap: var(--wp--preset--spacing--30);
+	grid-template-columns: 1fr 1fr;
+}
+.evive-ba-editor__labels {
+	margin-bottom: var(--wp--preset--spacing--20);
+}
+.evive-ba-editor__labels .evive-ba__label {
+	justify-self: start;
+	position: static;
+}
+.evive-ba-editor__images .wp-block-image {
+	margin: 0;
+}

@@ -1,0 +1,118 @@
+/* evive #412: before/after block. Tokens only. Loaded only on pages that contain the block. */
+
+/* Without JavaScript (and before view.js runs): both images side by side, stacked on phones. */
+.evive-ba {
+	display: grid;
+	gap: var(--wp--preset--spacing--30);
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+.evive-ba__item {
+	margin: 0;
+	position: relative;
+}
+.evive-ba .evive-ba__item > .wp-block-image {
+	margin: 0;
+}
+.evive-ba .evive-ba__item img {
+	border-radius: var(--wp--custom--radius--m);
+	display: block;
+	height: auto;
+	width: 100%;
+}
+.evive-ba__label {
+	background: color-mix(in srgb, var(--wp--preset--color--contrast) 78%, transparent);
+	border-radius: var(--wp--custom--radius--s);
+	color: var(--wp--preset--color--base);
+	font-size: var(--wp--preset--font-size--xs);
+	font-weight: 600;
+	left: var(--wp--preset--spacing--30);
+	line-height: 1.2;
+	padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+	pointer-events: none;
+	position: absolute;
+	top: var(--wp--preset--spacing--30);
+}
+
+/* With JavaScript: one picture; the after image is cut off left of the divider (--evive-ba-pos). */
+.evive-ba.is-interactive {
+	border-radius: var(--wp--custom--radius--m);
+	cursor: ew-resize;
+	gap: 0;
+	grid-template-columns: 1fr;
+	overflow: hidden;
+	position: relative;
+	touch-action: pan-y;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.evive-ba.is-interactive .evive-ba__item {
+	grid-area: 1 / 1;
+}
+.evive-ba.is-interactive .evive-ba__item img {
+	border-radius: 0;
+	-webkit-user-drag: none;
+}
+/* The before image sets the size. */
+/* The after image fills the same box, on the page background so a transparent image hides the one below. */
+.evive-ba.is-interactive .evive-ba__after {
+	background: var(--wp--preset--color--base);
+	clip-path: inset(0 0 0 var(--evive-ba-pos, 50%));
+	inset: 0;
+	position: absolute;
+}
+.evive-ba.is-interactive .evive-ba__after > .wp-block-image,
+.evive-ba.is-interactive .evive-ba__after img {
+	height: 100% !important; /* beats the inline size core/image may write */
+	width: 100% !important;
+}
+.evive-ba.is-interactive .evive-ba__after img {
+	object-fit: cover;
+}
+.evive-ba.is-interactive .evive-ba__after .evive-ba__label {
+	left: auto;
+	right: var(--wp--preset--spacing--30);
+}
+
+.evive-ba__handle {
+	background: var(--wp--preset--color--base);
+	bottom: 0;
+	box-shadow: 0 0 0 1px color-mix(in srgb, var(--wp--preset--color--contrast) 25%, transparent);
+	left: var(--evive-ba-pos, 50%);
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	width: 2px;
+}
+.evive-ba__grip {
+	align-items: center;
+	background: var(--wp--preset--color--base);
+	border-radius: 50%;
+	box-shadow: var(--wp--preset--shadow--m);
+	color: var(--wp--preset--color--contrast);
+	display: flex;
+	height: 2.75rem;
+	justify-content: center;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 2.75rem;
+}
+.evive-ba:has(.evive-ba__range:focus-visible) .evive-ba__grip {
+	outline: 2px solid var(--wp--preset--color--contrast);
+	outline-offset: 2px;
+}
+
+/* The range input is for the keyboard and screen readers; pointer dragging is handled on the picture. */
+.evive-ba__range {
+	block-size: 1px;
+	border: 0;
+	clip-path: inset(50%);
+	inline-size: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+}

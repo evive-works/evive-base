@@ -9,6 +9,9 @@ To update after strings change (WP-CLI needed, e.g. on staging, since there are 
 3. `python3 -I tools/i18n/build-po.py <locale>` fills `languages/<locale>.po` and lists missing strings.
 4. `wp i18n make-mo languages/<locale>.po languages/`
 4a. Editor strings of the theme blocks (`blocks/*/index.js`): `python3 -I tools/i18n/build-json.py <locale>` writes `languages/evive-<locale>-<md5>.json` (evive #411).
+4. `wp i18n make-mo languages/<locale>.po languages/`, or without WP-CLI: `python3 -I tools/i18n/make-mo.py <locale>` (evive #412)
 5. Bump the theme version, so the pattern cache is rebuilt.
+
+Block editor scripts in `blocks/` have no build step and no JSON translations: their strings are PHP strings passed to the script from `functions.php`, so they are in the pot and the .mo like all others.
 
 Locales: nl_NL.

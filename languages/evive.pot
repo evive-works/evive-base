@@ -1817,3 +1817,59 @@ msgstr ""
 #: blocks/tabs/index.js:44
 msgid "Tab label"
 msgstr ""
+
+#: functions.php:141 blocks/before-after/render.php:22
+msgctxt "before/after label"
+msgid "Before"
+msgstr ""
+
+#: functions.php:142 blocks/before-after/render.php:23
+msgctxt "before/after label"
+msgid "After"
+msgstr ""
+
+#: functions.php:143 blocks/before-after/block.json
+msgctxt "block title"
+msgid "Before / after"
+msgstr ""
+
+#: functions.php:144
+msgid "Label of the before image"
+msgstr ""
+
+#: functions.php:145
+msgid "Label of the after image"
+msgstr ""
+
+#: functions.php:146
+msgid "Start position of the divider (%)"
+msgstr ""
+
+#: functions.php:147
+msgid "Visitors drag the divider or use the arrow keys. Without JavaScript both images are shown side by side."
+msgstr ""
+
+#: blocks/before-after/render.php:30
+msgctxt "before/after slider"
+msgid "Divider between before and after"
+msgstr ""
+
+#: blocks/before-after/block.json
+msgctxt "block description"
+msgid "Two images with a divider visitors drag (mouse, touch or keyboard) to compare them. Without JavaScript both images are shown side by side."
+msgstr ""
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "compare"
+msgstr ""
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "slider"
+msgstr ""
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "make-over"
+msgstr ""

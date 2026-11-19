@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "evive/before-after",
+	"title": "Before / after",
+	"category": "media",
+	"icon": "image-flip-horizontal",
+	"description": "Two images with a divider visitors drag (mouse, touch or keyboard) to compare them. Without JavaScript both images are shown side by side.",
+	"keywords": [ "compare", "slider", "make-over" ],
+	"textdomain": "evive",
+	"attributes": {
+		"labelBefore": { "type": "string", "default": "" },
+		"labelAfter": { "type": "string", "default": "" },
+		"position": { "type": "number", "default": 50 }
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"html": false,
+		"spacing": { "margin": [ "top", "bottom" ] }
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}
