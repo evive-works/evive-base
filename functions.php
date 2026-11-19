@@ -49,6 +49,71 @@ add_action( 'init', function () {
 	register_block_style( 'core/image', [ 'name' => 'laptop', 'label' => _x( 'Laptop', 'block style', 'evive' ) ] );
 } );
 
+// evive #413: moving variants of the logo wall and the testimonials grid, as block styles an editor can
+// switch on. "Moving strip" (Group): a slow continuous strip, CSS only. The server repeats the logos
+// (the copies are aria-hidden and inert) so the loop has no gap; it pauses on hover, on focus and with
+// the "Pause animation" checkbox, and stands still as a normal scrollable row with reduced motion.
+// "Carousel" (Columns): a scroll-snap row; a small script adds previous/next buttons. Without
+// JavaScript both are a plain scrollable row.
+add_action( 'init', function () {
+	register_block_style( 'core/group', [ 'name' => 'logo-strip', 'label' => _x( 'Moving strip', 'block style', 'evive' ) ] );
+	register_block_style( 'core/columns', [ 'name' => 'carousel', 'label' => _x( 'Carousel', 'block style', 'evive' ) ] );
+	wp_register_script( 'evive-carousel', get_template_directory_uri() . '/assets/js/carousel.js', [], EVIVE_BASE_VERSION, [ 'in_footer' => true, 'strategy' => 'defer' ] );
+} );
+
+add_filter( 'render_block_core/group', function ( $html, $block ) {
+	if ( ! str_contains( $block['attrs']['className'] ?? '', 'is-style-logo-strip' ) || empty( $block['innerBlocks'] ) ) {
+		return $html;
+	}
+	$start = strpos( $html, '>' );
+	$end   = strrpos( $html, '</' );
+	if ( false === $start || false === $end || $end <= $start ) {
+		return $html;
+	}
+	$items  = count( $block['innerBlocks'] );
+	$copies = min( 8, 1 + (int) ceil( 13 / $items ) ); // enough copies to fill a wide screen
+	$inner  = substr( $html, $start + 1, $end - $start - 1 );
+	$track  = '<div class="evive-strip-track">';
+	for ( $i = 0; $i < $copies; $i++ ) {
+		$track .= 0 === $i ? '<div class="evive-strip-set">' . $inner . '</div>' : '<div class="evive-strip-set" aria-hidden="true" inert>' . $inner . '</div>';
+	}
+	$track .= '</div>';
+	$tags = new WP_HTML_Tag_Processor( substr( $html, 0, $start + 1 ) );
+	if ( ! $tags->next_tag() ) {
+		return $html;
+	}
+	$tags->add_class( 'evive-strip-on' );
+	$style = rtrim( (string) $tags->get_attribute( 'style' ), '; ' );
+	$tags->set_attribute( 'style', ltrim( $style . ';--evive-strip-copies:' . $copies . ';--evive-strip-duration:' . ( 5 * $items ) . 's', ';' ) );
+	$pause = '<label class="evive-strip-pause has-xs-font-size"><input type="checkbox"> ' . esc_html_x( 'Pause animation', 'logo strip', 'evive' ) . '</label>';
+	return $tags->get_updated_html() . $track . substr( $html, $end ) . $pause;
+}, 10, 2 );
+
+add_filter( 'render_block_core/columns', function ( $html, $block ) {
+	if ( ! str_contains( $block['attrs']['className'] ?? '', 'is-style-carousel' ) ) {
+		return $html;
+	}
+	$tags = new WP_HTML_Tag_Processor( $html );
+	if ( ! $tags->next_tag() ) {
+		return $html;
+	}
+	$id = $tags->get_attribute( 'id' );
+	if ( ! $id ) {
+		$id = wp_unique_id( 'evive-carousel-' );
+		$tags->set_attribute( 'id', $id );
+	}
+	$tags->set_attribute( 'role', 'region' );
+	$tags->set_attribute( 'aria-label', _x( 'Carousel', 'carousel region', 'evive' ) );
+	$tags->set_attribute( 'tabindex', '0' );
+	$arrow = '<svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="%s" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+	$nav   = '<div class="evive-carousel-nav" hidden>'
+		. '<button type="button" class="evive-carousel-prev" aria-controls="' . esc_attr( $id ) . '" aria-label="' . esc_attr_x( 'Previous', 'carousel', 'evive' ) . '">' . sprintf( $arrow, 'M15 18l-6-6 6-6' ) . '</button>'
+		. '<button type="button" class="evive-carousel-next" aria-controls="' . esc_attr( $id ) . '" aria-label="' . esc_attr_x( 'Next', 'carousel', 'evive' ) . '">' . sprintf( $arrow, 'M9 6l6 6-6 6' ) . '</button>'
+		. '</div>';
+	wp_enqueue_script( 'evive-carousel' );
+	return $tags->get_updated_html() . $nav;
+}, 10, 2 );
+
 // FAQ pattern: a group with the class "evive-faq" gets FAQPage structured data built from its
 // Details blocks (question = summary, answer = the content), so editors only edit the visible text.
 add_filter( 'render_block_core/group', function ( $html, $block ) {
