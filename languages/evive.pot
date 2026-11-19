@@ -1753,3 +1753,67 @@ msgstr ""
 msgctxt "placeholder"
 msgid "Portrait of the customer"
 msgstr ""
+
+#. translators: %d: number of the tab
+#: blocks/tabs/render.php:24
+#, php-format
+msgid "Tab %d"
+msgstr ""
+
+#: blocks/tabs/block.json
+msgctxt "block title"
+msgid "Tabs"
+msgstr ""
+
+#: blocks/tabs/block.json
+msgctxt "block description"
+msgid "Content in tabs: one tab is shown at a time. Each tab holds any blocks. Without JavaScript all tabs are shown one below the other."
+msgstr ""
+
+#: blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tabs"
+msgstr ""
+
+#: blocks/tabs/block.json
+msgctxt "block keyword"
+msgid "tab panel"
+msgstr ""
+
+#: blocks/tab/block.json
+msgctxt "block title"
+msgid "Tab"
+msgstr ""
+
+#: blocks/tab/block.json
+msgctxt "block description"
+msgid "One tab of a Tabs block: a label and any blocks."
+msgstr ""
+
+#: blocks/tabs/index.js:18
+msgid "First tab"
+msgstr ""
+
+#: blocks/tabs/index.js:18
+msgid "Content of the first tab. Add any blocks."
+msgstr ""
+
+#: blocks/tabs/index.js:19
+msgid "Second tab"
+msgstr ""
+
+#: blocks/tabs/index.js:19
+msgid "Content of the second tab. Add any blocks."
+msgstr ""
+
+#: blocks/tabs/index.js:20
+msgid "Third tab"
+msgstr ""
+
+#: blocks/tabs/index.js:20
+msgid "Content of the third tab. Add any blocks."
+msgstr ""
+
+#: blocks/tabs/index.js:44
+msgid "Tab label"
+msgstr ""

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "evive/tab",
+	"title": "Tab",
+	"category": "design",
+	"icon": "index-card",
+	"description": "One tab of a Tabs block: a label and any blocks.",
+	"parent": [ "evive/tabs" ],
+	"textdomain": "evive",
+	"attributes": {
+		"label": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"render": "file:./render.php"
+}

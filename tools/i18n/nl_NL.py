@@ -301,5 +301,20 @@ T = {
  "A large photo of the person next to a big quote, with name, role and company logo. On phones the photo sits above the quote.":
   "Een grote foto van de persoon naast een groot citaat, met naam, functie en bedrijfslogo. Op telefoons staat de foto boven het citaat.",
  "Portrait of the customer": "Portret van de klant",
+ "Tab %d": "Tabblad %d",
+ "Tabs": "Tabbladen",
+ "Content in tabs: one tab is shown at a time. Each tab holds any blocks. Without JavaScript all tabs are shown one below the other.":
+  "Inhoud in tabbladen: er is steeds één tabblad zichtbaar. Elk tabblad kan alle blokken bevatten. Zonder JavaScript staan alle tabbladen onder elkaar.",
+ "tabs": "tabbladen",
+ "tab panel": "tabpaneel",
+ "Tab": "Tabblad",
+ "One tab of a Tabs block: a label and any blocks.": "Eén tabblad van een Tabbladen-blok: een label en alle blokken die je wilt.",
+ "First tab": "Eerste tabblad",
+ "Content of the first tab. Add any blocks.": "Inhoud van het eerste tabblad. Voeg blokken toe.",
+ "Second tab": "Tweede tabblad",
+ "Content of the second tab. Add any blocks.": "Inhoud van het tweede tabblad. Voeg blokken toe.",
+ "Third tab": "Derde tabblad",
+ "Content of the third tab. Add any blocks.": "Inhoud van het derde tabblad. Voeg blokken toe.",
+ "Tab label": "Label van het tabblad",
 }
 CTX = {}

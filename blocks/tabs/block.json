@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "evive/tabs",
+	"title": "Tabs",
+	"category": "design",
+	"icon": "index-card",
+	"description": "Content in tabs: one tab is shown at a time. Each tab holds any blocks. Without JavaScript all tabs are shown one below the other.",
+	"keywords": [ "tabs", "tab panel" ],
+	"textdomain": "evive",
+	"allowedBlocks": [ "evive/tab" ],
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": [ "top", "bottom" ] }
+	},
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

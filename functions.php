@@ -49,6 +49,14 @@ add_action( 'init', function () {
 	register_block_style( 'core/image', [ 'name' => 'laptop', 'label' => _x( 'Laptop', 'block style', 'evive' ) ] );
 } );
 
+// evive #411: theme blocks in blocks/ (Tabs). Their front-end script and CSS load only on pages that use them;
+// the editor script's strings come from languages/evive-<locale>-<md5 of blocks/tabs/index.js>.json.
+add_action( 'init', function () {
+	register_block_type( __DIR__ . '/blocks/tabs' );
+	register_block_type( __DIR__ . '/blocks/tab' );
+	wp_set_script_translations( 'evive-tabs-editor-script', 'evive', get_template_directory() . '/languages' );
+} );
+
 // FAQ pattern: a group with the class "evive-faq" gets FAQPage structured data built from its
 // Details blocks (question = summary, answer = the content), so editors only edit the visible text.
 add_filter( 'render_block_core/group', function ( $html, $block ) {
