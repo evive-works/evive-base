@@ -2,6 +2,10 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New pattern `evive/testimonial-photo` ("Testimonial: large photo", category Proof): a large portrait photo (4:5, cropped to fill) next to a big quote with an opening quote mark in the primary colour, name, role and company logo, on the surface colour. On phones the photo stacks above the quote. New placeholder image `placeholder-portrait.svg` (evive #410).
+- nl_NL translations for the new strings (282 of 282).
+
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
 - New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).
