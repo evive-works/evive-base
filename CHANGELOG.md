@@ -2,6 +2,10 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New pattern `evive/integrations` (category Features): section heading, a row of static category labels (pills, the active one on the primary colour; plain text, not a working filter) and a grid of integration tiles with logo, name and one line. Four columns on wide screens, two on tablets, one on phones, where each tile becomes a compact row with the logo on the left (evive #409).
+- nl_NL translations for the new strings (289 of 289).
+
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
 - New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).

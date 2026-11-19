@@ -253,5 +253,17 @@ T = {
  "1,500 employees": "1.500 medewerkers",
  "Customer since": "Klant sinds",
  "Case": "Case",
+ # evive #409: integrations grid
+ "Integrations grid": "Koppelingen: raster",
+ "Section heading, a row of static category labels and a grid of integration tiles (logo, name, one line). The labels are plain text, not a working filter: change them, mark another one with the class is-active, or delete the list. On phones the tiles turn into compact rows.":
+  "Sectiekop, een rij vaste categorielabels en een raster van koppelingstegels (logo, naam, één regel). De labels zijn gewone tekst, geen werkend filter: pas ze aan, markeer een ander label met de class is-active, of verwijder de lijst. Op telefoons worden de tegels compacte rijen.",
+ "Works with the tools you already use": "Werkt met de tools die je al gebruikt",
+ "One sentence on how the integrations work and how quickly they are set up.": "Eén zin over hoe de koppelingen werken en hoe snel ze zijn ingesteld.",
+ "All": "Alle",
+ "First category": "Eerste categorie",
+ "Second category": "Tweede categorie",
+ "Third category": "Derde categorie",
+ "Integration name": "Naam van de koppeling",
+ "One line on what this integration does.": "Eén regel over wat deze koppeling doet.",
 }
 CTX = {}
