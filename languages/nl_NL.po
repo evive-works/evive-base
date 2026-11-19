@@ -342,6 +342,56 @@ msgid "Describe what changed, in numbers where you can. The key figures above sh
 msgstr "Beschrijf wat er veranderde, waar het kan in cijfers. De kerncijfers hierboven komen hier terug met een zin context."
 
 #: patterns/case-study.php:91
+#: patterns/integrations.php
+msgctxt "Pattern title"
+msgid "Integrations grid"
+msgstr "Koppelingen: raster"
+
+#: patterns/integrations.php
+msgctxt "Pattern description"
+msgid "Section heading, a row of static category labels and a grid of integration tiles (logo, name, one line). The labels are plain text, not a working filter: change them, mark another one with the class is-active, or delete the list. On phones the tiles turn into compact rows."
+msgstr "Sectiekop, een rij vaste categorielabels en een raster van koppelingstegels (logo, naam, één regel). De labels zijn gewone tekst, geen werkend filter: pas ze aan, markeer een ander label met de class is-active, of verwijder de lijst. Op telefoons worden de tegels compacte rijen."
+
+#: patterns/integrations.php:19
+msgctxt "placeholder"
+msgid "Works with the tools you already use"
+msgstr "Werkt met de tools die je al gebruikt"
+
+#: patterns/integrations.php:23
+msgctxt "placeholder"
+msgid "One sentence on how the integrations work and how quickly they are set up."
+msgstr "Eén zin over hoe de koppelingen werken en hoe snel ze zijn ingesteld."
+
+#: patterns/integrations.php:28
+msgctxt "integration category"
+msgid "All"
+msgstr "Alle"
+
+#: patterns/integrations.php:32
+msgctxt "placeholder"
+msgid "First category"
+msgstr "Eerste categorie"
+
+#: patterns/integrations.php:36
+msgctxt "placeholder"
+msgid "Second category"
+msgstr "Tweede categorie"
+
+#: patterns/integrations.php:40
+msgctxt "placeholder"
+msgid "Third category"
+msgstr "Derde categorie"
+
+#: patterns/integrations.php:51 patterns/integrations.php:65 patterns/integrations.php:79 patterns/integrations.php:93 patterns/integrations.php:107 patterns/integrations.php:121 patterns/integrations.php:135 patterns/integrations.php:149
+msgctxt "placeholder"
+msgid "Integration name"
+msgstr "Naam van de koppeling"
+
+#: patterns/integrations.php:55 patterns/integrations.php:69 patterns/integrations.php:83 patterns/integrations.php:97 patterns/integrations.php:111 patterns/integrations.php:125 patterns/integrations.php:139 patterns/integrations.php:153
+msgctxt "placeholder"
+msgid "One line on what this integration does."
+msgstr "Eén regel over wat deze koppeling doet."
+
 #: patterns/logo-wall.php:22
 #: patterns/logo-wall.php:26
 #: patterns/logo-wall.php:30

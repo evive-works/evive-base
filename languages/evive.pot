@@ -340,6 +340,56 @@ msgid "Describe what changed, in numbers where you can. The key figures above sh
 msgstr ""
 
 #: patterns/case-study.php:91
+#: patterns/integrations.php
+msgctxt "Pattern title"
+msgid "Integrations grid"
+msgstr ""
+
+#: patterns/integrations.php
+msgctxt "Pattern description"
+msgid "Section heading, a row of static category labels and a grid of integration tiles (logo, name, one line). The labels are plain text, not a working filter: change them, mark another one with the class is-active, or delete the list. On phones the tiles turn into compact rows."
+msgstr ""
+
+#: patterns/integrations.php:19
+msgctxt "placeholder"
+msgid "Works with the tools you already use"
+msgstr ""
+
+#: patterns/integrations.php:23
+msgctxt "placeholder"
+msgid "One sentence on how the integrations work and how quickly they are set up."
+msgstr ""
+
+#: patterns/integrations.php:28
+msgctxt "integration category"
+msgid "All"
+msgstr ""
+
+#: patterns/integrations.php:32
+msgctxt "placeholder"
+msgid "First category"
+msgstr ""
+
+#: patterns/integrations.php:36
+msgctxt "placeholder"
+msgid "Second category"
+msgstr ""
+
+#: patterns/integrations.php:40
+msgctxt "placeholder"
+msgid "Third category"
+msgstr ""
+
+#: patterns/integrations.php:51 patterns/integrations.php:65 patterns/integrations.php:79 patterns/integrations.php:93 patterns/integrations.php:107 patterns/integrations.php:121 patterns/integrations.php:135 patterns/integrations.php:149
+msgctxt "placeholder"
+msgid "Integration name"
+msgstr ""
+
+#: patterns/integrations.php:55 patterns/integrations.php:69 patterns/integrations.php:83 patterns/integrations.php:97 patterns/integrations.php:111 patterns/integrations.php:125 patterns/integrations.php:139 patterns/integrations.php:153
+msgctxt "placeholder"
+msgid "One line on what this integration does."
+msgstr ""
+
 #: patterns/logo-wall.php:22
 #: patterns/logo-wall.php:26
 #: patterns/logo-wall.php:30

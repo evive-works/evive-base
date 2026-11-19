@@ -165,6 +165,14 @@ Screenshots from a fresh test site with only WordPress's sample post (no feature
 | Default (1280) | Mobile (390) |
 |---|---|
 | ![Blog teasers, default](patterns/blog-teasers-default-1280.webp) | ![Blog teasers, mobile](patterns/blog-teasers-default-390.webp) |
+## Integrations grid
+`evive/integrations` · category `evive-features` (evive #409)
+
+Section heading, a row of static category labels (pills; the one with class `is-active` is on the primary colour) and a grid of integration tiles: logo, name and one line. The labels are plain text, not a working filter: change them or delete the list. Four columns on wide screens, two on tablets, one on phones, where each tile becomes a compact row with the logo on the left. Put each integration's own square logo in place of the placeholder icon; real names (Microsoft 365, Teams, Outlook, …) go in the page, not the pattern.
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Integrations grid, default](patterns/integrations-default-1280.webp) | ![Integrations grid, dark primary](patterns/integrations-dark-1280.webp) | ![Integrations grid, mobile](patterns/integrations-default-390.webp) |
 
 ## Header and footer (0.2.0)
 `evive/header` (default), `evive/header-no-cta`, `evive/header-sticky`; `evive/footer` (extended), `evive/footer-simple`. See `CHANGELOG.md`.
