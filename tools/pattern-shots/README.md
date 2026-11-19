@@ -31,12 +31,18 @@ What it does per shot:
 - the palette is set by overriding the preset custom properties `--wp--preset--color--<slug>` on `:root` (evive-base
   never redefines them lower down, so every block follows); the `default` palette overrides nothing;
 - the cookie banner (`#evive-cb`) is hidden;
-- it scrolls the whole page and waits for every image and web font (lazy images), then takes a full-page shot clipped to
-  the pattern's box;
+- it scrolls the whole page and waits for every image and web font (lazy images), and notes the layout at the real
+  viewport (the pattern's box and the font sizes of its first text elements);
+- it then makes the viewport as tall as the page (same width, so `vw`-based fluid sizes stay the same) and takes a plain
+  shot clipped to the pattern's box. No `fullPage` shot: that lets Chromium resize the page during capture, and now and
+  then the fluid font sizes came out too small in the shot (a smaller text, or an empty band at the bottom);
+- every shot is taken twice; both must be identical and the layout must match the one at the real viewport before
+  and after. Otherwise it retries (up to 3 times, printed as `retry ...`) and then reports a `PROBLEM` without writing
+  the file;
 - the PNG is scaled and encoded to WebP (quality 0.85) inside the browser, so no image tools are needed.
 
 Console errors and failing requests are printed as `PROBLEM ...` and give exit code 2 (the files are still written;
-look at them).
+look at them). A shot that stays unstable after 3 tries also gives `PROBLEM` and exit code 2, and its file is not written.
 
 Options: `--only default,dark,mobile` (a subset), `--out <dir>`, `--quality 0.85`, and `--site <url> --no-pages` for any
 other WordPress site with evive-base active where the `/pattern-<name>/` pages already exist (for example a local

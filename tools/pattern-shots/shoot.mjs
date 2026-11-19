@@ -18,7 +18,8 @@
 // --out <dir>    output folder (default docs/patterns).
 // --only <list>  comma list of variants: default,dark,mobile (default all three).
 // --quality <q>  WebP quality 0-1 (default 0.85).
-// Exit code 2 when a page had console errors or failing requests (the shots are still written; look at them).
+// Exit code 2 when a page had console errors or failing requests (the shots are still written; look at them), or when
+// no stable shot could be made in 3 tries (that file is not written).
 import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import fs from 'node:fs';
@@ -83,6 +84,22 @@ if (opt.pages) {
   }
 }
 
+// The pattern's box (union of everything inside the post content, in page coordinates, viewport width) plus a layout
+// key: the box and the computed font size of the first text elements. Runs in the page.
+function layout() {
+  const pc = document.querySelector('.wp-block-post-content, .entry-content');
+  if (!pc || !pc.children.length) return null;
+  let t = Infinity, b = -Infinity;
+  for (const el of [...pc.children, ...pc.querySelectorAll('*')]) {
+    const r = el.getBoundingClientRect(); const cs = getComputedStyle(el);
+    if (!r.width || !r.height || cs.visibility === 'hidden' || cs.display === 'none') continue;
+    t = Math.min(t, r.top + scrollY); b = Math.max(b, r.bottom + scrollY);
+  }
+  const y = Math.max(0, Math.floor(t)), height = Math.ceil(b - y), width = document.documentElement.clientWidth;
+  const fonts = [...pc.querySelectorAll('p, h1, h2, h3, li')].slice(0, 6).map(e => getComputedStyle(e).fontSize).join(',');
+  return { y, width, height, key: `${width}x${height}@${y} ${fonts}` };
+}
+
 // 2. Screenshots.
 const chromium = await loadChromium();
 const browser = await chromium.launch();
@@ -112,20 +129,37 @@ for (const p of patterns) {
       if (document.fonts) await document.fonts.ready;
     });
     await page.waitForTimeout(400);
-    // The pattern's box: union of everything inside the post content, in page coordinates, within the viewport width.
-    const box = await page.evaluate(() => {
-      const pc = document.querySelector('.wp-block-post-content, .entry-content');
-      if (!pc || !pc.children.length) return null;
-      let t = Infinity, b = -Infinity;
-      for (const el of [...pc.children, ...pc.querySelectorAll('*')]) {
-        const r = el.getBoundingClientRect(); const cs = getComputedStyle(el);
-        if (!r.width || !r.height || cs.visibility === 'hidden' || cs.display === 'none') continue;
-        t = Math.min(t, r.top + scrollY); b = Math.max(b, r.bottom + scrollY);
+    // evive #482 (test fail): a fullPage shot let Chromium resize the page during capture, and now and then the fluid
+    // font sizes (vw) were laid out wrong in the shot. So: measure the layout at the real viewport, make the viewport
+    // as tall as the page (the width stays), take plain clip shots (no resize during capture), take every shot twice
+    // and check that both are identical and the layout still matches. Retry up to 3 times, else report a PROBLEM.
+    const ref = await page.evaluate(layout);
+    if (!ref) { console.error(`${url}: no post content found`); problems++; await ctx.close(); continue; }
+    let png = null, box = null, why = '';
+    for (let attempt = 1; attempt <= 3 && !png; attempt++) {
+      for (let k = 0; k < 3; k++) { // the page height can follow the viewport height (min-height: 100vh); settle it
+        const h = await page.evaluate(() => document.documentElement.scrollHeight);
+        if (h === page.viewportSize().height) break;
+        await page.setViewportSize({ width: v.width, height: Math.max(v.height, h) });
+        await page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));
       }
-      return { x: 0, y: Math.max(0, Math.floor(t)), width: document.documentElement.clientWidth, height: Math.ceil(b - Math.max(0, Math.floor(t))) };
-    });
-    if (!box) { console.error(`${url}: no post content found`); problems++; await ctx.close(); continue; }
-    const png = await page.screenshot({ fullPage: true, clip: box });
+      await page.evaluate(async () => {
+        await Promise.all([...document.images].map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
+        window.scrollTo(0, 0);
+      });
+      await page.waitForTimeout(300);
+      const before = await page.evaluate(layout);
+      box = { x: 0, y: before.y, width: before.width, height: before.height };
+      const a = await page.screenshot({ clip: box });
+      const b = await page.screenshot({ clip: box });
+      const after = await page.evaluate(layout);
+      if (before.key !== ref.key) why = `layout differs from the ${v.width}x${v.height} viewport (${before.key} vs ${ref.key})`;
+      else if (after.key !== before.key) why = `layout changed during the shot (${after.key} vs ${before.key})`;
+      else if (!a.equals(b)) why = 'two shots in a row differ';
+      else { png = a; why = ''; }
+      if (why) console.log(`  retry ${attempt} (${p}, ${name}): ${why}`);
+    }
+    if (!png) { console.log(`  PROBLEM ${url} (${name}): no stable shot: ${why}`); problems++; await ctx.close(); continue; }
     // WebP encoding in the browser (no image tools needed), scaled to the batch 1 width.
     const webp = await page.evaluate(async ({ b64, w, q }) => {
       const img = new Image(); img.src = 'data:image/png;base64,' + b64; await img.decode();
