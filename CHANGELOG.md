@@ -2,7 +2,7 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
-## Unreleased
+## 0.8.1 — 2026-11-19
 - Fix: a sticky header now actually sticks. In a block theme the header group sits inside `<header class="wp-block-template-part">`, which is exactly as tall as the group, so the group had no room to move. When the header part holds a sticky group (pattern `evive/header-sticky`, or the header group set to sticky), the wrapper itself is sticky, with a background, below the admin bar when logged in (no offset up to 600px, where the admin bar scrolls away). Anchor links land below the header (`scroll-padding-top`); a small deferred script (`assets/js/sticky-header.js`, only on pages with a sticky group) keeps that offset equal to the header's real height, 6rem without JavaScript. Headers that are not sticky are unchanged (evive #513).
 
 ## 0.8.0 — 2026-11-19
