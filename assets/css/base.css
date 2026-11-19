@@ -810,3 +810,20 @@
 .is-style-count-up {
 	font-variant-numeric: tabular-nums;
 }
+
+/* evive #513: sticky header. A sticky group in the header sits inside <header class="wp-block-template-part">,
+   which is exactly as tall as the group, so the group has no room to stick. When the header part holds a
+   sticky group, the wrapper itself sticks. --wp-admin--admin-bar--position-offset is the fixed admin bar's
+   height when logged in and 0 without one or under 600px, where the admin bar scrolls away with the page.
+   The background is a fallback for a sticky group without its own background. Anchor targets land below
+   the header via scroll-padding-top; --evive-sticky-header-offset is a generous default for the header's
+   height that a child theme can set to its own. */
+header.wp-block-template-part:has(> .is-position-sticky) {
+	background-color: var(--wp--preset--color--base);
+	position: sticky;
+	top: var(--wp-admin--admin-bar--position-offset, 0px);
+	z-index: 100;
+}
+html:has(body header.wp-block-template-part > .is-position-sticky) {
+	scroll-padding-top: calc(var(--wp-admin--admin-bar--position-offset, 0px) + var(--evive-sticky-header-offset, 6rem));
+}
