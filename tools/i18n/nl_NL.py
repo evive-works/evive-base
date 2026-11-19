@@ -253,5 +253,16 @@ T = {
  "1,500 employees": "1.500 medewerkers",
  "Customer since": "Klant sinds",
  "Case": "Case",
+ # evive #412: before/after block
+ "Before": "Voor", "After": "Na", "Before / after": "Voor / na",
+ "Label of the before image": "Label van de voor-afbeelding",
+ "Label of the after image": "Label van de na-afbeelding",
+ "Start position of the divider (%)": "Beginpositie van de scheidslijn (%)",
+ "Visitors drag the divider or use the arrow keys. Without JavaScript both images are shown side by side.":
+  "Bezoekers slepen de scheidslijn of gebruiken de pijltjestoetsen. Zonder JavaScript staan beide afbeeldingen naast elkaar.",
+ "Divider between before and after": "Scheidslijn tussen voor en na",
+ "Two images with a divider visitors drag (mouse, touch or keyboard) to compare them. Without JavaScript both images are shown side by side.":
+  "Twee afbeeldingen met een scheidslijn die bezoekers verslepen (muis, touch of toetsenbord) om ze te vergelijken. Zonder JavaScript staan beide afbeeldingen naast elkaar.",
+ "compare": "vergelijken", "slider": "schuifregelaar", "make-over": "make-over",
 }
 CTX = {}

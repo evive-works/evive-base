@@ -2,6 +2,12 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
+## Unreleased
+- New block **Before / after** (`evive/before-after`, in `blocks/before-after/`): two images with a divider the visitor drags with the mouse or by touch (a sideways drag; vertical swipes still scroll the page) or moves with the keyboard and screen readers through a range input (arrow keys, Page Up/Down, Home/End). Labels "Before"/"After" (editable per block), start position of the divider, wide/full alignment. Without JavaScript both images are shown side by side (stacked on phones) with their labels. Its script and styles load only on pages that use the block. The block saves two ordinary Image blocks, so alt text and the media library work as usual. New placeholder art `placeholder-before.svg` / `placeholder-after.svg` (evive #412).
+- The theme registers every block in `blocks/*/block.json`; asset versions follow the theme version.
+- Dev tools: the block validator also validates the theme's own blocks; `tools/i18n/make-mo.py` compiles a .po without WP-CLI.
+- nl_NL translations for the new strings (291 of 291).
+
 ## 0.7.1 — 2026-11-18
 - Fix: the "Phone" image style now has a fixed phone shape (9:19.5). A screenshot of any size fills the screen from the top and is cut off at the bottom, instead of being shrunk with white bands beside it; inside the CTA band (`evive/cta-media`) the frame follows the height cap (evive #402).
 - New image style "Phone, floating": the same phone turned slightly in 3D, with a metal edge, a side button and a soft shadow below. Phone corners and notch now scale with the phone size. In the CTA band both phone styles stand inside the band instead of resting on its bottom edge (evive #402).

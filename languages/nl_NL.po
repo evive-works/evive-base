@@ -1539,3 +1539,59 @@ msgstr "Pagina zonder titel (hero eerst)"
 msgctxt "Custom template name"
 msgid "Case"
 msgstr "Case"
+
+#: functions.php:141 blocks/before-after/render.php:22
+msgctxt "before/after label"
+msgid "Before"
+msgstr "Voor"
+
+#: functions.php:142 blocks/before-after/render.php:23
+msgctxt "before/after label"
+msgid "After"
+msgstr "Na"
+
+#: functions.php:143 blocks/before-after/block.json
+msgctxt "block title"
+msgid "Before / after"
+msgstr "Voor / na"
+
+#: functions.php:144
+msgid "Label of the before image"
+msgstr "Label van de voor-afbeelding"
+
+#: functions.php:145
+msgid "Label of the after image"
+msgstr "Label van de na-afbeelding"
+
+#: functions.php:146
+msgid "Start position of the divider (%)"
+msgstr "Beginpositie van de scheidslijn (%)"
+
+#: functions.php:147
+msgid "Visitors drag the divider or use the arrow keys. Without JavaScript both images are shown side by side."
+msgstr "Bezoekers slepen de scheidslijn of gebruiken de pijltjestoetsen. Zonder JavaScript staan beide afbeeldingen naast elkaar."
+
+#: blocks/before-after/render.php:30
+msgctxt "before/after slider"
+msgid "Divider between before and after"
+msgstr "Scheidslijn tussen voor en na"
+
+#: blocks/before-after/block.json
+msgctxt "block description"
+msgid "Two images with a divider visitors drag (mouse, touch or keyboard) to compare them. Without JavaScript both images are shown side by side."
+msgstr "Twee afbeeldingen met een scheidslijn die bezoekers verslepen (muis, touch of toetsenbord) om ze te vergelijken. Zonder JavaScript staan beide afbeeldingen naast elkaar."
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "compare"
+msgstr "vergelijken"
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "slider"
+msgstr "schuifregelaar"
+
+#: blocks/before-after/block.json
+msgctxt "block keyword"
+msgid "make-over"
+msgstr "make-over"

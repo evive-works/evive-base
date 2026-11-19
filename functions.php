@@ -119,3 +119,34 @@ add_filter( 'single_template_hierarchy', function ( $templates ) {
 	}
 	return $templates;
 } );
+
+// evive #412: the theme's own blocks (blocks/<name>/block.json). Their styles and front-end scripts load only on
+// pages that contain the block. Asset versions follow the theme version, so an update busts browser caches.
+add_filter( 'block_type_metadata', function ( $metadata ) {
+	if ( str_starts_with( $metadata['name'] ?? '', 'evive/' ) ) {
+		$metadata['version'] = EVIVE_BASE_VERSION;
+	}
+	return $metadata;
+} );
+add_action( 'init', function () {
+	foreach ( glob( __DIR__ . '/blocks/*/block.json' ) as $evive_block ) {
+		register_block_type( dirname( $evive_block ) );
+	}
+} );
+
+// The editor scripts have no build step (no JSON translations): their strings come from here.
+add_action( 'enqueue_block_editor_assets', function () {
+	$images  = get_template_directory_uri() . '/assets/images/';
+	$strings = [
+		'before'            => _x( 'Before', 'before/after label', 'evive' ),
+		'after'             => _x( 'After', 'before/after label', 'evive' ),
+		'panel'             => _x( 'Before / after', 'block title', 'evive' ),
+		'labelBefore'       => __( 'Label of the before image', 'evive' ),
+		'labelAfter'        => __( 'Label of the after image', 'evive' ),
+		'position'          => __( 'Start position of the divider (%)', 'evive' ),
+		'help'              => __( 'Visitors drag the divider or use the arrow keys. Without JavaScript both images are shown side by side.', 'evive' ),
+		'placeholderBefore' => $images . 'placeholder-before.svg',
+		'placeholderAfter'  => $images . 'placeholder-after.svg',
+	];
+	wp_add_inline_script( generate_block_asset_handle( 'evive/before-after', 'editorScript' ), 'window.eviveBeforeAfter = ' . wp_json_encode( $strings ) . ';', 'before' );
+} );
