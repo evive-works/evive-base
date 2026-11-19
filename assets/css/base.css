@@ -486,6 +486,55 @@
 	text-align: center;
 }
 
+/* evive #484: "Device duo" (pattern evive/device-duo): a "Laptop" image with a "Phone, floating" image in
+   front of its bottom-right corner. Both sit in the same grid cell, so the group is as tall as the pair
+   and nothing next to or below it is covered. Sizes are percentages of the group, so the pair scales as
+   one picture down to phone width. The laptop screen has a fixed 16:10 shape; a screenshot of another
+   shape fills it from the top. Static, so reduced motion needs nothing. */
+.evive-device-duo {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: auto;
+}
+.evive-device-duo > .wp-block-image.is-style-laptop,
+.evive-device-duo > .wp-block-image.is-style-phone-float {
+	grid-area: 1 / 1;
+	margin: 0;
+}
+.evive-device-duo > .wp-block-image.is-style-laptop {
+	align-self: start;
+	justify-self: start;
+	/* Room under the laptop for the phone, which stands a little lower (in front of it). */
+	margin-bottom: 9%;
+	width: 88%;
+}
+.evive-device-duo > .wp-block-image.is-style-laptop img {
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	object-position: top;
+}
+.evive-device-duo > .wp-block-image.is-style-phone-float {
+	align-self: end;
+	justify-self: end;
+	margin-right: 2%;
+	max-width: none;
+	width: 21%;
+	z-index: 1;
+}
+@media (max-width: 781px) {
+	/* On phones the pair keeps its overlap, with the phone a bit larger so its screen stays readable. */
+	.evive-device-duo > .wp-block-image.is-style-laptop {
+		width: 84%;
+	}
+	.evive-device-duo > .wp-block-image.is-style-phone-float {
+		margin-right: 3%;
+		width: 27%;
+	}
+	.evive-device-duo > .wp-block-image.is-style-phone-float img {
+		border-width: 0.35rem;
+	}
+}
+
 /* Bento grid (pattern evive/bento): tiles of different sizes in the core grid layout. On narrow screens
    every tile takes the full width; !important because core prints the spans as generated classes. */
 .evive-bento > .evive-bento-tile {
