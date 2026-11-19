@@ -561,9 +561,10 @@
 	content: "\201C" / "";
 	display: block;
 	font-family: var(--wp--preset--font-family--heading);
-	font-size: var(--wp--preset--font-size--xxl);
+	font-size: calc(2 * var(--wp--preset--font-size--xxl));
+	font-weight: 700;
+	height: 0.55em;
 	line-height: 1;
-	margin-bottom: calc(-1 * var(--wp--preset--spacing--20));
 }
 .evive-testimonial-photo-quote p {
 	line-height: 1.3;
