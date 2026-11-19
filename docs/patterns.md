@@ -13,6 +13,25 @@ Screenshots per pattern: **default palette** (desktop), **dark-primary test pale
 - **Page without title** template (`page-no-title`) for pages that start with a hero (the hero has the H1).
 - **FAQ structured data:** a Group with class `evive-faq` outputs `FAQPage` JSON-LD built from its Details blocks (summary = question, content = answer). Editors only edit the visible text.
 
+## Block: Tabs
+`evive/tabs` with inner `evive/tab` blocks · block category Design · theme block in `blocks/tabs/` (evive #411)
+
+Content in tabs (for example desks / rooms / parking): one tab is shown at a time and each tab holds any blocks. Inserting the block gives three tabs; add more with the + below the last tab, and type each tab's label above its content. In the editor all tabs are shown one below the other.
+
+- **Accessible:** WAI-ARIA tabs pattern: `role="tablist"`, `tab` and `tabpanel`, linked with `aria-controls` / `aria-labelledby`. Mouse, touch and keyboard: Tab moves to the selected tab, Left/Right arrows (wrapping), Home and End switch tabs; Tab again moves into the open panel. A link to an anchor inside a panel opens that tab.
+- **Without JavaScript** the tab list stays hidden and every tab is shown with its label as a heading (H3), as in the last screenshot.
+- **Loading:** its script (`view.js`, about 2.5 KB, not minified) and CSS load only on pages that contain the block.
+- **Tokens:** labels `muted`, the selected tab `contrast` with a `primary` underline, the line below the list `border`.
+- **Saved markup:** both blocks save only their inner blocks (labels in the block comment); the tab list is rendered in PHP, so later front-end changes don't make saved content invalid.
+
+| Default | Dark primary (tab "Rooms" selected) | Mobile |
+|---|---|---|
+| ![Tabs, default](patterns/tabs-default-1280.webp) | ![Tabs, dark primary](patterns/tabs-dark-1280.webp) | ![Tabs, mobile](patterns/tabs-default-390.webp) |
+
+Without JavaScript:
+
+![Tabs without JavaScript: all tabs below each other](patterns/tabs-nojs-1280.webp)
+
 ## Hero: text and image
 `evive/hero-media` · category `evive-hero`
 
