@@ -504,9 +504,11 @@
 .evive-device-duo > .wp-block-image.is-style-laptop {
 	align-self: start;
 	justify-self: start;
+	/* The frame's side padding counts inside the width, so the base never sticks out of the column. */
+	box-sizing: border-box;
 	/* Room under the laptop for the phone, which stands a little lower (in front of it). */
 	margin-bottom: 9%;
-	width: 88%;
+	width: 92%;
 }
 .evive-device-duo > .wp-block-image.is-style-laptop img {
 	aspect-ratio: 16 / 10;
@@ -516,15 +518,15 @@
 .evive-device-duo > .wp-block-image.is-style-phone-float {
 	align-self: end;
 	justify-self: end;
-	margin-right: 2%;
+	margin-right: 1%;
 	max-width: none;
-	width: 21%;
+	width: 22%;
 	z-index: 1;
 }
 @media (max-width: 781px) {
 	/* On phones the pair keeps its overlap, with the phone a bit larger so its screen stays readable. */
 	.evive-device-duo > .wp-block-image.is-style-laptop {
-		width: 84%;
+		width: 88%;
 	}
 	.evive-device-duo > .wp-block-image.is-style-phone-float {
 		margin-right: 3%;
