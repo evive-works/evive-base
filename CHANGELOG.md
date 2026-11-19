@@ -2,7 +2,7 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
-## Unreleased
+## 0.8.0 — 2026-11-19
 - New pattern `evive/team` (category Content): a grid of people with a square photo with rounded corners (radius `l`), name, role and a LinkedIn link (Social Icons block, logos only, in the `muted` colour, `primary` on hover). Four per row on wide screens (the column count in the grid settings, so three is one click), two per row on phones (evive #406).
 - nl_NL translations for the new strings (284 of 284).
 - New pattern `evive/contact` (category Call to action): contact or demo request section with a small label, heading, intro and contact details (email, phone, address; links where they have one) on one side, and a form in a card on the other: name, email (both required, side by side), company, message (required). The form is the "Form" block of the evive Forms plugin (spam trap, minimum fill time and rate limit, entries, mail via `wp_mail`, so via FluentSMTP where that is set up). Without evive Forms active the form side stays empty. Stacks on phones, text first (evive #407).
