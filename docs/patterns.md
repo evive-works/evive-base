@@ -174,7 +174,7 @@ Three customer quotes as cards.
 ## Stats
 `evive/stats` · category `evive-proof`
 
-Four big numbers with a label each.
+Four big numbers with a label each. The numbers use the paragraph style **Count up**: they count up from 0 once when they scroll into view. The final number is in the HTML (no JavaScript or reduced motion: it simply shows); text with more than one number, like `24/7`, doesn't count. The script loads only on pages that use the style.
 
 | Default | Dark primary | Mobile |
 |---|---|---|

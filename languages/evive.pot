@@ -1903,3 +1903,13 @@ msgstr ""
 msgctxt "carousel"
 msgid "Next"
 msgstr ""
+
+#: functions.php:51
+msgctxt "block style"
+msgid "Count up"
+msgstr ""
+
+#: patterns/stats.php
+msgctxt "Pattern description"
+msgid "Four big numbers with a label each; the numbers count up once when they scroll into view."
+msgstr ""

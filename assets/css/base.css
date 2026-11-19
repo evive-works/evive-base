@@ -795,4 +795,8 @@
 }
 .evive-carousel-nav button:dir(rtl) svg {
 	transform: scaleX(-1);
+/* evive #414: "Count up" paragraph style. Digits of equal width, so the number doesn't jitter while it
+   counts (assets/js/count-up.js, which does nothing with reduced motion). */
+.is-style-count-up {
+	font-variant-numeric: tabular-nums;
 }
