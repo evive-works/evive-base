@@ -2,7 +2,7 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
-## Unreleased
+## 0.9.1 — 2026-11-20
 - Docs: screenshots for ten newer patterns in `docs/patterns.md` (steps, problem-solution, bento, product-screenshot, pricing-plans, pricing-comparison, pricing-addon, cta-media, case-cards, case-study): default palette at 1280, dark-primary test palette at 1280, phone at 390, same format as the earlier shots. No theme code changes (evive #482).
 - Tools: `tools/pattern-shots/` makes these screenshots with one command (`node tools/pattern-shots/shoot.mjs --card <card> <pattern...>` on an evive-base test site: one page per pattern, Playwright at real viewport widths, lazy images loaded, every shot taken twice and checked for a stable layout, WebP encoded in the browser). The dark-primary test palette is written down in `tools/pattern-shots/palettes.json`; how it works in `tools/pattern-shots/README.md` (evive #482).
 
