@@ -2,7 +2,7 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
-## Unreleased
+## 0.10.0 — 2026-11-20
 - New pattern `evive/device-duo` ("Device duo: laptop with phone in front", category Features): a laptop with a desktop screenshot and a floating phone with an app screenshot overlapping its bottom-right corner, drawn in CSS by the existing image block styles "Laptop" and "Phone, floating" (no mockup images). Swap in two plain screenshots; the laptop screen is 16:10 and fills from the top. One group (`evive-device-duo`, CSS in `base.css`), so it works on its own, next to text or in the image column of a hero or `evive/cta-media`; on phones the pair keeps its overlap, scaled down. Static, no animation (evive #484).
 - nl_NL translations for the new strings (389 of 389). Docs: section and screenshots in `docs/patterns.md`.
 
