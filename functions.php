@@ -271,3 +271,232 @@ add_action( 'enqueue_block_editor_assets', function () {
 	];
 	wp_add_inline_script( generate_block_asset_handle( 'evive/media-overlap', 'editorScript' ), 'window.eviveMediaOverlap = ' . wp_json_encode( $strings ) . ';', 'before' );
 } );
+
+// evive #546: "Slides" (Group block style): one slide (a direct child of the group, e.g. a Cover) at a time,
+// full width, in a scroll-snap row with previous/next buttons, dots and keyboard (assets/js/carousel.js,
+// shared with the Carousel style). "Slides, autoplay" also moves on by itself every 6 seconds: never with
+// reduced motion, it stops on hover and keyboard focus, and it has a pause button (WCAG 2.2.2). Without
+// JavaScript both are a plain scrollable row, like the Carousel style (#413). In the editor the slides stand
+// below each other, so each one can be edited.
+add_action( 'init', function () {
+	register_block_style( 'core/group', [ 'name' => 'slides', 'label' => _x( 'Slides', 'block style', 'evive' ) ] );
+	register_block_style( 'core/group', [ 'name' => 'slides-autoplay', 'label' => _x( 'Slides, autoplay', 'block style', 'evive' ) ] );
+} );
+
+add_filter( 'render_block_core/group', function ( $html, $block ) {
+	$classes = $block['attrs']['className'] ?? '';
+	if ( is_admin() || ! preg_match( '/\bis-style-slides(-autoplay)?\b/', $classes, $style ) || empty( $block['innerBlocks'] ) ) {
+		return $html;
+	}
+	$tags = new WP_HTML_Tag_Processor( $html );
+	if ( ! $tags->next_tag() ) {
+		return $html;
+	}
+	$id = $tags->get_attribute( 'id' );
+	if ( ! $id ) {
+		$id = wp_unique_id( 'evive-slides-' );
+		$tags->set_attribute( 'id', $id );
+	}
+	$count = count( $block['innerBlocks'] );
+	$tags->set_attribute( 'role', 'region' );
+	$tags->set_attribute( 'aria-roledescription', _x( 'Slides', 'slides region', 'evive' ) );
+	if ( ! $tags->get_attribute( 'aria-label' ) ) {
+		$tags->set_attribute( 'aria-label', _x( 'Slides', 'slides region', 'evive' ) );
+	}
+	$tags->set_attribute( 'tabindex', '0' );
+	/* translators: 1: number of the slide, 2: number of slides */
+	$tags->set_attribute( 'data-evive-slide-label', _x( 'Slide %1$s of %2$s', 'slides', 'evive' ) );
+	$tags->set_attribute( 'data-evive-slide-role', _x( 'Slide', 'slides roledescription', 'evive' ) );
+	$autoplay = ! empty( $style[1] );
+	$arrow    = '<svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="%s" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+	$nav      = '<div class="evive-slides-nav" hidden>'
+		. '<button type="button" class="evive-slides-prev" aria-controls="' . esc_attr( $id ) . '" aria-label="' . esc_attr_x( 'Previous slide', 'slides', 'evive' ) . '">' . sprintf( $arrow, 'M15 18l-6-6 6-6' ) . '</button>'
+		. '<div class="evive-slides-dots">';
+	for ( $i = 1; $i <= $count; $i++ ) {
+		/* translators: %s: number of the slide */
+		$nav .= '<button type="button" class="evive-slides-dot" aria-controls="' . esc_attr( $id ) . '" aria-label="' . esc_attr( sprintf( _x( 'Slide %s', 'slides dot', 'evive' ), $i ) ) . '"' . ( 1 === $i ? ' aria-current="true"' : '' ) . '></button>';
+	}
+	$nav .= '</div>'
+		. '<button type="button" class="evive-slides-next" aria-controls="' . esc_attr( $id ) . '" aria-label="' . esc_attr_x( 'Next slide', 'slides', 'evive' ) . '">' . sprintf( $arrow, 'M9 6l6 6-6 6' ) . '</button>';
+	if ( $autoplay ) {
+		// The script shows this button only when autoplay really runs (not with reduced motion).
+		$nav .= '<button type="button" class="evive-slides-pause" aria-controls="' . esc_attr( $id ) . '" hidden'
+			. ' data-label-pause="' . esc_attr_x( 'Pause slides', 'slides', 'evive' ) . '" data-label-play="' . esc_attr_x( 'Play slides', 'slides', 'evive' ) . '"'
+			. ' aria-label="' . esc_attr_x( 'Pause slides', 'slides', 'evive' ) . '">'
+			. '<svg class="evive-icon-pause" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>'
+			. '<svg class="evive-icon-play" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>'
+			. '</button>';
+	}
+	$nav .= '</div>';
+	wp_enqueue_script( 'evive-carousel' );
+	return $tags->get_updated_html() . $nav;
+}, 10, 2 );
+
+// evive #546: "Muted loop" (Video block style), for a video in place of a hero image. The video is muted,
+// loops and has no sound or controls of its own; the poster shows first. The browser loads nothing of the
+// video before the page has loaded (preload="none", no autoplay attribute): assets/js/video.js then starts it,
+// except on phones (below 782px, to save data) and with reduced motion, where the visitor starts it with the
+// play button. A pause button is always there (WCAG 2.2.2). Without JavaScript the browser's own controls show.
+add_action( 'init', function () {
+	register_block_style( 'core/video', [ 'name' => 'loop', 'label' => _x( 'Muted loop', 'block style', 'evive' ) ] );
+	wp_register_script( 'evive-video', get_template_directory_uri() . '/assets/js/video.js', [], EVIVE_BASE_VERSION, [ 'in_footer' => true, 'strategy' => 'defer' ] );
+} );
+
+add_filter( 'render_block_core/video', function ( $html, $block ) {
+	if ( is_admin() || ! str_contains( $block['attrs']['className'] ?? '', 'is-style-loop' ) ) {
+		return $html;
+	}
+	$tags = new WP_HTML_Tag_Processor( $html );
+	if ( ! $tags->next_tag( 'video' ) ) {
+		return $html;
+	}
+	$tags->remove_attribute( 'autoplay' );
+	$tags->set_attribute( 'muted', true );
+	$tags->set_attribute( 'loop', true );
+	$tags->set_attribute( 'playsinline', true );
+	$tags->set_attribute( 'controls', true ); // removed by the script; the fallback without JavaScript
+	$tags->set_attribute( 'preload', 'none' );
+	$tags->set_attribute( 'data-evive-loop', '' );
+	$html = $tags->get_updated_html();
+	$end  = strrpos( $html, '</figure>' );
+	if ( false === $end ) {
+		return $html;
+	}
+	$button = '<button type="button" class="evive-video-toggle" hidden'
+		. ' data-label-pause="' . esc_attr_x( 'Pause video', 'video', 'evive' ) . '" data-label-play="' . esc_attr_x( 'Play video', 'video', 'evive' ) . '"'
+		. ' aria-label="' . esc_attr_x( 'Play video', 'video', 'evive' ) . '">'
+		. '<svg class="evive-icon-pause" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>'
+		. '<svg class="evive-icon-play" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>'
+		. '</button>';
+	wp_enqueue_script( 'evive-video' );
+	return substr( $html, 0, $end ) . $button . substr( $html, $end );
+}, 10, 2 );
+
+// evive #546: privacy embed for YouTube and Vimeo. Instead of the player, the page shows the video's
+// thumbnail (fetched once by the server and stored in uploads/evive-embeds/, so the visitor's browser makes no
+// request to YouTube or Vimeo), the title and a play button. Only a click loads the player, from
+// youtube-nocookie.com or with Vimeo's dnt=1 (assets/js/embed.js). Without JavaScript the play button is a link
+// to the video on YouTube/Vimeo. On for every YouTube/Vimeo embed; off for one embed with the extra CSS class
+// "evive-embed-direct", or for the whole site with add_filter( 'evive_privacy_embed', '__return_false' ).
+add_action( 'init', function () {
+	wp_register_script( 'evive-embed', get_template_directory_uri() . '/assets/js/embed.js', [], EVIVE_BASE_VERSION, [ 'in_footer' => true, 'strategy' => 'defer' ] );
+} );
+
+/**
+ * evive #546: the player URL (privacy mode, autoplay after the click) and the public page of a YouTube or Vimeo
+ * video, from the embed's iframe src or its URL. Null for anything else.
+ */
+function evive_privacy_embed_target( string $provider, string $src, string $url ): ?array {
+	$query = [];
+	parse_str( (string) wp_parse_url( $src, PHP_URL_QUERY ), $query );
+	if ( 'youtube' === $provider ) {
+		$id = '';
+		foreach ( [ $src, $url ] as $candidate ) {
+			if ( preg_match( '~(?:youtube(?:-nocookie)?\.com/(?:embed/|shorts/|live/|watch\?(?:.*&)?v=)|youtu\.be/)([A-Za-z0-9_-]{11})~', $candidate, $m ) ) {
+				$id = $m[1];
+				break;
+			}
+		}
+		if ( ! $id ) {
+			return null;
+		}
+		$args = [ 'autoplay' => 1, 'rel' => 0 ];
+		if ( isset( $query['start'] ) ) {
+			$args['start'] = (int) $query['start'];
+		}
+		return [
+			'id'     => $id,
+			'player' => add_query_arg( $args, 'https://www.youtube-nocookie.com/embed/' . $id ),
+			'page'   => 'https://www.youtube.com/watch?v=' . $id,
+			'thumb'  => 'https://i.ytimg.com/vi/' . $id . '/hqdefault.jpg',
+		];
+	}
+	if ( 'vimeo' === $provider && preg_match( '~player\.vimeo\.com/video/(\d+)~', $src, $m ) ) {
+		$args = [ 'dnt' => 1, 'autoplay' => 1 ];
+		if ( ! empty( $query['h'] ) && preg_match( '/^[a-f0-9]+$/', $query['h'] ) ) {
+			$args['h'] = $query['h'];
+		}
+		return [
+			'id'     => $m[1],
+			'player' => add_query_arg( $args, 'https://player.vimeo.com/video/' . $m[1] ),
+			'page'   => $url ? $url : 'https://vimeo.com/' . $m[1],
+			'thumb'  => '',
+		];
+	}
+	return null;
+}
+
+/**
+ * evive #546: a local copy of the video's thumbnail (uploads/evive-embeds/), fetched once by the server.
+ * Remembered for 30 days; a failed fetch is retried after a day. Empty string when there is none.
+ */
+function evive_privacy_embed_thumb( string $provider, array $target ): string {
+	$key    = 'evive_embed_' . md5( $provider . ':' . $target['id'] );
+	$cached = get_transient( $key );
+	$upload = wp_upload_dir( null, false );
+	if ( is_array( $cached ) ) {
+		return ( $cached['file'] && file_exists( trailingslashit( $upload['basedir'] ) . $cached['file'] ) ) ? set_url_scheme( trailingslashit( $upload['baseurl'] ) . $cached['file'] ) : '';
+	}
+	$thumb = $target['thumb'];
+	if ( ! $thumb && 'vimeo' === $provider ) {
+		$resp = wp_safe_remote_get( add_query_arg( [ 'url' => rawurlencode( 'https://vimeo.com/' . $target['id'] ), 'width' => 1280 ], 'https://vimeo.com/api/oembed.json' ), [ 'timeout' => 4 ] );
+		$data = json_decode( (string) wp_remote_retrieve_body( $resp ), true );
+		$thumb = is_array( $data ) ? (string) ( $data['thumbnail_url'] ?? '' ) : '';
+	}
+	$file = '';
+	if ( $thumb && preg_match( '~^https://(i\.ytimg\.com|i\.vimeocdn\.com)/~', $thumb ) && ! $upload['error'] ) {
+		$resp = wp_safe_remote_get( $thumb, [ 'timeout' => 4, 'limit_response_size' => 2 * MB_IN_BYTES ] );
+		$type = (string) wp_remote_retrieve_header( $resp, 'content-type' );
+		$ext  = [ 'image/jpeg' => 'jpg', 'image/webp' => 'webp', 'image/png' => 'png' ][ strtok( $type, ';' ) ] ?? '';
+		$body = (string) wp_remote_retrieve_body( $resp );
+		if ( 200 === wp_remote_retrieve_response_code( $resp ) && $ext && strlen( $body ) > 100 && wp_mkdir_p( trailingslashit( $upload['basedir'] ) . 'evive-embeds' ) ) {
+			$name = 'evive-embeds/' . $provider . '-' . $target['id'] . '.' . $ext;
+			if ( false !== file_put_contents( trailingslashit( $upload['basedir'] ) . $name, $body ) ) {
+				$file = $name;
+			}
+		}
+	}
+	set_transient( $key, [ 'file' => $file ], $file ? 30 * DAY_IN_SECONDS : DAY_IN_SECONDS );
+	return $file ? set_url_scheme( trailingslashit( $upload['baseurl'] ) . $file ) : '';
+}
+
+add_filter( 'render_block_core/embed', function ( $html, $block ) {
+	$provider = $block['attrs']['providerNameSlug'] ?? '';
+	if ( is_admin() || is_feed() || ! in_array( $provider, [ 'youtube', 'vimeo' ], true ) || str_contains( $block['attrs']['className'] ?? '', 'evive-embed-direct' )
+		|| ! apply_filters( 'evive_privacy_embed', true, $block ) ) {
+		return $html;
+	}
+	// The_content's autoembed has already turned the URL into the provider's iframe; without one, leave it.
+	if ( ! preg_match( '~<iframe\b[^>]*>.*?</iframe>~is', $html, $iframe ) ) {
+		return $html;
+	}
+	$frame = new WP_HTML_Tag_Processor( $iframe[0] );
+	$frame->next_tag( 'iframe' );
+	$target = evive_privacy_embed_target( $provider, html_entity_decode( (string) $frame->get_attribute( 'src' ) ), (string) ( $block['attrs']['url'] ?? '' ) );
+	if ( ! $target ) {
+		return $html;
+	}
+	$title = trim( (string) $frame->get_attribute( 'title' ) );
+	$name  = 'youtube' === $provider ? 'YouTube' : 'Vimeo';
+	$thumb = evive_privacy_embed_thumb( $provider, $target );
+	/* translators: %s: title of the video */
+	$label = $title ? sprintf( _x( 'Play video: %s', 'privacy embed', 'evive' ), $title ) : _x( 'Play video', 'privacy embed', 'evive' );
+	$note  = 'youtube' === $provider
+		? _x( 'Plays from YouTube in privacy-enhanced mode. Nothing is loaded from YouTube before you click play.', 'privacy embed', 'evive' )
+		: _x( 'Plays from Vimeo without tracking (dnt). Nothing is loaded from Vimeo before you click play.', 'privacy embed', 'evive' );
+	$facade = '<div class="evive-embed" data-evive-embed="' . esc_url( $target['player'] ) . '" data-evive-embed-title="' . esc_attr( $title ? $title : $name ) . '">'
+		. ( $thumb ? '<img class="evive-embed-thumb" src="' . esc_url( $thumb ) . '" alt="" loading="lazy" decoding="async">' : '' )
+		. '<a class="evive-embed-play" href="' . esc_url( $target['page'] ) . '" aria-label="' . esc_attr( $label ) . '">'
+		. '<svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></a>'
+		. '<div class="evive-embed-info">' . ( $title ? '<p class="evive-embed-title">' . esc_html( $title ) . '</p>' : '' )
+		. '<p class="evive-embed-note">' . esc_html( $note ) . '</p></div>'
+		. '</div>';
+	wp_enqueue_script( 'evive-embed' );
+	$html = str_replace( $iframe[0], $facade, $html );
+	$tags = new WP_HTML_Tag_Processor( $html );
+	if ( $tags->next_tag( 'figure' ) ) {
+		$tags->add_class( 'evive-embed-privacy' );
+		$html = $tags->get_updated_html();
+	}
+	return $html;
+}, 10, 2 );

@@ -889,3 +889,233 @@ html:has(body header.wp-block-template-part > .is-position-sticky) {
 		--evive-admin-bar-offset: 0px;
 	}
 }
+
+/* evive #546: "Slides" and "Slides, autoplay" (Group block styles, pattern evive/hero-slider). One slide (a direct
+   child of the group) per view, full width, in a scroll-snap row; swipe works without JavaScript, and without it
+   the row keeps a thin scrollbar. assets/js/carousel.js adds the controls below and hides the scrollbar. */
+.wp-block-group:is(.is-style-slides, .is-style-slides-autoplay) {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: thin;
+}
+.wp-block-group:is(.is-style-slides, .is-style-slides-autoplay) > * {
+	flex: 0 0 100%;
+	margin: 0 !important;
+	max-width: none !important;
+	min-width: 0;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}
+.wp-block-group.evive-slides-on {
+	scrollbar-width: none;
+}
+.wp-block-group.evive-slides-on::-webkit-scrollbar {
+	display: none;
+}
+/* In the editor the slides stand below each other, so each one can be edited. */
+.wp-block-group:is(.is-style-slides, .is-style-slides-autoplay).block-editor-block-list__block {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--30);
+	overflow: visible;
+}
+.evive-slides-nav:not([hidden]) {
+	align-items: center;
+	display: flex;
+	gap: var(--wp--preset--spacing--30);
+	justify-content: center;
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+.evive-slides-nav > button,
+.evive-video-toggle {
+	align-items: center;
+	background: var(--wp--preset--color--base);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 999px;
+	color: var(--wp--preset--color--contrast);
+	cursor: pointer;
+	display: inline-flex;
+	height: 44px;
+	justify-content: center;
+	padding: 0;
+	width: 44px;
+}
+.evive-slides-nav > button:hover {
+	border-color: var(--wp--preset--color--contrast);
+}
+.evive-slides-nav > button:dir(rtl) svg {
+	transform: scaleX(-1);
+}
+.evive-slides-nav > .evive-slides-pause[hidden] {
+	display: none;
+}
+.evive-slides-dots {
+	display: flex;
+	gap: var(--wp--preset--spacing--10);
+}
+/* A dot is small, its button 24px (WCAG 2.2 target size). */
+.evive-slides-dot {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	height: 24px;
+	padding: 0;
+	position: relative;
+	width: 24px;
+}
+.evive-slides-dot::before {
+	background: var(--wp--preset--color--border);
+	border: 1px solid var(--wp--preset--color--muted);
+	border-radius: 999px;
+	content: "";
+	height: 10px;
+	inset: 0;
+	margin: auto;
+	position: absolute;
+	transition: width 0.2s;
+	width: 10px;
+}
+.evive-slides-dot[aria-current="true"]::before {
+	background: var(--wp--preset--color--primary);
+	border-color: var(--wp--preset--color--primary);
+	width: 20px;
+}
+/* Pause/play buttons (slides and the muted-loop video) show the icon of what a click does. */
+.evive-slides-pause .evive-icon-play,
+.evive-slides-pause.is-paused .evive-icon-pause,
+.evive-video-toggle .evive-icon-pause,
+.evive-video-toggle.is-playing .evive-icon-play {
+	display: none;
+}
+.evive-slides-pause.is-paused .evive-icon-play,
+.evive-video-toggle.is-playing .evive-icon-pause {
+	display: block;
+}
+
+/* evive #546: videos. "Video section" (pattern evive/video-section) uses the class evive-video: rounded like the
+   images. "Muted loop" (Video block style, pattern evive/hero-video): no controls, a pause/play button in the
+   corner; before it first plays (phones, reduced motion) a large play button in the middle. */
+.wp-block-video:is(.evive-video, .is-style-loop) video {
+	aspect-ratio: 16 / 10;
+	background: var(--wp--preset--color--surface);
+	border-radius: var(--wp--custom--radius--l);
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+.wp-block-video.is-style-loop {
+	position: relative;
+}
+.wp-block-video.evive-video-on video {
+	cursor: pointer;
+}
+.evive-video-toggle {
+	bottom: var(--wp--preset--spacing--20);
+	box-shadow: var(--wp--preset--shadow--s);
+	position: absolute;
+	right: var(--wp--preset--spacing--20);
+}
+.evive-video-toggle:dir(rtl) {
+	left: var(--wp--preset--spacing--20);
+	right: auto;
+}
+.evive-video-toggle[hidden] {
+	display: none;
+}
+.evive-video-on.is-idle .evive-video-toggle {
+	background: var(--wp--preset--color--primary);
+	border-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--primary-contrast);
+	height: 72px;
+	inset: 0;
+	margin: auto;
+	width: 72px;
+}
+.evive-video-on.is-idle .evive-video-toggle svg {
+	height: 28px;
+	width: 28px;
+}
+
+/* evive #546: privacy embed (YouTube, Vimeo): a local thumbnail with a play button; the player loads on click. */
+.evive-embed {
+	aspect-ratio: 16 / 9;
+	background: var(--wp--preset--color--contrast);
+	border-radius: var(--wp--custom--radius--m);
+	color: var(--wp--preset--color--base);
+	overflow: hidden;
+	position: relative;
+}
+.wp-has-aspect-ratio .evive-embed {
+	aspect-ratio: auto;
+	inset: 0;
+	position: absolute;
+}
+.evive-embed-thumb {
+	height: 100%;
+	inset: 0;
+	object-fit: cover;
+	position: absolute;
+	width: 100%;
+}
+.evive-embed-play {
+	align-items: center;
+	background: var(--wp--preset--color--primary);
+	border-radius: 999px;
+	box-shadow: var(--wp--preset--shadow--m);
+	color: var(--wp--preset--color--primary-contrast);
+	display: flex;
+	height: 72px;
+	inset: 0;
+	justify-content: center;
+	margin: auto;
+	position: absolute;
+	width: 72px;
+	z-index: 1;
+}
+.evive-embed-play:hover {
+	background: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent-contrast);
+}
+/* The whole thumbnail is the click target. */
+.evive-embed-play::after {
+	content: "";
+	inset: -100vmax;
+	position: absolute;
+}
+.evive-embed:has(.evive-embed-play) {
+	cursor: pointer;
+}
+.evive-embed-info {
+	background: linear-gradient(to top, color-mix(in srgb, var(--wp--preset--color--contrast) 85%, transparent), transparent);
+	bottom: 0;
+	left: 0;
+	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--30) var(--wp--preset--spacing--20);
+	position: absolute;
+	right: 0;
+}
+.evive-embed-info p {
+	margin: 0;
+}
+.evive-embed-title {
+	font-weight: 600;
+}
+.evive-embed-note {
+	font-size: var(--wp--preset--font-size--xs);
+	opacity: 0.85;
+}
+.evive-embed-frame {
+	border: 0;
+	height: 100%;
+	inset: 0;
+	position: absolute;
+	width: 100%;
+}
+@media (max-width: 599px) {
+	.evive-embed-note {
+		display: none;
+	}
+}
