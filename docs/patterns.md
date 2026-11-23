@@ -12,6 +12,7 @@ Screenshots per pattern: **default palette** (desktop), **dark-primary test pale
 - **Shadow tokens** `s`, `m`, `l` (added in 0.3.0, as proposed in D.1). They are built from the `contrast` colour with `color-mix()`, so they follow the palette.
 - **Page without title** template (`page-no-title`) for pages that start with a hero (the hero has the H1).
 - **Moving strip** block style for Group (`is-style-logo-strip`) and **Carousel** block style for Columns (`is-style-carousel`): see *Logo wall* and *Testimonials: grid of three* below (evive #413).
+- **Slides** and **Slides, autoplay** block styles for Group, **Muted loop** block style for Video, and the privacy embed for YouTube/Vimeo: see *Video and slides* below (evive #546).
 - **FAQ structured data:** a Group with class `evive-faq` outputs `FAQPage` JSON-LD built from its Details blocks (summary = question, content = answer). Editors only edit the visible text.
 
 ## Block: Tabs
@@ -223,6 +224,62 @@ A laptop with a desktop screenshot and a "Phone, floating" phone with an app scr
 | Default | Dark primary | Mobile |
 |---|---|---|
 | ![Device duo, default](patterns/device-duo-default-1280.webp) | ![Device duo, dark primary](patterns/device-duo-dark-1280.webp) | ![Device duo, mobile](patterns/device-duo-default-390.webp) |
+
+## Video and slides (evive #546)
+Made with `tools/pattern-shots/` (evive-base alone, placeholder video and poster). The shots are taken with reduced motion, so they show the poster and the first slide.
+
+## Hero: slider
+`evive/hero-slider` · category `evive-hero` (evive #546)
+
+Three full-width slides, each a **Cover** block (image with a dark `contrast` overlay at 80 %, text in `base`), inside a Group with the block style **Slides**. Swap in a photo per slide (Cover → replace image). Only the first slide has the page's H1, the others an H2. Add or remove slides inside the group; in the editor they stand below each other so each one can be edited.
+
+- **Slides** (Group block style `is-style-slides`): every direct child of the group is one slide, full width, in a scroll-snap row. Under it: *previous* / *next* (wrapping around), one dot per slide (`aria-current` on the visible one, 24px targets). The row itself can be focused (Tab) and moved with Left/Right, Home and End; swipe and trackpad work as a normal scroll. The region has `aria-roledescription` "Slides", every slide is a group labelled "Slide 1 of 3". Script: `assets/js/carousel.js` (the same file as the Carousel style, only loaded on pages with slides or a carousel).
+- **Slides, autoplay** (`is-style-slides-autoplay`): the same, plus a step every 6 seconds. Autoplay waits while the pointer is over the slides or the keyboard focus is in them, stops for good after a click on *previous* / *next* / a dot, and has a pause/play button (WCAG 2.2.2). With `prefers-reduced-motion: reduce` it never starts and the pause button is not shown.
+- **Without JavaScript** the slides are a plain scrollable row (thin scrollbar, snapping), without buttons.
+- Off by default: autoplay. Any group can use the style, e.g. for a row of image slides.
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Hero slider, default](patterns/hero-slider-default-1280.webp) | ![Hero slider, dark primary](patterns/hero-slider-dark-1280.webp) | ![Hero slider, mobile](patterns/hero-slider-default-390.webp) |
+
+## Hero: text and video
+`evive/hero-video` · category `evive-hero` (evive #546)
+
+*Hero: text and image* with a short muted video that loops instead of the image: a Video block with the block style **Muted loop** (`is-style-loop`), rounded like the images (radius `l`, 16:10, the video fills the frame).
+
+- The poster shows first. The theme renders the video with `preload="none"` and without `autoplay`, so the browser loads nothing of the video until the page has loaded; then `assets/js/video.js` starts it (muted, loop, `playsinline`).
+- **Phones** (below 782px, to save data) and **reduced motion**: the video does not start by itself. The poster shows with a large play button in the middle; a tap on it (or on the video) starts it.
+- A **pause/play** button in the corner is always there (WCAG 2.2.2); Tab, Enter and Space work. A click on the video also pauses it.
+- **Without JavaScript** the browser's own video controls show.
+- Use a short MP4 without sound (a few seconds, a few MB at most) and always set a poster image. The placeholder is `assets/video/placeholder-loop.webm` (neutral grey shapes, 6 s, 110 KB).
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Hero with video, default](patterns/hero-video-default-1280.webp) | ![Hero with video, dark primary](patterns/hero-video-dark-1280.webp) | ![Hero with video, mobile](patterns/hero-video-default-390.webp) |
+
+## Video section
+`evive/video-section` · category `evive-content` (evive #546)
+
+Heading and intro text with a video below it at content width, rounded like the images (class `evive-video` on the Video block: radius `l`, 16:10, poster fills the frame). Normal video controls and sound; `preload="none"`, so the video loads only when the visitor presses play. Replace the placeholder with your own MP4 and a poster image. For a YouTube or Vimeo video, replace the Video block with an Embed block (see *Privacy embed* below). The placeholder WebM has no stored duration, so its controls show 0:00; a real MP4 shows its length.
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Video section, default](patterns/video-section-default-1280.webp) | ![Video section, dark primary](patterns/video-section-dark-1280.webp) | ![Video section, mobile](patterns/video-section-default-390.webp) |
+
+## Privacy embed: YouTube and Vimeo
+Every core **Embed** block for YouTube or Vimeo (evive #546), no setting needed
+
+Instead of the player the page shows the video's thumbnail, its title, a play button and one line saying where it plays from. The visitor's browser makes **no request to YouTube or Vimeo and gets no cookies** until the click: the server fetches the thumbnail once (`i.ytimg.com`, or Vimeo's oEmbed thumbnail) and stores it in `wp-content/uploads/evive-embeds/` (kept for 30 days; a failed fetch is retried after a day, and without a thumbnail the box is dark). Only the click loads the player, from **youtube-nocookie.com** or with Vimeo's **dnt=1**, and it starts playing. That makes it consent-friendly with the evive Cookie Banner: nothing to block before the click, and the click itself is the visitor's choice.
+
+- The play button is a link to the video on YouTube/Vimeo, so **without JavaScript** it opens the video there. Keyboard: Tab to it, Enter; focus moves into the player.
+- The aspect ratio of the embed (16:9 etc.) and the caption stay as they were. The editor shows the normal preview.
+- Off for one embed: add the extra CSS class `evive-embed-direct`. Off for the whole site (child theme or plugin): `add_filter( 'evive_privacy_embed', '__return_false' );` (the filter also gets the block).
+
+| Default | Dark primary | Mobile |
+|---|---|---|
+| ![Privacy embed, default](patterns/privacy-embed-default-1280.webp) | ![Privacy embed, dark primary](patterns/privacy-embed-dark-1280.webp) | ![Privacy embed, mobile](patterns/privacy-embed-default-390.webp) |
+
+Thumbnail in the screenshots: *Big Buck Bunny*, © Blender Foundation, CC BY 3.0.
 
 ## Batch 2: newer patterns (screenshots evive #482)
 Made with `tools/pattern-shots/` (see its README): evive-base alone on a throwaway test site, no child theme.
