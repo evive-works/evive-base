@@ -23,7 +23,7 @@ $evive_vid = get_template_directory_uri() . "/assets/video/";
 <p class="has-text-align-center has-l-font-size"><?php echo esc_html_x( 'One sentence on what the video shows and why it is worth watching.', 'placeholder', 'evive' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:video {"align":"wide","className":"evive-video","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
-<figure class="wp-block-video alignwide evive-video" style="margin-top:var(--wp--preset--spacing--50)"><video controls poster="<?php echo esc_url( $evive_img . 'placeholder.svg' ); ?>" preload="none" src="<?php echo esc_url( $evive_vid . 'placeholder-loop.webm' ); ?>" playsinline></video></figure>
+<!-- wp:video {"className":"evive-video","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
+<figure class="wp-block-video evive-video" style="margin-top:var(--wp--preset--spacing--50)"><video controls poster="<?php echo esc_url( $evive_img . 'placeholder.svg' ); ?>" preload="none" src="<?php echo esc_url( $evive_vid . 'placeholder-loop.webm' ); ?>" playsinline></video></figure>
 <!-- /wp:video --></div>
 <!-- /wp:group -->

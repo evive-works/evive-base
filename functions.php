@@ -439,7 +439,7 @@ function evive_privacy_embed_thumb( string $provider, array $target ): string {
 	}
 	$thumb = $target['thumb'];
 	if ( ! $thumb && 'vimeo' === $provider ) {
-		$resp = wp_safe_remote_get( add_query_arg( [ 'url' => rawurlencode( 'https://vimeo.com/' . $target['id'] ), 'width' => 1280 ], 'https://vimeo.com/api/oembed.json' ), [ 'timeout' => 4 ] );
+		$resp = wp_safe_remote_get( add_query_arg( [ 'url' => rawurlencode( $target['page'] ), 'width' => 1280 ], 'https://vimeo.com/api/oembed.json' ), [ 'timeout' => 4 ] );
 		$data = json_decode( (string) wp_remote_retrieve_body( $resp ), true );
 		$thumb = is_array( $data ) ? (string) ( $data['thumbnail_url'] ?? '' ) : '';
 	}

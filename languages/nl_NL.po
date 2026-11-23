@@ -2069,3 +2069,161 @@ msgstr "Apparaatduo: laptop met telefoon ervoor"
 msgctxt "Pattern description"
 msgid "A laptop with a desktop screenshot and a floating phone with an app screenshot in front of it, overlapping its bottom-right corner. Swap in two plain screenshots: both devices are drawn by the image block styles \"Laptop\" and \"Phone, floating\" (never use an image with a device baked in). The desktop screenshot fills the screen from the top. One group, so it works on its own, in a column next to text or in the image column of a hero or CTA band."
 msgstr "Een laptop met een desktopscreenshot en daarvoor een zwevende telefoon met een appscreenshot, over de hoek rechtsonder. Zet er twee gewone screenshots in: beide apparaten worden getekend door de afbeeldingsstijlen \"Laptop\" en \"Telefoon, zwevend\" (gebruik nooit een afbeelding met een ingebakken apparaat). Het desktopscreenshot vult het scherm vanaf de bovenkant. Eén groep, dus het werkt los, in een kolom naast tekst of in de beeldkolom van een hero of CTA-band."
+
+#: patterns/video-section.php
+msgctxt "Pattern title"
+msgid "Video section"
+msgstr "Videosectie"
+
+#: patterns/video-section.php
+msgctxt "Pattern description"
+msgid "Heading and intro text with a video below it, rounded like the images. Replace the placeholder with your own video (MP4) and poster image; the video loads only when the visitor presses play. For a YouTube or Vimeo video, replace the Video block with an Embed block: the theme shows its thumbnail and loads the player only on click."
+msgstr "Kop en introtekst met daaronder een video, afgerond zoals de afbeeldingen. Vervang de placeholder door je eigen video (MP4) en posterafbeelding; de video laadt pas als de bezoeker op afspelen drukt. Voor een YouTube- of Vimeo-video vervang je het Video-blok door een Embed-blok: het thema toont de thumbnail en laadt de speler pas na een klik."
+
+#: patterns/video-section.php
+msgctxt "placeholder"
+msgid "See how it works in two minutes"
+msgstr "Zie in twee minuten hoe het werkt"
+
+#: patterns/video-section.php
+msgctxt "placeholder"
+msgid "One sentence on what the video shows and why it is worth watching."
+msgstr "Eén zin over wat de video laat zien en waarom hij het kijken waard is."
+
+#: patterns/hero-video.php
+msgctxt "Pattern title"
+msgid "Hero: text and video"
+msgstr "Hero: tekst en video"
+
+#: patterns/hero-video.php
+msgctxt "Pattern description"
+msgid "Page heading, intro text and two buttons, with a short muted video that loops on the side (Video block style \"Muted loop\"). The poster shows first; the video starts after the page has loaded, on phones and with reduced motion only after a tap on play. A pause button is always there. Use a short MP4 without sound and set a poster image."
+msgstr "Paginakop, introtekst en twee knoppen, met ernaast een korte video zonder geluid die blijft herhalen (Video-blokstijl \"Stille lus\"). Eerst staat de poster er; de video start nadat de pagina geladen is, op telefoons en bij beperkte beweging pas na een tik op afspelen. Er is altijd een pauzeknop. Gebruik een korte MP4 zonder geluid en stel een posterafbeelding in."
+
+#: patterns/hero-slider.php
+msgctxt "Pattern title"
+msgid "Hero: slider"
+msgstr "Hero: slider"
+
+#: patterns/hero-slider.php
+msgctxt "Pattern description"
+msgid "Three full-width slides (Cover blocks with an image and a dark overlay) in a Group with the block style \"Slides\": one slide at a time, with previous/next, dots, the arrow keys and swipe. Switch the group to \"Slides, autoplay\" to move on every 6 seconds (stops on hover and focus, never with reduced motion, with a pause button). Only the first slide has the page's H1. Add or remove slides in the group; in the editor they stand below each other."
+msgstr "Drie dia's over de volle breedte (Cover-blokken met een afbeelding en een donkere overlay) in een Groep met de blokstijl \"Dia's\": één dia tegelijk, met vorige/volgende, stippen, de pijltjestoetsen en vegen. Zet de groep op \"Dia's, automatisch\" om elke 6 seconden door te gaan (stopt bij hover en focus, nooit bij beperkte beweging, met een pauzeknop). Alleen de eerste dia heeft de H1 van de pagina. Voeg dia's toe of verwijder ze in de groep; in de editor staan ze onder elkaar."
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "A second message worth its own slide"
+msgstr "Een tweede boodschap die een eigen dia verdient"
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "One sentence that backs it up: a feature, a result or a customer."
+msgstr "Eén zin die het onderbouwt: een functie, een resultaat of een klant."
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "Learn more"
+msgstr "Meer weten"
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "A third message, then stop"
+msgstr "Een derde boodschap, en dan stoppen"
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "Three slides is plenty: most visitors only see the first one."
+msgstr "Drie dia's is genoeg: de meeste bezoekers zien alleen de eerste."
+
+#: functions.php:282
+msgctxt "block style"
+msgid "Slides"
+msgstr "Dia's"
+
+#: functions.php:283
+msgctxt "block style"
+msgid "Slides, autoplay"
+msgstr "Dia's, automatisch"
+
+#: functions.php:302
+msgctxt "slides region"
+msgid "Slides"
+msgstr "Dia's"
+
+#. translators: 1: number of the slide, 2: number of slides
+#: functions.php:308
+#, php-format
+msgctxt "slides"
+msgid "Slide %1$s of %2$s"
+msgstr "Dia %1$s van %2$s"
+
+#. translators: 1: number of the slide, 2: number of slides
+#: functions.php:309
+msgctxt "slides roledescription"
+msgid "Slide"
+msgstr "Dia"
+
+#: functions.php:313
+msgctxt "slides"
+msgid "Previous slide"
+msgstr "Vorige dia"
+
+#. translators: %s: number of the slide
+#: functions.php:317
+#, php-format
+msgctxt "slides dot"
+msgid "Slide %s"
+msgstr "Dia %s"
+
+#: functions.php:320
+msgctxt "slides"
+msgid "Next slide"
+msgstr "Volgende dia"
+
+#: functions.php:324
+msgctxt "slides"
+msgid "Pause slides"
+msgstr "Dia's pauzeren"
+
+#: functions.php:324
+msgctxt "slides"
+msgid "Play slides"
+msgstr "Dia's afspelen"
+
+#: functions.php:341
+msgctxt "block style"
+msgid "Muted loop"
+msgstr "Stille lus"
+
+#: functions.php:366
+msgctxt "video"
+msgid "Pause video"
+msgstr "Video pauzeren"
+
+#: functions.php:366
+msgctxt "video"
+msgid "Play video"
+msgstr "Video afspelen"
+
+#. translators: %s: title of the video
+#: functions.php:483
+#, php-format
+msgctxt "privacy embed"
+msgid "Play video: %s"
+msgstr "Video afspelen: %s"
+
+#. translators: %s: title of the video
+#: functions.php:483
+msgctxt "privacy embed"
+msgid "Play video"
+msgstr "Video afspelen"
+
+#: functions.php:485
+msgctxt "privacy embed"
+msgid "Plays from YouTube in privacy-enhanced mode. Nothing is loaded from YouTube before you click play."
+msgstr "Speelt af via YouTube in de privacyvriendelijke modus. Er wordt niets van YouTube geladen voordat je op afspelen klikt."
+
+#: functions.php:486
+msgctxt "privacy embed"
+msgid "Plays from Vimeo without tracking (dnt). Nothing is loaded from Vimeo before you click play."
+msgstr "Speelt af via Vimeo zonder tracking (dnt). Er wordt niets van Vimeo geladen voordat je op afspelen klikt."

@@ -360,5 +360,30 @@ T = {
  "Device duo: laptop with phone in front": "Apparaatduo: laptop met telefoon ervoor",
  "A laptop with a desktop screenshot and a floating phone with an app screenshot in front of it, overlapping its bottom-right corner. Swap in two plain screenshots: both devices are drawn by the image block styles \"Laptop\" and \"Phone, floating\" (never use an image with a device baked in). The desktop screenshot fills the screen from the top. One group, so it works on its own, in a column next to text or in the image column of a hero or CTA band.":
   "Een laptop met een desktopscreenshot en daarvoor een zwevende telefoon met een appscreenshot, over de hoek rechtsonder. Zet er twee gewone screenshots in: beide apparaten worden getekend door de afbeeldingsstijlen \"Laptop\" en \"Telefoon, zwevend\" (gebruik nooit een afbeelding met een ingebakken apparaat). Het desktopscreenshot vult het scherm vanaf de bovenkant. Eén groep, dus het werkt los, in een kolom naast tekst of in de beeldkolom van een hero of CTA-band.",
+  # evive #546: video patterns, privacy embed, slides
+ "Video section": "Videosectie",
+ "Heading and intro text with a video below it, rounded like the images. Replace the placeholder with your own video (MP4) and poster image; the video loads only when the visitor presses play. For a YouTube or Vimeo video, replace the Video block with an Embed block: the theme shows its thumbnail and loads the player only on click.":
+  "Kop en introtekst met daaronder een video, afgerond zoals de afbeeldingen. Vervang de placeholder door je eigen video (MP4) en posterafbeelding; de video laadt pas als de bezoeker op afspelen drukt. Voor een YouTube- of Vimeo-video vervang je het Video-blok door een Embed-blok: het thema toont de thumbnail en laadt de speler pas na een klik.",
+ "See how it works in two minutes": "Zie in twee minuten hoe het werkt",
+ "One sentence on what the video shows and why it is worth watching.": "Eén zin over wat de video laat zien en waarom hij het kijken waard is.",
+ "Hero: text and video": "Hero: tekst en video",
+ "Page heading, intro text and two buttons, with a short muted video that loops on the side (Video block style \"Muted loop\"). The poster shows first; the video starts after the page has loaded, on phones and with reduced motion only after a tap on play. A pause button is always there. Use a short MP4 without sound and set a poster image.":
+  "Paginakop, introtekst en twee knoppen, met ernaast een korte video zonder geluid die blijft herhalen (Video-blokstijl \"Stille lus\"). Eerst staat de poster er; de video start nadat de pagina geladen is, op telefoons en bij beperkte beweging pas na een tik op afspelen. Er is altijd een pauzeknop. Gebruik een korte MP4 zonder geluid en stel een posterafbeelding in.",
+ "Hero: slider": "Hero: slider",
+ "Three full-width slides (Cover blocks with an image and a dark overlay) in a Group with the block style \"Slides\": one slide at a time, with previous/next, dots, the arrow keys and swipe. Switch the group to \"Slides, autoplay\" to move on every 6 seconds (stops on hover and focus, never with reduced motion, with a pause button). Only the first slide has the page's H1. Add or remove slides in the group; in the editor they stand below each other.":
+  "Drie dia's over de volle breedte (Cover-blokken met een afbeelding en een donkere overlay) in een Groep met de blokstijl \"Dia's\": één dia tegelijk, met vorige/volgende, stippen, de pijltjestoetsen en vegen. Zet de groep op \"Dia's, automatisch\" om elke 6 seconden door te gaan (stopt bij hover en focus, nooit bij beperkte beweging, met een pauzeknop). Alleen de eerste dia heeft de H1 van de pagina. Voeg dia's toe of verwijder ze in de groep; in de editor staan ze onder elkaar.",
+ "A second message worth its own slide": "Een tweede boodschap die een eigen dia verdient",
+ "One sentence that backs it up: a feature, a result or a customer.": "Eén zin die het onderbouwt: een functie, een resultaat of een klant.",
+ "Learn more": "Meer weten",
+ "A third message, then stop": "Een derde boodschap, en dan stoppen",
+ "Three slides is plenty: most visitors only see the first one.": "Drie dia's is genoeg: de meeste bezoekers zien alleen de eerste.",
+ "Slides": "Dia's", "Slides, autoplay": "Dia's, automatisch", "Slide": "Dia",
+ "Slide %1$s of %2$s": "Dia %1$s van %2$s", "Slide %s": "Dia %s",
+ "Previous slide": "Vorige dia", "Next slide": "Volgende dia", "Pause slides": "Dia's pauzeren", "Play slides": "Dia's afspelen",
+ "Muted loop": "Stille lus", "Pause video": "Video pauzeren", "Play video": "Video afspelen", "Play video: %s": "Video afspelen: %s",
+ "Plays from YouTube in privacy-enhanced mode. Nothing is loaded from YouTube before you click play.":
+  "Speelt af via YouTube in de privacyvriendelijke modus. Er wordt niets van YouTube geladen voordat je op afspelen klikt.",
+ "Plays from Vimeo without tracking (dnt). Nothing is loaded from Vimeo before you click play.":
+  "Speelt af via Vimeo zonder tracking (dnt). Er wordt niets van Vimeo geladen voordat je op afspelen klikt.",
 }
 CTX = {}

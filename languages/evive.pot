@@ -2067,3 +2067,161 @@ msgstr ""
 msgctxt "Pattern description"
 msgid "A laptop with a desktop screenshot and a floating phone with an app screenshot in front of it, overlapping its bottom-right corner. Swap in two plain screenshots: both devices are drawn by the image block styles \"Laptop\" and \"Phone, floating\" (never use an image with a device baked in). The desktop screenshot fills the screen from the top. One group, so it works on its own, in a column next to text or in the image column of a hero or CTA band."
 msgstr ""
+
+#: patterns/video-section.php
+msgctxt "Pattern title"
+msgid "Video section"
+msgstr ""
+
+#: patterns/video-section.php
+msgctxt "Pattern description"
+msgid "Heading and intro text with a video below it, rounded like the images. Replace the placeholder with your own video (MP4) and poster image; the video loads only when the visitor presses play. For a YouTube or Vimeo video, replace the Video block with an Embed block: the theme shows its thumbnail and loads the player only on click."
+msgstr ""
+
+#: patterns/video-section.php
+msgctxt "placeholder"
+msgid "See how it works in two minutes"
+msgstr ""
+
+#: patterns/video-section.php
+msgctxt "placeholder"
+msgid "One sentence on what the video shows and why it is worth watching."
+msgstr ""
+
+#: patterns/hero-video.php
+msgctxt "Pattern title"
+msgid "Hero: text and video"
+msgstr ""
+
+#: patterns/hero-video.php
+msgctxt "Pattern description"
+msgid "Page heading, intro text and two buttons, with a short muted video that loops on the side (Video block style \"Muted loop\"). The poster shows first; the video starts after the page has loaded, on phones and with reduced motion only after a tap on play. A pause button is always there. Use a short MP4 without sound and set a poster image."
+msgstr ""
+
+#: patterns/hero-slider.php
+msgctxt "Pattern title"
+msgid "Hero: slider"
+msgstr ""
+
+#: patterns/hero-slider.php
+msgctxt "Pattern description"
+msgid "Three full-width slides (Cover blocks with an image and a dark overlay) in a Group with the block style \"Slides\": one slide at a time, with previous/next, dots, the arrow keys and swipe. Switch the group to \"Slides, autoplay\" to move on every 6 seconds (stops on hover and focus, never with reduced motion, with a pause button). Only the first slide has the page's H1. Add or remove slides in the group; in the editor they stand below each other."
+msgstr ""
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "A second message worth its own slide"
+msgstr ""
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "One sentence that backs it up: a feature, a result or a customer."
+msgstr ""
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "Learn more"
+msgstr ""
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "A third message, then stop"
+msgstr ""
+
+#: patterns/hero-slider.php
+msgctxt "placeholder"
+msgid "Three slides is plenty: most visitors only see the first one."
+msgstr ""
+
+#: functions.php:282
+msgctxt "block style"
+msgid "Slides"
+msgstr ""
+
+#: functions.php:283
+msgctxt "block style"
+msgid "Slides, autoplay"
+msgstr ""
+
+#: functions.php:302
+msgctxt "slides region"
+msgid "Slides"
+msgstr ""
+
+#. translators: 1: number of the slide, 2: number of slides
+#: functions.php:308
+#, php-format
+msgctxt "slides"
+msgid "Slide %1$s of %2$s"
+msgstr ""
+
+#. translators: 1: number of the slide, 2: number of slides
+#: functions.php:309
+msgctxt "slides roledescription"
+msgid "Slide"
+msgstr ""
+
+#: functions.php:313
+msgctxt "slides"
+msgid "Previous slide"
+msgstr ""
+
+#. translators: %s: number of the slide
+#: functions.php:317
+#, php-format
+msgctxt "slides dot"
+msgid "Slide %s"
+msgstr ""
+
+#: functions.php:320
+msgctxt "slides"
+msgid "Next slide"
+msgstr ""
+
+#: functions.php:324
+msgctxt "slides"
+msgid "Pause slides"
+msgstr ""
+
+#: functions.php:324
+msgctxt "slides"
+msgid "Play slides"
+msgstr ""
+
+#: functions.php:341
+msgctxt "block style"
+msgid "Muted loop"
+msgstr ""
+
+#: functions.php:366
+msgctxt "video"
+msgid "Pause video"
+msgstr ""
+
+#: functions.php:366
+msgctxt "video"
+msgid "Play video"
+msgstr ""
+
+#. translators: %s: title of the video
+#: functions.php:483
+#, php-format
+msgctxt "privacy embed"
+msgid "Play video: %s"
+msgstr ""
+
+#. translators: %s: title of the video
+#: functions.php:483
+msgctxt "privacy embed"
+msgid "Play video"
+msgstr ""
+
+#: functions.php:485
+msgctxt "privacy embed"
+msgid "Plays from YouTube in privacy-enhanced mode. Nothing is loaded from YouTube before you click play."
+msgstr ""
+
+#: functions.php:486
+msgctxt "privacy embed"
+msgid "Plays from Vimeo without tracking (dnt). Nothing is loaded from Vimeo before you click play."
+msgstr ""
