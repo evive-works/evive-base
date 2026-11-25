@@ -2225,3 +2225,38 @@ msgstr ""
 msgctxt "privacy embed"
 msgid "Plays from Vimeo without tracking (dnt). Nothing is loaded from Vimeo before you click play."
 msgstr ""
+
+#: patterns/post-cta.php
+msgctxt "Pattern title"
+msgid "Post call to action"
+msgstr ""
+
+#: patterns/post-cta.php
+msgctxt "Pattern description"
+msgid "Call-to-action card after every blog post (template part \"Post call to action\"): heading, one line and two buttons, by default to the contact page and the posts page. Edit it once in the Site Editor (Patterns → Template parts) and it changes on every post."
+msgstr ""
+
+#: patterns/post-cta.php:23
+msgctxt "post cta"
+msgid "Want to talk about this?"
+msgstr ""
+
+#: patterns/post-cta.php:27
+msgctxt "post cta"
+msgid "Get in touch: we are happy to think along with you, no strings attached."
+msgstr ""
+
+#: patterns/post-cta.php:32
+msgctxt "post cta"
+msgid "Contact us"
+msgstr ""
+
+#: patterns/post-cta.php:36
+msgctxt "post cta"
+msgid "More articles"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Post call to action"
+msgstr ""

@@ -385,5 +385,13 @@ T = {
   "Speelt af via YouTube in de privacyvriendelijke modus. Er wordt niets van YouTube geladen voordat je op afspelen klikt.",
  "Plays from Vimeo without tracking (dnt). Nothing is loaded from Vimeo before you click play.":
   "Speelt af via Vimeo zonder tracking (dnt). Er wordt niets van Vimeo geladen voordat je op afspelen klikt.",
+ # evive #580: post call to action
+ "Post call to action": "Call-to-action onder berichten",
+ "Call-to-action card after every blog post (template part \"Post call to action\"): heading, one line and two buttons, by default to the contact page and the posts page. Edit it once in the Site Editor (Patterns → Template parts) and it changes on every post.":
+  "Call-to-action-kaart onder elk blogbericht (template-onderdeel \"Call-to-action onder berichten\"): kop, één regel en twee knoppen, standaard naar de contactpagina en de berichtenpagina. Pas hem één keer aan in de Site-editor (Patronen → Template-onderdelen) en hij verandert onder elk bericht.",
+ "Want to talk about this?": "Hierover praten?",
+ "Get in touch: we are happy to think along with you, no strings attached.": "Laat van je horen: we denken graag vrijblijvend met je mee.",
+ "Contact us": "Neem contact op",
+ "More articles": "Meer artikelen",
 }
 CTX = {}

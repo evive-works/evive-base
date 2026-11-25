@@ -2227,3 +2227,38 @@ msgstr "Speelt af via YouTube in de privacyvriendelijke modus. Er wordt niets va
 msgctxt "privacy embed"
 msgid "Plays from Vimeo without tracking (dnt). Nothing is loaded from Vimeo before you click play."
 msgstr "Speelt af via Vimeo zonder tracking (dnt). Er wordt niets van Vimeo geladen voordat je op afspelen klikt."
+
+#: patterns/post-cta.php
+msgctxt "Pattern title"
+msgid "Post call to action"
+msgstr "Call-to-action onder berichten"
+
+#: patterns/post-cta.php
+msgctxt "Pattern description"
+msgid "Call-to-action card after every blog post (template part \"Post call to action\"): heading, one line and two buttons, by default to the contact page and the posts page. Edit it once in the Site Editor (Patterns → Template parts) and it changes on every post."
+msgstr "Call-to-action-kaart onder elk blogbericht (template-onderdeel \"Call-to-action onder berichten\"): kop, één regel en twee knoppen, standaard naar de contactpagina en de berichtenpagina. Pas hem één keer aan in de Site-editor (Patronen → Template-onderdelen) en hij verandert onder elk bericht."
+
+#: patterns/post-cta.php:23
+msgctxt "post cta"
+msgid "Want to talk about this?"
+msgstr "Hierover praten?"
+
+#: patterns/post-cta.php:27
+msgctxt "post cta"
+msgid "Get in touch: we are happy to think along with you, no strings attached."
+msgstr "Laat van je horen: we denken graag vrijblijvend met je mee."
+
+#: patterns/post-cta.php:32
+msgctxt "post cta"
+msgid "Contact us"
+msgstr "Neem contact op"
+
+#: patterns/post-cta.php:36
+msgctxt "post cta"
+msgid "More articles"
+msgstr "Meer artikelen"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Post call to action"
+msgstr "Call-to-action onder berichten"

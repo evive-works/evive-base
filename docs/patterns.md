@@ -207,6 +207,13 @@ Screenshots from a fresh test site with only WordPress's sample post (no feature
 | Default (1280) | Mobile (390) |
 |---|---|
 | ![Blog teasers, default](patterns/blog-teasers-default-1280.webp) | ![Blog teasers, mobile](patterns/blog-teasers-default-390.webp) |
+## Blog posts: comments and the post call to action (evive #580)
+`templates/single.html`, template part `post-cta` (pattern `evive/post-cta`, not in the inserter)
+
+- **Comments:** the Comments block on a post renders only when comments are open on that post. With comments closed there is no comments area at all (no "Comments are closed", no old comments). A site that wants a closed post's existing comments to stay visible: `add_filter( 'evive_show_comments', fn ( $show, $post_id ) => $show || get_comments_number( $post_id ) > 0, 10, 2 );`.
+- **Post call to action:** after every post (below the tags, above previous/next) a card on the primary colour with a heading, one line and two buttons: "Contact us" to the page with slug `contact` (or `/contact/` when there is none) and "More articles" to the posts page. It is a template part, so it is edited in **one place**: Site Editor → Patterns → Template parts → "Post call to action"; the change shows on every post. To drop it, remove the part from the Single template. Case posts (`single-case.html`) don't have it.
+- **evive builds (make-over brief):** comments off by default on a new site: Settings → Discussion → untick "Allow people to submit comments on new posts" (`wp option update default_comment_status closed`, and `wp post list --comment_status=open` / close existing ones). Fill the post call to action from the site's main conversion (demo, quote, call): heading, line, button label and link (e.g. `/contact/?type=demo`).
+
 ## Integrations grid
 `evive/integrations` · category `evive-features` (evive #409)
 

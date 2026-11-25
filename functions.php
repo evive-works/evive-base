@@ -213,6 +213,14 @@ add_filter( 'single_template_hierarchy', function ( $templates ) {
 	return $templates;
 } );
 
+// evive #580: the Comments block renders only when comments are open on that post, so a site with comments
+// closed (evive's default) shows no comments area at all, not "Comments are closed" or old comments.
+// To keep showing a closed post's existing comments: add_filter( 'evive_show_comments', ..., 10, 2 ).
+add_filter( 'render_block_core/comments', function ( $html, $block, $instance = null ) {
+	$post_id = (int) ( $instance->context['postId'] ?? get_the_ID() );
+	return apply_filters( 'evive_show_comments', $post_id && comments_open( $post_id ), $post_id ) ? $html : '';
+}, 10, 3 );
+
 // evive #412: the theme's own blocks (blocks/<name>/block.json). Their styles and front-end scripts load only on
 // pages that contain the block. Asset versions follow the theme version, so an update busts browser caches.
 add_filter( 'block_type_metadata', function ( $metadata ) {
