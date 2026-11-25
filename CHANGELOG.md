@@ -2,7 +2,7 @@
 
 All notable changes. Semantic versioning: a slug change in the token contract is a major release.
 
-## Unreleased
+## 0.12.0 — 2026-11-25
 - Blog posts: the Comments block in `single.html` renders only when comments are open on that post, so a site with comments closed shows no comments area at all (no "Comments are closed", no old comments). Filter `evive_show_comments` ( `$show, $post_id` ) to change that per site (evive #580).
 - New template part **Post call to action** (`parts/post-cta.html`, pattern `evive/post-cta`, not in the inserter) after the content of every post in `single.html`: a card on the primary colour with a heading, one line and two buttons, "Contact us" to the page with slug `contact` (or `/contact/`) and "More articles" to the posts page. Edited in one place (Site Editor → Patterns → Template parts) and shown on every post. This adds the card to existing posts on sites that update and use the theme's Single template (evive #580).
 - nl_NL translations for the new strings (426 of 426). Docs: section "Blog posts: comments and the post call to action" in `docs/patterns.md`, including the make-over guidance (comments off by default, CTA filled from the site's main conversion).
